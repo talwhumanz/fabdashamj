@@ -212,7 +212,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:20px 28px;disp
   3. Paste it below between the quotes
 ============================================= -->
 <script>
-const SHEET_ID = '1xn6flo5zHCTPihw4J7VV0mcV-i_wcqAe';
+const SHEET_ID = '2PACX-1vQFDfiCYevFPhZjhV4pbsM2KYyKMLjXP0fClwZFnUcXvw7TmwxxT0P23GQxxSd7rg';
 </script>
 
 <nav>
@@ -489,7 +489,7 @@ const avatarColors=[
    GOOGLE SHEETS CSV FETCH
 ============================================================ */
 async function fetchSheet(tabName){
-  const url=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tabName)}`;
+  const url=`https://docs.google.com/spreadsheets/d/e/${SHEET_ID}/pub?output=csv&sheet=${encodeURIComponent(tabName)}`;
   try{
     const res=await fetch(url);
     if(!res.ok)throw new Error(`HTTP ${res.status} on tab "${tabName}"`);
