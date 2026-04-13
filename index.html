@@ -942,12 +942,16 @@ async function loadDashboard(){
       </div>`;
       return;
     }
-    const [configRows,kpiRows,creatorRows,videoRows,sampleRows,productRows,flatFeeRows,trendsRows,summaryRows]=
-      await Promise.all([
-        fetchSheet('CONFIG'),fetchSheet('KPI'),fetchSheet('TOP_CREATORS'),
-        fetchSheet('TOP_VIDEOS'),fetchSheet('SAMPLES'),fetchSheet('PRODUCTS'),
-        fetchSheet('FLAT_FEE'),fetchSheet('TRENDS'),fetchSheet('SUMMARY')
-      ]);
+    const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+    const configRows   = await fetchSheet('CONFIG');    await sleep(300);
+    const kpiRows      = await fetchSheet('KPI');       await sleep(300);
+    const creatorRows  = await fetchSheet('TOP_CREATORS'); await sleep(300);
+    const videoRows    = await fetchSheet('TOP_VIDEOS'); await sleep(300);
+    const sampleRows   = await fetchSheet('SAMPLES');   await sleep(300);
+    const productRows  = await fetchSheet('PRODUCTS');  await sleep(300);
+    const flatFeeRows  = await fetchSheet('FLAT_FEE');  await sleep(300);
+    const trendsRows   = await fetchSheet('TRENDS');    await sleep(300);
+    const summaryRows  = await fetchSheet('SUMMARY');
 
     const cfg=renderConfig(configRows);
     document.getElementById('pill-enrolled').innerHTML=`<div class="dot" style="background:var(--blue);width:6px;height:6px;border-radius:50%;"></div>${cfg.enrolled_affiliates||'—'} Creators Tracked`;
