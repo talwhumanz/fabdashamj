@@ -490,10 +490,17 @@ const avatarColors=[
 ============================================================ */
 async function fetchSheet(tabName){
   const url=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tabName)}`;
-  const res=await fetch(url);
-  if(!res.ok)throw new Error(`Failed to fetch tab: ${tabName}`);
-  const text=await res.text();
-  return parseCSV(text);
+  try{
+    const res=await fetch(url);
+    if(!res.ok)throw new Error(`HTTP ${res.status} on tab "${tabName}"`);
+    const text=await res.text();
+    if(text.trim().startsWith('<!DOCTYPE')||text.includes('accounts.google.com'))
+      throw new Error(`Tab "${tabName}" returned a login page — make sure the sheet is published to web.`);
+    const rows=parseCSV(text);
+    return rows.filter(r=>Object.values(r).some(v=>v!==''));
+  }catch(e){
+    throw new Error(`Tab "${tabName}": ${e.message}`);
+  }
 }
 
 function parseCSV(text){
@@ -882,7 +889,7 @@ function renderTrends(rows, cfg){
     data:{labels:projLabels,datasets:[{
       label:'GMV',data:projData,
       backgroundColor:bgColors,
-      borderColor:projLabels.map((l,i)=>l.includes('proj.')?'#1a6fd4':'transparent'),
+      borderColor:projLabels.map((l,i)=>(l||'').includes('proj.')?'#1a6fd4':'transparent'),
       borderWidth:projLabels.map((l,i)=>l.includes('proj.')?2:0),
       borderRadius:4,borderSkipped:false
     }]},
