@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First Aid Beauty × Humanz — TikTok Shop Dashboard</title>
+<title>First Aid Beauty Ã Humanz â TikTok Shop Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
@@ -100,18 +100,18 @@ nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;
 .vdate-row{display:flex;align-items:center;justify-content:space-between;margin-top:1px;}
 .vdate{display:inline-flex;align-items:center;gap:3px;background:var(--surface3);color:var(--soft);font-size:10px;padding:2px 7px;border-radius:20px;}
 .vlink{font-size:10px;font-weight:500;color:var(--blue);text-decoration:none;}
-.vlink::after{content:' ↗';font-size:9px;}
+.vlink::after{content:' â';font-size:9px;}
 .table-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04);}
-.vtable,.ptable,.flat-fee-table{width:100%;border-collapse:collapse;font-size:12px;}
-.vtable thead tr,.ptable thead tr,.flat-fee-table thead tr{background:#f9f8f5;border-bottom:1px solid var(--border);}
-.vtable thead th,.ptable thead th,.flat-fee-table thead th{padding:10px 14px;text-align:left;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
-.vtable thead th.r,.ptable thead th.r,.flat-fee-table thead th.r{text-align:right;}
+.vtable,.ptable,.fftable{width:100%;border-collapse:collapse;font-size:12px;}
+.vtable thead tr,.ptable thead tr,.fftable thead tr{background:#f9f8f5;border-bottom:1px solid var(--border);}
+.vtable thead th,.ptable thead th,.fftable thead th{padding:10px 14px;text-align:left;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+.vtable thead th.r,.ptable thead th.r,.fftable thead th.r{text-align:right;}
 .ptable thead th.c{text-align:center;}
-.vtable tbody tr,.ptable tbody tr,.flat-fee-table tbody tr{border-bottom:1px solid var(--border);transition:background .12s;}
-.vtable tbody tr:last-child,.ptable tbody tr:last-child,.flat-fee-table tbody tr:last-child{border-bottom:none;}
-.vtable tbody tr:hover,.ptable tbody tr:hover,.flat-fee-table tbody tr:hover{background:#faf9f7;}
-.vtable td,.ptable td,.flat-fee-table td{padding:9px 14px;color:var(--ink2);vertical-align:middle;}
-.vtable td.r,.ptable td.r,.flat-fee-table td.r{text-align:right;font-weight:600;color:var(--ink);}
+.vtable tbody tr,.ptable tbody tr,.fftable tbody tr{border-bottom:1px solid var(--border);transition:background .12s;}
+.vtable tbody tr:last-child,.ptable tbody tr:last-child,.fftable tbody tr:last-child{border-bottom:none;}
+.vtable tbody tr:hover,.ptable tbody tr:hover,.fftable tbody tr:hover{background:#faf9f7;}
+.vtable td,.ptable td,.fftable td{padding:9px 14px;color:var(--ink2);vertical-align:middle;}
+.vtable td.r,.ptable td.r,.fftable td.r{text-align:right;font-weight:600;color:var(--ink);}
 .ptable td.c{text-align:center;}
 .vtable td.gmv{color:var(--red);font-weight:700;text-align:right;}
 .trank{width:20px;height:20px;border-radius:50%;background:var(--surface3);display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--soft);}
@@ -120,7 +120,7 @@ nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;
 .ttitle{color:var(--ink2);font-size:12px;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;}
 .tdate{display:inline-flex;align-items:center;gap:4px;background:var(--surface3);color:var(--soft);font-size:10px;padding:2px 8px;border-radius:20px;white-space:nowrap;}
 .tlink{font-size:11px;color:var(--blue);text-decoration:none;}
-.tlink::after{content:' ↗';font-size:10px;}
+.tlink::after{content:' â';font-size:10px;}
 .collapsible-row.hidden{display:none;}
 .expand-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:11px;background:#fff;border:none;border-top:1px solid var(--border);font-size:11px;font-weight:600;color:var(--blue);cursor:pointer;transition:background .15s;}
 .expand-btn:hover{background:var(--blue-dim);}
@@ -152,29 +152,6 @@ nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;
 .scard-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px;margin-top:8px;}
 .sow-prog-wrap{background:var(--surface3);border-radius:20px;height:5px;margin:10px 0 5px;overflow:hidden;}
 .sow-prog-bar{height:100%;border-radius:20px;background:var(--purple);}
-.table-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:#f9f8f5;}
-.hero-takeaway{background:var(--ink);border-radius:16px;padding:36px;margin-bottom:16px;position:relative;overflow:hidden;}
-.hero-takeaway::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(232,40,74,.12);}
-.hero-eyebrow-t{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:flex;align-items:center;gap:8px;position:relative;}
-.hero-eyebrow-t::before{content:'';width:16px;height:1.5px;background:var(--red);}
-.hero-title-t{font-size:clamp(18px,2.5vw,26px);font-weight:600;color:#f0efe8;line-height:1.25;margin-bottom:14px;max-width:700px;position:relative;}
-.hero-title-t em{color:var(--red);font-style:normal;}
-.hero-body-t{font-size:13px;line-height:1.85;color:#9d9daa;max-width:680px;position:relative;margin-bottom:20px;}
-.hero-body-t strong{color:#f0efe8;}
-.hero-action-t{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-size:12px;font-weight:600;padding:10px 18px;border-radius:10px;position:relative;}
-.hero-action-t::before{content:'→';font-size:13px;}
-.hero-stats-t{display:flex;gap:28px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;position:relative;}
-.hero-stat-val-t{font-size:22px;font-weight:600;color:#f0efe8;line-height:1;}
-.hero-stat-label-t{font-size:10px;color:#6b6b7a;font-weight:500;}
-.icard{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;flex-direction:column;gap:10px;}
-.icard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
-.icard-badge{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;white-space:nowrap;}
-.icard-title{font-size:13px;font-weight:600;color:var(--ink);line-height:1.35;}
-.icard-body{font-size:12px;color:var(--soft);line-height:1.75;flex:1;}
-.icard-body strong{color:var(--ink2);}
-.icard-action{display:flex;align-items:flex-start;gap:8px;background:var(--surface3);border-radius:8px;padding:10px 12px;margin-top:2px;}
-.icard-action-arrow{font-size:11px;font-weight:700;color:var(--red);flex-shrink:0;margin-top:1px;}
-.icard-action-text{font-size:11px;font-weight:500;color:var(--ink2);line-height:1.5;}
 .prod-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 1px 3px rgba(0,0,0,.05);}
 .prod-img{width:64px;height:64px;border-radius:10px;flex-shrink:0;object-fit:cover;background:var(--surface3);}
 .prod-img-fallback{width:64px;height:64px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;}
@@ -194,37 +171,901 @@ nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;
 .chart-badge{font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:var(--red-dim);color:var(--red);}
 .chart-body{padding:20px;}
 .chart-canvas-wrap{position:relative;height:240px;}
-.loading-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:16px;}
-.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--red);border-radius:50%;animation:spin .8s linear infinite;}
-@keyframes spin{to{transform:rotate(360deg)}}
-.loading-text{font-size:13px;color:var(--soft);}
-.error-banner{background:var(--red-dim);border:1px solid var(--red-mid);border-radius:10px;padding:16px 20px;margin:20px 0;font-size:13px;color:var(--ink2);}
+.hero-takeaway{background:var(--ink);border-radius:16px;padding:36px;margin-bottom:16px;position:relative;overflow:hidden;}
+.hero-takeaway::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(232,40,74,.12);}
+.hero-eyebrow-t{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:flex;align-items:center;gap:8px;position:relative;}
+.hero-eyebrow-t::before{content:'';width:16px;height:1.5px;background:var(--red);}
+.hero-title-t{font-size:clamp(18px,2.5vw,26px);font-weight:600;color:#f0efe8;line-height:1.25;margin-bottom:14px;max-width:700px;position:relative;}
+.hero-title-t em{color:var(--red);font-style:normal;}
+.hero-body-t{font-size:13px;line-height:1.85;color:#9d9daa;max-width:680px;position:relative;margin-bottom:20px;}
+.hero-body-t strong{color:#f0efe8;}
+.hero-action-t{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-size:12px;font-weight:600;padding:10px 18px;border-radius:10px;position:relative;}
+.hero-action-t::before{content:'â';font-size:13px;}
+.hero-stats-t{display:flex;gap:28px;margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;position:relative;}
+.hero-stat-val-t{font-size:22px;font-weight:600;color:#f0efe8;line-height:1;}
+.hero-stat-label-t{font-size:10px;color:#6b6b7a;font-weight:500;}
+.icard{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.05);display:flex;flex-direction:column;gap:10px;}
+.icard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+.icard-badge{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;white-space:nowrap;}
+.icard-title{font-size:13px;font-weight:600;color:var(--ink);line-height:1.35;}
+.icard-body{font-size:12px;color:var(--soft);line-height:1.75;flex:1;}
+.icard-body strong{color:var(--ink2);}
+.icard-action{display:flex;align-items:flex-start;gap:8px;background:var(--surface3);border-radius:8px;padding:10px 12px;margin-top:2px;}
+.icard-action-arrow{font-size:11px;font-weight:700;color:var(--red);flex-shrink:0;margin-top:1px;}
+.icard-action-text{font-size:11px;font-weight:500;color:var(--ink2);line-height:1.5;}
 footer{background:#fff;border-top:1px solid var(--border);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--muted);}
 </style>
 </head>
 <body>
-
-<!-- =============================================
-  CONFIGURATION — update SHEET_ID below
-  1. Open your Google Sheet
-  2. Copy the ID from the URL:
-     https://docs.google.com/spreadsheets/d/COPY_THIS_PART/edit
-  3. Paste it below between the quotes
-============================================= -->
 <script>
-const SHEET_ID = '2PACX-1vQFDfiCYevFPhZjhV4pbsM2KYyKMLjXP0fClwZFnUcXvw7TmwxxT0P23GQxxSd7rg';
+/* ============================================================
+   â UPDATE THIS SECTION EVERY WEEK â
+   All numbers live here. Change values, save, upload to GitHub.
+============================================================ */
+const D = {
+  "agency": "Humanz",
+  "client": "First Aid Beauty",
+  "report_month": "Apr 2026",
+  "last_updated": "Apr 12, 2026",
+  "days_elapsed": 12,
+  "days_in_month": 30,
+  "highlights": "March delivered $142K in GMV, our strongest month since launch. The sample programme hit 68% of target with a 41% conversion rate. Focus for April: push the remaining 160 samples out early.",
+  "gmv_target": 100000,
+  "gmv_last_month": 10317,
+  "w1_gmv": 4531,
+  "w2_gmv": 4396,
+  "w3_gmv": null,
+  "w4_gmv": null,
+  "w2_partial": true,
+  "w2_days_done": 5,
+  "trends_projected": 20600,
+  "active_affiliates": 464,
+  "active_affiliates_last": 189,
+  "affiliates_target": 2500,
+  "total_videos": 667,
+  "total_videos_last": 452,
+  "enrolled_affiliates": 1542,
+  "enrolled_affiliates_last": 1480,
+  "samples_sent": 1590,
+  "samples_last_month": 990,
+  "samples_target": 3240,
+  "samples_projection": "Projected GMV impact: ~$4,785-$9,570 based on 4.0%-17.4% historical conversion x $76 avg GMV per converter.",
+  "samples_sent_this_month": 1566,
+  "samples_posted": 216,
+  "samples_converted": 62,
+  "samples_gmv": 4714,
+  "flatfee_videos": 70,
+  "flatfee_spend": 8300,
+  "flatfee_creators": 5,
+  "flatfee_posted": 0,
+  "flatfee_gmv": 0,
+  "flatfee_note": "Chase posting timelines this week. All 5 creators confirmed but none have posted yet.",
+  "creators": [
+    [
+      1,
+      "Erica Taylor",
+      "@ericataylor2347",
+      "Flat-Fee",
+      "$965.56",
+      28,
+      "29,861",
+      "$32.34",
+      2,
+      "$76.52"
+    ],
+    [
+      2,
+      "Happily Ever Becka",
+      "@happilyeverbecka",
+      "Flat-Fee",
+      "$348.70",
+      9,
+      "9,017",
+      "$38.67",
+      1,
+      "$32.48"
+    ],
+    [
+      3,
+      "Rachel",
+      "@influenced.edit",
+      "Commission",
+      "$305.56",
+      8,
+      "14,061",
+      "$21.73",
+      1,
+      "$37.34"
+    ],
+    [
+      4,
+      "Hailey",
+      "@haileyxbush",
+      "Flat-Fee",
+      "$298.46",
+      7,
+      "20,238",
+      "$14.75",
+      1,
+      "$24.49"
+    ],
+    [
+      5,
+      "CANDICE",
+      "@doublethedeals",
+      "Commission",
+      "$220.70",
+      7,
+      "2,001",
+      "$110.29",
+      1,
+      "$22.85"
+    ],
+    [
+      6,
+      "Shopwitherica",
+      "@ericamademebuyit",
+      "Commission",
+      "$137.00",
+      4,
+      "4,799",
+      "$28.55",
+      2,
+      "$0.20"
+    ],
+    [
+      7,
+      "Sara Weaver",
+      "@schweaver5",
+      "Commission",
+      "$134.94",
+      4,
+      "3,166",
+      "$42.62",
+      1,
+      "$10.20"
+    ],
+    [
+      8,
+      "findbyjazz",
+      "@findsbyjazz",
+      "Commission",
+      "$99.74",
+      3,
+      "2,162",
+      "$46.13",
+      1,
+      "$15.39"
+    ],
+    [
+      9,
+      "Amanda Renee",
+      "@mandsbarbie21",
+      "Commission",
+      "$90.00",
+      2,
+      "28,809",
+      "$3.12",
+      1,
+      "$9.00"
+    ],
+    [
+      10,
+      "GiniGlow",
+      "@giniglow",
+      "Commission",
+      "$86.00",
+      1,
+      "2,267",
+      "$37.94",
+      2,
+      "$12.90"
+    ],
+    [
+      11,
+      "Viridiana Escalante",
+      "@viryescalantec",
+      "Commission",
+      "$86.00",
+      3,
+      "3,020",
+      "$28.48",
+      1,
+      "$5.85"
+    ],
+    [
+      12,
+      "jaylawayla",
+      "@jaylajaneediaries",
+      "Commission",
+      "$74.77",
+      3,
+      "1,007",
+      "$74.25",
+      1,
+      "$6.08"
+    ],
+    [
+      13,
+      "BeccApproves",
+      "@mrsbryan27",
+      "Commission",
+      "$68.71",
+      1,
+      "285",
+      "$241.09",
+      1,
+      "$10.97"
+    ],
+    [
+      14,
+      "Raquel Chicas",
+      "@chicasv03",
+      "Commission",
+      "$68.45",
+      1,
+      "31",
+      "$2,208",
+      1,
+      "$12.60"
+    ],
+    [
+      15,
+      "Houston Psychic",
+      "@psychictexas",
+      "Commission",
+      "$66.34",
+      1,
+      "235",
+      "$282.30",
+      1,
+      "$10.80"
+    ],
+    [
+      16,
+      "LINZ STANLEY",
+      "@linzstanley",
+      "Commission",
+      "$66.30",
+      1,
+      "69",
+      "$960.87",
+      1,
+      "$9.95"
+    ],
+    [
+      17,
+      "abby rani",
+      "@abbyrani",
+      "Commission",
+      "$66.20",
+      4,
+      "2,124",
+      "$31.17",
+      1,
+      "$6.93"
+    ],
+    [
+      18,
+      "Chelse DeAnda",
+      "@chelsead92_",
+      "Commission",
+      "$64.98",
+      3,
+      "399",
+      "$162.86",
+      1,
+      "$5.42"
+    ],
+    [
+      19,
+      "GetDealsToday",
+      "@getdealstoday",
+      "Commission",
+      "$60.68",
+      2,
+      "5,583",
+      "$10.87",
+      1,
+      "$7.95"
+    ],
+    [
+      20,
+      "classicufindz",
+      "@classicufindz",
+      "Commission",
+      "$60.20",
+      2,
+      "1,409",
+      "$42.73",
+      1,
+      "$3.15"
+    ]
+  ],
+  "videos": [
+    [
+      1,
+      "@ericataylor2347",
+      "Flat-Fee",
+      "Cakey Makeup Hack - Brighten + Glow Facial Radiance Pads",
+      "Feb 18",
+      "$559.07",
+      20,
+      "13,207",
+      "$42.33",
+      "https://www.tiktok.com/@ericataylor2347/video/7608380676894706975",
+      "https://i.ibb.co/fYDcdJnm/erica1.png"
+    ],
+    [
+      2,
+      "@happilyeverbecka",
+      "Commission",
+      "My morning routine that changed everything",
+      "Sep 15",
+      "$243.65",
+      9,
+      "7,606",
+      "$32.03",
+      "https://www.tiktok.com/@happilyeverbecka/video/7550320740252323085",
+      "https://i.ibb.co/xSJdzCnn/Screenshot-2026-04-12-at-10-23-00-PM.png"
+    ],
+    [
+      3,
+      "@ericataylor2347",
+      "Flat-Fee",
+      "POV: you finally found a product that actually works",
+      "Dec 2",
+      "$219.69",
+      9,
+      "8,114",
+      "$27.08",
+      "https://www.tiktok.com/@ericataylor2347/video/7443936233975205151",
+      "https://i.ibb.co/Ps5Xj5Qd/Screenshot-2026-04-12-at-10-43-55-PM.png"
+    ],
+    [
+      4,
+      "@doublethedeals",
+      "Commission",
+      "Unboxing + honest review - worth the hype?",
+      "Dec 20",
+      "$193.28",
+      7,
+      "1,263",
+      "$153.03",
+      "https://www.tiktok.com/@doublethedeals/video/7586011404386209079",
+      "https://i.ibb.co/xtrJpPxs/Screenshot-2026-04-12-at-10-46-09-PM.png"
+    ],
+    [
+      5,
+      "@haileyxbush",
+      "Flat-Fee",
+      "Clean beauty finds that are actually affordable",
+      "Nov 30",
+      "$174.80",
+      4,
+      "8,445",
+      "$20.70",
+      "https://www.tiktok.com/@haileyxbush/video/7578662716341095735",
+      "https://i.ibb.co/TxsqWVp3/Screenshot-2026-04-12-at-10-50-24-PM.png"
+    ],
+    [
+      6,
+      "@influenced.edit",
+      "Commission",
+      "This is the one thing I tell everyone to try first",
+      "Dec 30",
+      "$129.25",
+      4,
+      "6,154",
+      "$21.00",
+      "https://www.tiktok.com/@influenced.edit/video/7589778386428415246",
+      "https://i.ibb.co/vC3nsHbS/Screenshot-2026-04-12-at-10-53-18-PM.png"
+    ],
+    [
+      7,
+      "@schweaver5",
+      "Commission",
+      "My go-to skincare staple this season",
+      "Dec 26",
+      "$171.99",
+      4,
+      "2,720",
+      "$63.23",
+      "https://www.tiktok.com/@schweaver5/video/7588303275238100237",
+      "https://i.ibb.co/ksZTjDkF/Screenshot-2026-04-12-at-11-00-54-PM.png"
+    ],
+    [
+      8,
+      "@ericamademebuyit",
+      "Flat-Fee",
+      "Why I switched my entire routine to this brand",
+      "Dec 19",
+      "$45.00",
+      3,
+      "2,625",
+      "$17.14",
+      "https://www.tiktok.com/@ericamademebuyit/video/7585761933488360717",
+      "https://i.ibb.co/FbnWVzjV/ericamademebuyit.png"
+    ],
+    [
+      9,
+      "@viryescalantec",
+      "Commission",
+      "Testing viral skincare so you dont have to",
+      "Jan 17",
+      "$86.00",
+      4,
+      "2,226",
+      "$38.63",
+      "https://www.tiktok.com/@viryescalantec/video/7596512366251019551",
+      "https://i.ibb.co/35F9vFG2/viry.png"
+    ],
+    [
+      10,
+      "@haileyxbush",
+      "Commission",
+      "This actually held up during my workouts",
+      "Jan 7",
+      "$45.00",
+      2,
+      "2,273",
+      "$19.80",
+      "https://www.tiktok.com/@haileyxbush/video/7592769634554613047",
+      "https://i.ibb.co/CpWrP4L0/hailey.png"
+    ],
+    [
+      11,
+      "@mrsbryan27",
+      "Commission",
+      "Okay but why is nobody talking about this?",
+      "Apr 8",
+      "$68.71",
+      1,
+      "348",
+      "$197.44",
+      "https://www.tiktok.com/@mrsbryan27/video/7626579981388369165",
+      "https://i.ibb.co/MkC5CP42/mrs.png"
+    ],
+    [
+      12,
+      "@psychictexas",
+      "Flat-Fee",
+      "My honest thoughts after 2 weeks of use",
+      "Jan 10",
+      "$66.34",
+      2,
+      "92",
+      "$721.09",
+      "https://www.tiktok.com/@psychictexas/video/7593892202250620174",
+      "https://i.ibb.co/zTgm5g2x/psy.png"
+    ],
+    [
+      13,
+      "@abbyrani",
+      "Commission",
+      "I was sceptical but now Im obsessed",
+      "Apr 5",
+      "$49.80",
+      4,
+      "1,908",
+      "$26.10",
+      "https://www.tiktok.com/@abbyrani/video/7489950034629528878",
+      "https://i.ibb.co/GvQrD3mr/abb.png"
+    ],
+    [
+      14,
+      "@chelsead92_",
+      "Commission",
+      "Dermatologist-approved and TikTok-approved",
+      "Dec 19",
+      "$64.98",
+      3,
+      "339",
+      "$191.68",
+      "https://www.tiktok.com/@chelsead92_/video/7450212721900965150",
+      "https://i.ibb.co/Xktc794T/che.png"
+    ],
+    [
+      15,
+      "@classicufindz",
+      "Flat-Fee",
+      "5 products I repurchase every single month",
+      "Mar 29",
+      "$60.20",
+      2,
+      "147",
+      "$409.52",
+      "https://www.tiktok.com/@classicufindz/video/7622746856182861069",
+      "https://i.ibb.co/B54RFktZ/clas.png"
+    ],
+    [
+      16,
+      "@tashaalovetoshop",
+      "Commission",
+      "Clean ingredients checklist - this one passes",
+      "Jan 24",
+      "$52.40",
+      2,
+      "3,586",
+      "$14.61",
+      "https://www.tiktok.com/@tashaalovetoshop/video/7598957168523480375",
+      "https://i.ibb.co/Fqkdcff2/tas.png"
+    ],
+    [
+      17,
+      "@rosedecherie",
+      "Commission",
+      "3 reasons this is my new holy grail product",
+      "Feb 14",
+      "$49.20",
+      3,
+      "893",
+      "$55.10",
+      "https://www.tiktok.com/@rosedecherie/video/7606644710165335309",
+      "https://i.ibb.co/KptJ1ms5/ros.png"
+    ],
+    [
+      18,
+      "@truefindsdaily",
+      "Commission",
+      "Bought this with my own money - heres the truth",
+      "Jan 17",
+      "$47.50",
+      1,
+      "187",
+      "$254.01",
+      "https://www.tiktok.com/@truefindsdaily/video/7596498938069290295",
+      "https://i.ibb.co/LhBjbVMb/tru.png"
+    ],
+    [
+      19,
+      "@laceylynnmcglynn",
+      "Flat-Fee",
+      "Adding this to my night routine was a game changer",
+      "Jan 30",
+      "$47.00",
+      2,
+      "606",
+      "$77.56",
+      "https://www.tiktok.com/@laceylynnmcglynn/video/7601308696043425055",
+      "https://i.ibb.co/hJPmKW42/lac.png"
+    ],
+    [
+      20,
+      "@reddroxx",
+      "Commission",
+      "Rating every product in my routine out of 10",
+      "Feb 12",
+      "$46.48",
+      2,
+      "2,850",
+      "$16.31",
+      "https://www.tiktok.com/@reddroxx/video/7606218564860644639",
+      "https://i.ibb.co/4nq17b83/red.png"
+    ]
+  ],
+  "products": [
+    [
+      "Brighten + Glow Facial Radiance Pads with Glycolic + Lactic Acids",
+      "1729444457839891167",
+      false,
+      2349.87,
+      2207,
+      69
+    ],
+    [
+      "Ingrown Hair Pads 60ct & KP Bump Eraser Body Scrub Strawberry 2oz Duo",
+      "1732016864752931551",
+      true,
+      882.94,
+      1766.9,
+      23
+    ],
+    [
+      "KP Bump Eraser Body Scrub 10% AHA",
+      "1729444460628906719",
+      false,
+      861.49,
+      1060.5,
+      37
+    ],
+    [
+      "KP Bump Eraser Body Scrub 10% AHA Toasted Coconut",
+      "1732222937286021855",
+      false,
+      568.2,
+      874.3,
+      24
+    ],
+    [
+      "AM/PM Exclusive Pads Bundle for exfoliation and hydration",
+      "1732292801223758559",
+      true,
+      508.01,
+      0,
+      8
+    ],
+    [
+      "KP Bump Eraser Body Scrub 10% AHA Fresh Strawberry",
+      "1730273324509991647",
+      false,
+      475.33,
+      614.21,
+      31
+    ],
+    [
+      "Ingrown Hair Pads with BHA + AHA",
+      "1731089073057010399",
+      false,
+      407.75,
+      232.6,
+      13
+    ],
+    [
+      "Ultra Repair Cream Intense Hydration",
+      "1729440589585945311",
+      false,
+      365.11,
+      435,
+      11
+    ],
+    [
+      "Hydrating Pillow Pads and 2oz URC Hydration Boost Bundle",
+      "1732070580260279007",
+      true,
+      323.63,
+      897.7,
+      6
+    ],
+    [
+      "Ultra Repair Hydrating Pillow Pads with Colloidal Oatmeal",
+      "1732066215916376799",
+      false,
+      288.34,
+      291,
+      10
+    ]
+  ],
+  "sample_products": [
+    [
+      "AM/PM Exclusive Pads Bundle",
+      "https://i.ibb.co/vxKH7xmn/mapm.jpg",
+      778,
+      876,
+      null
+    ],
+    [
+      "Sensitive Skin Full Routine Bundle",
+      "https://i.ibb.co/YBDgXj2X/sens.jpg",
+      660,
+      617,
+      "Apr 6"
+    ],
+    [
+      "Body Bumps Exclusive Bundle",
+      "https://i.ibb.co/hRxPh2ST/bumps.jpg",
+      600,
+      893,
+      null
+    ],
+    [
+      "FAB Cleanse + Exfoliate Duo",
+      "https://i.ibb.co/cKW0BdZZ/cleanse.jpg",
+      142,
+      250,
+      null
+    ],
+    [
+      "Ingrown Hair + KP Bump Eraser Bundle",
+      "https://i.ibb.co/9kZkmFy0/ing.jpg",
+      128,
+      250,
+      null
+    ],
+    [
+      "Hydrating Pillow Pads and 2oz URC Bundle",
+      "https://i.ibb.co/RTwDMh1H/pillow.jpg",
+      111,
+      250,
+      null
+    ]
+  ],
+  "flat_fee": [
+    [
+      "@simplysprinkled",
+      "Apr 2026",
+      20,
+      1500,
+      75,
+      0,
+      "Havent posted all videos yet"
+    ],
+    [
+      "@breeeee6969",
+      "Apr 2026",
+      20,
+      2000,
+      100,
+      0,
+      "Havent posted all videos yet"
+    ],
+    [
+      "@sarasfinds13",
+      "Apr 2026",
+      10,
+      1000,
+      100,
+      0,
+      "Havent posted all videos yet"
+    ],
+    [
+      "@lesliesoldano",
+      "Apr 2026",
+      20,
+      2000,
+      100,
+      0,
+      "Havent posted all videos yet"
+    ],
+    [
+      "@schweaver5",
+      "Apr 2026",
+      20,
+      1800,
+      90,
+      0,
+      "Havent posted all videos yet"
+    ],
+    [
+      "@hannahleigh143",
+      "Mar 2026",
+      10,
+      900,
+      90,
+      0,
+      ""
+    ],
+    [
+      "@ashley.jernigan",
+      "Mar 2026",
+      5,
+      2000,
+      400,
+      0,
+      ""
+    ],
+    [
+      "@breeeee6969",
+      "Mar 2026",
+      5,
+      600,
+      120,
+      0,
+      ""
+    ],
+    [
+      "@onlystarz1",
+      "Mar 2026",
+      10,
+      800,
+      80,
+      0,
+      ""
+    ],
+    [
+      "@lesliesoldano",
+      "Mar 2026",
+      10,
+      1000,
+      100,
+      0,
+      ""
+    ]
+  ],
+  "trends": [
+    [
+      "Nov '25",
+      6285,
+      false,
+      null
+    ],
+    [
+      "Dec '25",
+      54007,
+      false,
+      null
+    ],
+    [
+      "Jan '26",
+      43750,
+      false,
+      null
+    ],
+    [
+      "Feb '26",
+      71622,
+      false,
+      null
+    ],
+    [
+      "Mar '26",
+      28553,
+      false,
+      null
+    ],
+    [
+      "Apr '26",
+      8927,
+      true,
+      20600
+    ]
+  ],
+  "summary_hero_title": "GMV hit $142K - but 72% of your creators posted once and never came back.",
+  "summary_hero_body": "March was your strongest GMV month since launch. However, 1,589 creators posted once and churned. Converting even 10% of them to a second post would add ~160 returning creators per month.",
+  "summary_hero_action": "Re-engage One and Done creators within 7 days of their first post",
+  "summary_stats": [
+    [
+      "Total GMV (Mar peak)",
+      "$142K"
+    ],
+    [
+      "Jan-Feb retention",
+      "27.8%"
+    ],
+    [
+      "One and Done creators",
+      "1,589"
+    ],
+    [
+      "Champions",
+      "13"
+    ]
+  ],
+  "summary_cards": [
+    {
+      "icon": "warning",
+      "badge": "At Risk",
+      "badge_bg": "var(--blue-dim)",
+      "badge_color": "var(--blue)",
+      "title": "23 At Risk creators went dark - worth $497 avg GMV each",
+      "body": "These creators drove $11.4K in prior months.",
+      "action": "Personal outreach this week. Offer a new sample or commission bump."
+    },
+    {
+      "icon": "target",
+      "badge": "Samples",
+      "badge_bg": "var(--blue-dim)",
+      "badge_color": "var(--blue)",
+      "title": "Sample post rate dropped to 13.8% - 4-6 week lag in effect",
+      "body": "Sampled creators still drove 52.8% of shop GMV.",
+      "action": "Fast-track sample outreach within 7 days."
+    },
+    {
+      "icon": "box",
+      "badge": "Products",
+      "badge_bg": "var(--blue-dim)",
+      "badge_color": "var(--blue)",
+      "title": "Bundle SOW dropped 10.6pp to 19.2% - worth monitoring",
+      "body": "Bundle GMV fell from $2,665 to $1,715.",
+      "action": "Brief 10+ creators specifically on bundle content."
+    }
+  ]
+};
+/* ============================================================
+   END OF DATA SECTION â do not edit below this line
+============================================================ */
 </script>
 
 <nav>
   <div class="nav-top">
     <div class="nav-brand">
-      <div class="nav-logo">H</div>
-      <div class="nav-title" id="nav-agency">Humanz</div>
+      <div class="nav-logo" id="nav-logo">H</div>
+      <div class="nav-title" id="nav-title">Humanz</div>
     </div>
     <div class="nav-right">
-      <span class="nav-updated" id="nav-updated">Loading...</span>
-      <span class="nav-client" id="nav-client">First Aid Beauty</span>
-      <span class="nav-period" id="nav-period">—</span>
+      <span class="nav-updated" id="nav-updated"></span>
+      <span class="nav-client" id="nav-client"></span>
+      <span class="nav-period" id="nav-period"></span>
     </div>
   </div>
   <div class="nav-links">
@@ -241,217 +1082,203 @@ const SHEET_ID = '2PACX-1vQFDfiCYevFPhZjhV4pbsM2KYyKMLjXP0fClwZFnUcXvw7TmwxxT0P2
 </nav>
 
 <div class="page">
-  <div class="loading-screen" id="loading">
-    <div class="spinner"></div>
-    <div class="loading-text">Loading dashboard data...</div>
-  </div>
-  <div id="dashboard" style="display:none">
 
-    <div class="hero" id="overview">
-      <div class="hero-eyebrow">TikTok Shop Monthly Report</div>
-      <h1 id="hero-title">First Aid Beauty<br><em>Shop Performance</em></h1>
-      <div class="hero-sub" id="hero-sub">Loading...</div>
-      <div class="hero-pills">
-        <div class="pill"><div class="dot" style="background:var(--teal);"></div>TikTok Shop</div>
-        <div class="pill"><div class="dot" style="background:var(--red);"></div>Creator Affiliates</div>
-        <div class="pill" id="pill-enrolled"><div class="dot" style="background:var(--blue);"></div>— Creators Tracked</div>
-        <div class="pill"><div class="dot" style="background:var(--amber);"></div>Sample Programme</div>
-      </div>
-    </div>
-
-    <div class="highlights">
-      <div class="hl-title">Monthly Highlights</div>
-      <div class="hl-text" id="highlights-text">Loading...</div>
-    </div>
-
-    <!-- KPI -->
-    <div class="section" id="kpi">
-      <div class="sec-label">Results — what's happening now</div>
-      <div class="sec-title" id="kpi-title">— Week — in progress</div>
-      <div class="sec-sub" id="kpi-sub">Loading...</div>
-
-      <div class="kpi" style="margin-bottom:14px;">
-        <div class="kpi-accent" style="background:var(--red);"></div>
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
-          <div>
-            <div class="kpi-label">Total GMV — weekly progress</div>
-            <div class="kpi-val" style="color:var(--ink);" id="gmv-total-val">—</div>
-          </div>
-          <div style="text-align:right;">
-            <div class="kpi-badge dn" id="gmv-mom-badge">—</div>
-            <div style="font-size:10px;color:var(--soft);margin-top:4px;">W3 + W4 historically deliver 67% of monthly GMV</div>
-          </div>
-        </div>
-        <div style="margin-bottom:20px;">
-          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:5px;">
-            <span>$0</span><span style="font-weight:600;color:var(--ink);" id="gmv-progress-label">—</span><span id="gmv-target-label">$100K</span>
-          </div>
-          <div style="height:8px;background:var(--surface3);border-radius:20px;overflow:hidden;">
-            <div id="gmv-progress-bar" style="height:100%;background:var(--red);border-radius:20px;width:0%;"></div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px;" id="weekly-cards"></div>
-        <div style="position:relative;height:150px;">
-          <canvas id="pacingChart" role="img" aria-label="Weekly GMV vs historical targets">Weekly GMV pacing chart</canvas>
-        </div>
-        <div style="display:flex;gap:16px;margin-top:10px;flex-wrap:wrap;">
-          <span style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--soft);"><span style="width:10px;height:10px;border-radius:2px;background:#e8284a;display:inline-block;"></span>Actual GMV (closed)</span>
-          <span style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--soft);"><span style="width:10px;height:10px;border-radius:2px;background:rgba(232,40,74,0.55);display:inline-block;"></span>Actual GMV (partial week)</span>
-          <span style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--soft);"><span style="width:10px;height:10px;border-radius:2px;background:#378ADD;display:inline-block;"></span>Weekly target (historical avg)</span>
-        </div>
-        <div style="margin-top:14px;padding:10px 14px;background:var(--surface3);border-radius:8px;font-size:11px;line-height:1.7;color:var(--soft);">
-          <strong style="color:var(--ink2);">How weekly targets are set:</strong> Rather than splitting the monthly target evenly, targets are weighted by the actual GMV distribution observed across Dec 2025–Mar 2026 (W1: 15%, W2: 18%, W3: 32%, W4: 36%). This reflects how this account genuinely ramps — slow early, back-heavy — so early-week shortfalls are expected, not alarming.
-        </div>
-      </div>
-
-      <div class="kpi-grid" id="live-kpis"></div>
-
-      <div style="display:flex;align-items:center;gap:12px;margin:32px 0 16px;">
-        <div style="flex:1;height:1px;background:var(--border);"></div>
-        <div style="display:flex;align-items:center;gap:7px;padding:5px 14px;border:1px solid var(--amber-mid);border-radius:20px;background:var(--amber-dim);">
-          <div style="width:7px;height:7px;border-radius:50%;background:var(--amber);"></div>
-          <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);">Pipeline investments — results land next month</span>
-        </div>
-        <div style="flex:1;height:1px;background:var(--border);"></div>
-      </div>
-      <div style="font-size:12px;color:var(--soft);margin-bottom:16px;">These are investments made this month. The GMV impact arrives 4–6 weeks later — they are not current-month underperformance.</div>
-      <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr);" id="pipeline-kpis"></div>
-    </div>
-
-    <!-- TOP CREATORS -->
-    <div class="section" id="creators">
-      <div class="sec-label">Creator Performance</div>
-      <div class="sec-title">Top 20 Creators This Month</div>
-      <div class="sec-sub">Top 5 featured · remaining 15 in table below.</div>
-      <div class="creator-grid" id="creator-cards"></div>
-      <div class="sub-label">Creators 6 – 20</div>
-      <div class="table-wrap">
-        <table class="vtable">
-          <thead><tr><th>#</th><th>Creator</th><th>Type</th><th class="r">GMV</th><th class="r">Orders</th><th class="r">Product Views</th><th class="r">GPM</th><th class="r">Videos</th><th class="r">Commission</th></tr></thead>
-          <tbody id="creators-tbody"></tbody>
-        </table>
-      </div>
-      <button class="expand-btn" id="creators-btn" onclick="toggleTable('creators','15 creators')"><span id="creators-btn-text">Show all 15 creators</span><span class="arrow">▼</span></button>
-    </div>
-
-    <!-- TOP VIDEOS -->
-    <div class="section" id="videos">
-      <div class="sec-label">Content</div>
-      <div class="sec-title">Top 20 Videos by GMV</div>
-      <div class="sec-sub">Top 5 featured · remaining 15 in table below.</div>
-      <div class="top5-grid" id="video-cards"></div>
-      <div class="sub-label">Videos 6 – 20</div>
-      <div class="table-wrap">
-        <table class="vtable">
-          <thead><tr><th>#</th><th>Creator</th><th>Type</th><th>Caption</th><th>Posted</th><th class="r">GMV</th><th class="r">Orders</th><th class="r">Views</th><th class="r">GPM</th><th></th></tr></thead>
-          <tbody id="videos-tbody"></tbody>
-        </table>
-      </div>
-      <button class="expand-btn" id="videos-btn" onclick="toggleTable('videos','15 videos')"><span id="videos-btn-text">Show all 15 videos</span><span class="arrow">▼</span></button>
-    </div>
-
-    <!-- SAMPLES -->
-    <div class="section" id="samples">
-      <div class="sec-label">Sample Programme</div>
-      <div class="sec-title" id="samples-title">Samples Tracking</div>
-      <div class="sec-sub">Full journey from sample sent → video posted → sale converted.</div>
-      <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:0;margin-bottom:28px;" id="sample-funnel"></div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;" id="sample-products"></div>
-    </div>
-
-    <!-- PRODUCTS -->
-    <div class="section" id="products">
-      <div class="sec-label">Products</div>
-      <div class="sec-title">Top Products This Month</div>
-      <div class="sec-sub">Ranked by GMV. Bundle products tagged in purple.</div>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px;" id="product-scards"></div>
-      <div class="table-wrap">
-        <div class="table-header">
-          <div><div style="font-size:13px;font-weight:600;color:var(--ink);">Top 10 Products by GMV</div><div style="font-size:11px;color:var(--muted);">Bundle products marked in purple · MoM vs last month</div></div>
-        </div>
-        <table class="ptable">
-          <thead><tr><th class="c">#</th><th>Product</th><th class="r">GMV</th><th>GMV Bar</th><th class="c">% of Total</th><th class="r">Orders</th><th class="c">MoM GMV</th></tr></thead>
-          <tbody id="products-tbody"></tbody>
-        </table>
-        <button class="expand-btn" id="products-btn" onclick="toggleProducts()"><span id="products-btn-text">Show all products</span><span class="arrow">▼</span></button>
-      </div>
-    </div>
-
-    <!-- FLAT FEE -->
-    <div class="section" id="flatfee">
-      <div class="sec-label">Flat-Fee Creators</div>
-      <div class="sec-title" id="flatfee-title">Flat-Fee Tracker</div>
-      <div class="sec-sub">Manual entries for this month. Cost per video = total payment ÷ videos.</div>
-      <div class="table-wrap">
-        <table class="flat-fee-table">
-          <thead><tr><th>Creator Handle</th><th>Month</th><th class="r">Videos</th><th class="r">Total Payment</th><th class="r">Cost / Video</th><th class="r">GMV Generated</th><th>Notes</th></tr></thead>
-          <tbody id="flatfee-tbody"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- TRENDS -->
-    <div class="section" id="trends">
-      <div class="sec-label">Monthly Trends</div>
-      <div class="sec-title">6-Month Rolling Performance</div>
-      <div class="sec-sub" id="trends-sub">Rolling view. Current month shown as partial + projected.</div>
-      <div class="chart-wrap">
-        <div class="chart-header">
-          <div><div class="chart-title-text">GMV — closed months vs current month</div><div class="chart-sub-text" id="trend-chart-sub">Current month is in progress</div></div>
-          <div class="chart-badge">6-month view</div>
-        </div>
-        <div class="chart-body">
-          <div style="display:flex;gap:18px;margin-bottom:12px;flex-wrap:wrap;">
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:#0a9e83;"></div>Closed month (final)</div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(10,158,131,0.4);"></div>Current month actual (partial)</div>
-            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(26,111,212,0.2);border:1.5px dashed #1a6fd4;"></div>Current month projected EOMonth</div>
-          </div>
-          <div class="chart-canvas-wrap"><canvas id="trendChart" role="img" aria-label="6-month GMV trend chart">6-month GMV trend</canvas></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SUMMARY -->
-    <div class="section" id="summary">
-      <div class="sec-label">Summary</div>
-      <div class="sec-title">Key Takeaways</div>
-      <div class="sec-sub">Hero insight + supporting findings with recommended actions.</div>
-      <div class="hero-takeaway">
-        <div class="hero-eyebrow-t" id="summary-eyebrow">Hero Insight</div>
-        <div class="hero-title-t" id="summary-title">Loading...</div>
-        <div class="hero-body-t" id="summary-body">Loading...</div>
-        <div class="hero-action-t" id="summary-action">Loading...</div>
-        <div class="hero-stats-t" id="summary-stats"></div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px;" id="insight-cards"></div>
-    </div>
-
+<div class="hero" id="overview">
+  <div class="hero-eyebrow">TikTok Shop Monthly Report</div>
+  <h1 id="hero-h1">First Aid Beauty<br><em>Shop Performance</em></h1>
+  <div class="hero-sub">Monthly overview of TikTok Shop performance, creator activity, video results, and sample programme tracking.</div>
+  <div class="hero-pills">
+    <div class="pill"><div class="dot" style="background:var(--teal);"></div>TikTok Shop</div>
+    <div class="pill"><div class="dot" style="background:var(--red);"></div>Creator Affiliates</div>
+    <div class="pill" id="pill-enrolled"><div class="dot" style="background:var(--blue);"></div>â Creators Tracked</div>
+    <div class="pill"><div class="dot" style="background:var(--amber);"></div>Sample Programme</div>
   </div>
 </div>
 
+<div class="highlights"><div class="hl-title">Monthly Highlights</div><div class="hl-text" id="highlights"></div></div>
+
+<!-- KPI -->
+<div class="section" id="kpi">
+  <div class="sec-label">Results â what's happening now</div>
+  <div class="sec-title" id="kpi-title"></div>
+  <div class="sec-sub" id="kpi-sub"></div>
+
+  <div class="kpi" style="margin-bottom:14px;">
+    <div class="kpi-accent" style="background:var(--red);"></div>
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:18px;">
+      <div>
+        <div class="kpi-label">Total GMV â weekly progress</div>
+        <div class="kpi-val" style="color:var(--ink);" id="gmv-val"></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="kpi-badge" id="gmv-badge"></div>
+        <div style="font-size:10px;color:var(--soft);margin-top:4px;">W3 + W4 historically deliver 67% of monthly GMV</div>
+      </div>
+    </div>
+    <div style="margin-bottom:20px;">
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:5px;">
+        <span>$0</span><span style="font-weight:600;color:var(--ink);" id="gmv-progress-label"></span><span id="gmv-target-label"></span>
+      </div>
+      <div style="height:8px;background:var(--surface3);border-radius:20px;overflow:hidden;">
+        <div id="gmv-prog-bar" style="height:100%;background:var(--red);border-radius:20px;width:0%;transition:width .5s;"></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px;" id="weekly-cards"></div>
+    <div style="position:relative;height:150px;"><canvas id="pacingChart" role="img" aria-label="Weekly GMV vs targets">Weekly pacing</canvas></div>
+    <div style="display:flex;gap:16px;margin-top:10px;flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--soft);"><span style="width:10px;height:10px;border-radius:2px;background:#e8284a;display:inline-block;"></span>Actual GMV (closed)</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--soft);"><span style="width:10px;height:10px;border-radius:2px;background:rgba(232,40,74,0.55);display:inline-block;"></span>Actual GMV (partial week)</span>
+      <span style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--soft);"><span style="width:10px;height:10px;border-radius:2px;background:#378ADD;display:inline-block;"></span>Weekly target (historical avg)</span>
+    </div>
+    <div style="margin-top:14px;padding:10px 14px;background:var(--surface3);border-radius:8px;font-size:11px;line-height:1.7;color:var(--soft);">
+      <strong style="color:var(--ink2);">How weekly targets are set:</strong> Targets are weighted by actual GMV distribution across Dec 2025âMar 2026 (W1: 15%, W2: 18%, W3: 32%, W4: 36%). This account is back-heavy by nature â early-week shortfalls are expected, not alarming.
+    </div>
+  </div>
+
+  <div class="kpi-grid" id="live-kpis"></div>
+
+  <div style="display:flex;align-items:center;gap:12px;margin:32px 0 16px;">
+    <div style="flex:1;height:1px;background:var(--border);"></div>
+    <div style="display:flex;align-items:center;gap:7px;padding:5px 14px;border:1px solid var(--amber-mid);border-radius:20px;background:var(--amber-dim);">
+      <div style="width:7px;height:7px;border-radius:50%;background:var(--amber);"></div>
+      <span style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);">Pipeline investments â results land next month</span>
+    </div>
+    <div style="flex:1;height:1px;background:var(--border);"></div>
+  </div>
+  <div style="font-size:12px;color:var(--soft);margin-bottom:16px;">These are investments made this month. The GMV impact arrives 4â6 weeks later â not current-month underperformance.</div>
+  <div class="kpi-grid" style="grid-template-columns:repeat(2,1fr);" id="pipeline-kpis"></div>
+</div>
+
+<!-- TOP CREATORS -->
+<div class="section" id="creators">
+  <div class="sec-label">Creator Performance</div>
+  <div class="sec-title">Top 20 Creators This Month</div>
+  <div class="sec-sub">Top 5 featured Â· remaining 15 in table below.</div>
+  <div class="creator-grid" id="creator-cards"></div>
+  <div class="sub-label">Creators 6â20</div>
+  <div class="table-wrap">
+    <table class="vtable">
+      <thead><tr><th>#</th><th>Creator</th><th>Type</th><th class="r">GMV</th><th class="r">Orders</th><th class="r">Product Views</th><th class="r">GPM</th><th class="r">Videos</th><th class="r">Commission</th></tr></thead>
+      <tbody id="creators-tbody"></tbody>
+    </table>
+  </div>
+  <button class="expand-btn" id="creators-btn" onclick="toggleTable('creators','15 creators')"><span id="creators-btn-text">Show all 15 creators</span><span class="arrow">â¼</span></button>
+</div>
+
+<!-- TOP VIDEOS -->
+<div class="section" id="videos">
+  <div class="sec-label">Content</div>
+  <div class="sec-title">Top 20 Videos by GMV</div>
+  <div class="sec-sub">Top 5 featured Â· remaining 15 in table below.</div>
+  <div class="top5-grid" id="video-cards"></div>
+  <div class="sub-label">Videos 6â20</div>
+  <div class="table-wrap">
+    <table class="vtable">
+      <thead><tr><th>#</th><th>Creator</th><th>Type</th><th>Caption</th><th>Posted</th><th class="r">GMV</th><th class="r">Orders</th><th class="r">Views</th><th class="r">GPM</th><th></th></tr></thead>
+      <tbody id="videos-tbody"></tbody>
+    </table>
+  </div>
+  <button class="expand-btn" id="videos-btn" onclick="toggleTable('videos','15 videos')"><span id="videos-btn-text">Show all 15 videos</span><span class="arrow">â¼</span></button>
+</div>
+
+<!-- SAMPLES -->
+<div class="section" id="samples">
+  <div class="sec-label">Sample Programme</div>
+  <div class="sec-title" id="samples-title"></div>
+  <div class="sec-sub">Full journey from sample sent â video posted â sale converted.</div>
+  <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:0;margin-bottom:28px;" id="sample-funnel"></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;" id="sample-products"></div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section" id="products">
+  <div class="sec-label">Products</div>
+  <div class="sec-title">Top Products This Month</div>
+  <div class="sec-sub">Ranked by GMV. Bundle products tagged in purple.</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:24px;" id="product-scards"></div>
+  <div class="table-wrap">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:#f9f8f5;">
+      <div><div style="font-size:13px;font-weight:600;color:var(--ink);">Top 10 Products by GMV</div><div style="font-size:11px;color:var(--muted);">Bundle products marked in purple Â· MoM vs last month</div></div>
+    </div>
+    <table class="ptable">
+      <thead><tr><th class="c">#</th><th>Product</th><th class="r">GMV</th><th>GMV Bar</th><th class="c">% of Total</th><th class="r">Orders</th><th class="c">MoM GMV</th></tr></thead>
+      <tbody id="products-tbody"></tbody>
+    </table>
+    <button class="expand-btn" id="products-btn" onclick="toggleProducts()"><span id="products-btn-text">Show all 10 products</span><span class="arrow">â¼</span></button>
+  </div>
+</div>
+
+<!-- FLAT FEE -->
+<div class="section" id="flatfee">
+  <div class="sec-label">Flat-Fee Creators</div>
+  <div class="sec-title" id="flatfee-title"></div>
+  <div class="sec-sub">Manual entries. Cost per video = total payment Ã· videos.</div>
+  <div class="table-wrap">
+    <table class="fftable">
+      <thead><tr><th>Creator Handle</th><th>Month</th><th class="r">Videos</th><th class="r">Total Payment</th><th class="r">Cost / Video</th><th class="r">GMV Generated</th><th>Notes</th></tr></thead>
+      <tbody id="flatfee-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TRENDS -->
+<div class="section" id="trends">
+  <div class="sec-label">Monthly Trends</div>
+  <div class="sec-title">6-Month Rolling Performance</div>
+  <div class="sec-sub">Current month shown as partial + projected end-of-month.</div>
+  <div class="chart-wrap">
+    <div class="chart-header">
+      <div><div class="chart-title-text">GMV â closed months vs current month</div><div class="chart-sub-text" id="trend-sub"></div></div>
+      <div class="chart-badge">6-month view</div>
+    </div>
+    <div class="chart-body">
+      <div style="display:flex;gap:18px;margin-bottom:12px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:#0a9e83;"></div>Closed month</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(10,158,131,0.4);"></div>Current month (partial)</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(26,111,212,0.2);border:1.5px dashed #1a6fd4;"></div>Projected EOMonth</div>
+      </div>
+      <div class="chart-canvas-wrap"><canvas id="trendChart" role="img" aria-label="6-month GMV trend">6-month GMV</canvas></div>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section" id="summary">
+  <div class="sec-label">Summary</div>
+  <div class="sec-title">Key Takeaways</div>
+  <div class="sec-sub">Hero insight + supporting findings with recommended actions.</div>
+  <div class="hero-takeaway">
+    <div class="hero-eyebrow-t" id="sum-eyebrow">Hero Insight</div>
+    <div class="hero-title-t" id="sum-title"></div>
+    <div class="hero-body-t" id="sum-body"></div>
+    <div class="hero-action-t" id="sum-action"></div>
+    <div class="hero-stats-t" id="sum-stats"></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" id="insight-cards"></div>
+</div>
+
+</div>
 <footer>
-  <div id="footer-left">Humanz × First Aid Beauty</div>
-  <div id="footer-right">TikTok Shop Monthly Report</div>
+  <div id="footer-l"></div>
+  <div id="footer-r"></div>
 </footer>
 
 <script>
-/* ============================================================
-   UTILITY
-============================================================ */
+/* ââ NAV âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function navTo(id,e){
   document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
   document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
   e.target.classList.add('active');
 }
-const navIds=['overview','kpi','creators','videos','samples','products','flatfee','trends','summary'];
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(en=>{if(en.isIntersecting){
     document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
     document.querySelector(`.nav-link[onclick="navTo('${en.target.id}',event)"]`)?.classList.add('active');
   }});
 },{threshold:0.15,rootMargin:'-85px 0px -55% 0px'});
-navIds.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el);});
-
+['overview','kpi','creators','videos','samples','products','flatfee','trends','summary'].forEach(id=>{
+  const el=document.getElementById(id);if(el)obs.observe(el);
+});
 function toggleTable(name,label){
   const rows=document.querySelectorAll(`#${name}-tbody .collapsible-row`);
   const btn=document.getElementById(`${name}-btn`);
@@ -467,17 +1294,14 @@ function toggleProducts(){
   const isOpen=btn.classList.contains('open');
   rows.forEach(r=>r.classList.toggle('hidden',isOpen));
   btn.classList.toggle('open',!isOpen);
-  document.getElementById('products-btn-text').textContent=isOpen?'Show all products':'Collapse';
+  document.getElementById('products-btn-text').textContent=isOpen?'Show all 10 products':'Collapse';
 }
-
 function momBadge(cur,prev){
-  if(!prev||prev==0)return`<span class="mom-badge neu">→ New</span>`;
+  if(!prev)return`<span class="mom-badge neu">â New</span>`;
   const v=((cur-prev)/prev*100).toFixed(1);
-  const cls=v>0?'up':'dn',arrow=v>0?'▲':'▼',sign=v>0?'+':'';
-  return`<span class="mom-badge ${cls}">${arrow} ${sign}${v}%</span>`;
+  return`<span class="mom-badge ${v>=0?'up':'dn'}">${v>=0?'â²':'â¼'} ${v>=0?'+':''}${v}%</span>`;
 }
-
-const avatarColors=[
+const AV=[
   {c:'var(--red)',b:'var(--red-mid)',bg:'var(--red-dim)'},
   {c:'var(--teal)',b:'var(--teal-mid)',bg:'var(--teal-dim)'},
   {c:'var(--amber)',b:'var(--amber-mid)',bg:'var(--amber-dim)'},
@@ -485,504 +1309,335 @@ const avatarColors=[
   {c:'var(--purple)',b:'var(--purple-mid)',bg:'var(--purple-dim)'},
 ];
 
-/* ============================================================
-   GOOGLE SHEETS CSV FETCH
-============================================================ */
-async function fetchSheet(tabName){
-  const url=`https://docs.google.com/spreadsheets/d/e/${SHEET_ID}/pub?output=csv&sheet=${encodeURIComponent(tabName)}`;
-  try{
-    const res=await fetch(url);
-    if(!res.ok)throw new Error(`HTTP ${res.status} on tab "${tabName}"`);
-    const text=await res.text();
-    if(text.trim().startsWith('<!DOCTYPE')||text.includes('accounts.google.com'))
-      throw new Error(`Tab "${tabName}" returned a login page — make sure the sheet is published to web.`);
-    const rows=parseCSV(text);
-    return rows.filter(r=>Object.values(r).some(v=>v!==''));
-  }catch(e){
-    throw new Error(`Tab "${tabName}": ${e.message}`);
-  }
-}
+/* ââ BUILD âââââââââââââââââââââââââââââââââââââââââââââââââ */
+document.getElementById('nav-logo').textContent=D.agency[0];
+document.getElementById('nav-title').textContent=D.agency;
+document.getElementById('nav-client').textContent=D.client;
+document.getElementById('nav-period').textContent=D.report_month;
+document.getElementById('nav-updated').textContent=`Last updated ${D.last_updated}`;
+document.getElementById('hero-h1').innerHTML=`${D.client}<br><em>Shop Performance</em>`;
+document.getElementById('pill-enrolled').innerHTML=`<div class="dot" style="background:var(--blue);width:6px;height:6px;border-radius:50%;"></div>${D.enrolled_affiliates.toLocaleString()} Creators Tracked`;
+document.getElementById('highlights').textContent=D.highlights;
+document.getElementById('kpi-title').textContent=`${D.report_month} â Week ${D.w2_partial?'2 in progress':'2 closed'}`;
+document.getElementById('kpi-sub').textContent=`${D.days_elapsed} of ${D.days_in_month} days elapsed Â· Last updated ${D.last_updated} Â· Targets based on DecâMar historical pattern`;
+document.getElementById('samples-title').textContent=`Samples Tracking â ${D.report_month}`;
+document.getElementById('flatfee-title').textContent=`Flat-Fee Tracker â ${D.report_month}`;
+document.getElementById('footer-l').textContent=`${D.agency} Ã ${D.client}`;
+document.getElementById('footer-r').textContent=`TikTok Shop Monthly Report Â· ${D.report_month} Â· Last updated ${D.last_updated}`;
 
-function parseCSV(text){
-  const lines=text.trim().split('\n');
-  const headers=parseCSVLine(lines[0]);
-  return lines.slice(1).map(line=>{
-    const vals=parseCSVLine(line);
-    const obj={};
-    headers.forEach((h,i)=>obj[h.trim()]=vals[i]?.trim()||'');
-    return obj;
-  });
-}
+/* GMV */
+const gmvTotal=(D.w1_gmv||0)+(D.w2_gmv||0)+(D.w3_gmv||0)+(D.w4_gmv||0);
+const gmvPct=(gmvTotal/D.gmv_target*100).toFixed(1);
+const gmvMom=D.gmv_last_month?((gmvTotal-D.gmv_last_month)/D.gmv_last_month*100).toFixed(1):null;
+const isUp=gmvMom&&parseFloat(gmvMom)>=0;
+document.getElementById('gmv-val').innerHTML=`$${gmvTotal.toLocaleString()} <span style="font-size:14px;color:var(--muted);">of $${(D.gmv_target/1000).toFixed(0)}K target</span>`;
+document.getElementById('gmv-prog-bar').style.width=Math.min(gmvPct,100)+'%';
+document.getElementById('gmv-progress-label').textContent=`$${gmvTotal.toLocaleString()} banked Â· ${gmvPct}% of target`;
+document.getElementById('gmv-target-label').textContent=`$${(D.gmv_target/1000).toFixed(0)}K`;
+const badge=document.getElementById('gmv-badge');
+badge.className=`kpi-badge ${isUp?'up':'dn'}`;
+badge.textContent=`${isUp?'â²':'â¼'} ${isUp?'+':''}${gmvMom}% vs last month ($${D.gmv_last_month.toLocaleString()})`;
 
-function parseCSVLine(line){
-  const result=[];let cur='';let inQ=false;
-  for(let i=0;i<line.length;i++){
-    if(line[i]==='"'){inQ=!inQ;}
-    else if(line[i]===','&&!inQ){result.push(cur);cur='';}
-    else{cur+=line[i];}
-  }
-  result.push(cur);
-  return result.map(v=>v.replace(/^"|"$/g,'').replace(/""/g,'"'));
-}
-
-function num(v){return parseFloat(String(v).replace(/[$,]/g,''))||0;}
-function pct(v){return parseFloat(String(v).replace(/%/,''))||0;}
-
-/* ============================================================
-   RENDER FUNCTIONS
-============================================================ */
-function renderConfig(rows){
-  const cfg={};
-  rows.forEach(r=>{if(r.key)cfg[r.key]=r.value;});
-  document.getElementById('nav-agency').textContent=cfg.agency_name||'Humanz';
-  document.getElementById('nav-client').textContent=cfg.client_name||'First Aid Beauty';
-  document.getElementById('nav-period').textContent=cfg.report_month_short||'—';
-  document.getElementById('nav-updated').textContent=`Last updated ${cfg.last_updated||'—'}`;
-  document.getElementById('hero-title').innerHTML=`${cfg.client_name||'First Aid Beauty'}<br><em>Shop Performance</em>`;
-  document.getElementById('hero-sub').textContent=cfg.hero_sub||'Monthly overview of TikTok Shop performance.';
-  document.getElementById('highlights-text').textContent=cfg.highlights||'';
-  document.getElementById('kpi-title').textContent=`${cfg.report_month_short||'—'} — ${cfg.current_week_label||'Week in progress'}`;
-  document.getElementById('kpi-sub').textContent=`${cfg.days_elapsed||'—'} of ${cfg.days_in_month||30} days elapsed · Last updated ${cfg.last_updated||'—'} · Targets based on Dec–Mar historical pattern`;
-  document.getElementById('samples-title').textContent=`Samples Tracking — ${cfg.report_month_short||''}`;
-  document.getElementById('flatfee-title').textContent=`Flat-Fee Tracker — ${cfg.report_month_short||''}`;
-  document.getElementById('footer-left').textContent=`${cfg.agency_name||'Humanz'} × ${cfg.client_name||'First Aid Beauty'}`;
-  document.getElementById('footer-right').textContent=`TikTok Shop Monthly Report · ${cfg.report_month_long||''} · Last updated ${cfg.last_updated||''}`;
-  return cfg;
-}
-
-function renderKPI(rows, cfg){
-  // Weekly GMV
-  const w1=num(cfg.w1_actual), w2=num(cfg.w2_actual), w2partial=cfg.w2_partial==='TRUE';
-  const gmvTotal=w1+w2;
-  const gmvTarget=num(cfg.gmv_target)||100000;
-  const gmvLastMonth=num(cfg.gmv_last_month);
-  const pctOfTarget=(gmvTotal/gmvTarget*100).toFixed(1);
-  const momPct=gmvLastMonth?((gmvTotal-gmvLastMonth)/gmvLastMonth*100).toFixed(1):null;
-
-  document.getElementById('gmv-total-val').innerHTML=`$${gmvTotal.toLocaleString()} <span style="font-size:14px;color:var(--muted);">of $${(gmvTarget/1000).toFixed(0)}K target</span>`;
-  document.getElementById('gmv-progress-bar').style.width=Math.min(pctOfTarget,100)+'%';
-  document.getElementById('gmv-progress-label').textContent=`$${gmvTotal.toLocaleString()} banked · ${pctOfTarget}% of target`;
-  document.getElementById('gmv-target-label').textContent=`$${(gmvTarget/1000).toFixed(0)}K`;
-
-  const momBadgeEl=document.getElementById('gmv-mom-badge');
-  if(momPct!==null){
-    const isUp=parseFloat(momPct)>=0;
-    momBadgeEl.className=`kpi-badge ${isUp?'up':'dn'}`;
-    momBadgeEl.textContent=`${isUp?'▲':'▼'} ${isUp?'+':''}${momPct}% vs last month ($${gmvLastMonth.toLocaleString()})`;
-  }
-
-  // Weekly targets from historical averages
-  const wTargets=[
-    Math.round(gmvTarget*0.151),
-    Math.round(gmvTarget*0.176),
-    Math.round(gmvTarget*0.318),
-    Math.round(gmvTarget*0.356)
-  ];
-  const wLabels=['Week 1','Week 2','Week 3','Week 4'];
-  const wDates=[cfg.w1_dates||'Apr 1–7',cfg.w2_dates||'Apr 8–14',cfg.w3_dates||'Apr 15–21',cfg.w4_dates||'Apr 22–30'];
-  const wActuals=[w1, w2partial?w2:null, null, null];
-  const wNotes=[
-    'W1 historically averages 15% of monthly GMV. Content is still surfacing — normal pattern.',
-    w2partial?`${cfg.w2_days_done||5} of 7 days completed.`:'Week complete.',
-    'Historically the ramp week — avg 32% of GMV lands here.',
-    'Strongest week on average — end-of-month spike typical.'
-  ];
-  const wStatus=['closed', w2partial?'partial':'closed','upcoming','upcoming'];
-
-  const wcEl=document.getElementById('weekly-cards');
-  wcEl.innerHTML='';
-  wLabels.forEach((lbl,i)=>{
-    const actual=wActuals[i];
-    const pctFill=actual!=null?Math.min(100,Math.round(actual/wTargets[i]*100)):0;
-    const isCurrent=wStatus[i]==='partial';
-    const isUpcoming=wStatus[i]==='upcoming';
-    const barColor=isCurrent?'var(--blue)':'var(--red)';
-    const border=isCurrent?'1.5px solid var(--blue-mid)':isUpcoming?'1px dashed var(--border2)':'1px solid var(--border)';
-    const opacity=isUpcoming?'opacity:.65;':'';
-    wcEl.innerHTML+=`<div style="border:${border};border-radius:10px;padding:12px;background:var(--surface);${opacity}">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-        <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);">${lbl} · ${wDates[i]}</div>
-        ${isCurrent?'<div style="font-size:9px;font-weight:600;padding:1px 7px;border-radius:20px;background:var(--blue-dim);color:var(--blue);">In progress</div>':''}
-      </div>
-      <div style="font-size:19px;font-weight:600;color:var(--ink);line-height:1;margin-bottom:2px;">${actual!=null?'$'+actual.toLocaleString():'—'}</div>
-      <div style="font-size:10px;color:var(--soft);margin-bottom:8px;">of $${wTargets[i].toLocaleString()} target (${[15,18,32,36][i]}% of month)</div>
-      <div style="height:4px;background:var(--surface3);border-radius:4px;overflow:hidden;margin-bottom:8px;">
-        <div style="width:${pctFill}%;height:100%;background:${barColor};border-radius:4px;"></div>
-      </div>
-      <div style="font-size:10px;color:var(--soft);line-height:1.55;padding:7px 9px;background:${isCurrent?'var(--blue-dim)':'var(--surface3)'};border-radius:7px;${isCurrent?'color:var(--blue);':''}">${wNotes[i]}</div>
-    </div>`;
-  });
-
-  // Pacing chart
-  const pacingCtx=document.getElementById('pacingChart');
-  if(window._pacingChart)window._pacingChart.destroy();
-  window._pacingChart=new Chart(pacingCtx,{
-    type:'bar',
-    data:{
-      labels:wLabels.map((l,i)=>`${l} · ${wDates[i]}`),
-      datasets:[
-        {label:'Actual GMV',data:[w1,w2partial?w2:null,null,null].map(v=>v??0),
-         backgroundColor:[w1>0?'#e8284a':'rgba(232,40,74,0.1)',w2partial&&w2>0?'rgba(232,40,74,0.55)':'rgba(232,40,74,0.1)','rgba(232,40,74,0.1)','rgba(232,40,74,0.1)'],
-         borderRadius:4,borderSkipped:false,barPercentage:0.9,categoryPercentage:0.85,order:1},
-        {label:'Weekly target',data:wTargets,backgroundColor:'#378ADD',
-         borderRadius:4,borderSkipped:false,barPercentage:0.9,categoryPercentage:0.85,order:2}
-      ]
-    },
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',titleColor:'#9ca3af',bodyColor:'#fff',padding:8,cornerRadius:6,
-        callbacks:{label:c=>c.raw>0?` ${c.dataset.label}: $${c.raw.toLocaleString()}`:null,filter:i=>i.raw>0}}},
-      scales:{
-        x:{grid:{display:false},ticks:{font:{family:'DM Sans',size:10},color:'#6b7280'}},
-        y:{grid:{color:'rgba(0,0,0,.04)'},min:0,max:40000,ticks:{callback:v=>'$'+(v>=1000?Math.round(v/1000)+'K':v),font:{family:'DM Sans',size:10},color:'#6b7280'}}
-      }
-    }
-  });
-
-  // Live KPIs
-  const kpiMap={};
-  rows.forEach(r=>{if(r.metric)kpiMap[r.metric]=r;});
-  const liveKpis=[
-    {key:'active_affiliates',label:'Active affiliates',color:'var(--purple)',target:cfg.affiliates_target,lastKey:'active_affiliates_last'},
-    {key:'total_videos',label:'Total videos posted',color:'var(--teal)',sub:true,subFn:r=>`Avg. ${(num(r.value)/Math.max(num(kpiMap['active_affiliates']?.value),1)).toFixed(2)} videos / affiliate`,lastKey:'total_videos_last'},
-    {key:'enrolled_affiliates',label:'Enrolled affiliates',color:'var(--blue)',subFn:r=>`${Math.round(num(kpiMap['active_affiliates']?.value)/Math.max(num(r.value),1)*100)}% activation rate`,lastKey:'enrolled_affiliates_last'}
-  ];
-  const liveEl=document.getElementById('live-kpis');
-  liveEl.innerHTML='';
-  liveKpis.forEach(k=>{
-    const row=kpiMap[k.key];if(!row)return;
-    const v=num(row.value);const last=num(kpiMap[k.lastKey]?.value||row.last_month);
-    const mom=last?((v-last)/last*100).toFixed(1):null;
-    const tgt=num(k.target||cfg[`${k.key}_target`]);
-    const pct=tgt?Math.min(v/tgt*100,100).toFixed(1):null;
-    const isUp=mom&&parseFloat(mom)>=0;
-    const sub=k.subFn?k.subFn(row):row.sub||'';
-    liveEl.innerHTML+=`<div class="kpi"><div class="kpi-accent" style="background:${k.color};"></div>
-      <div class="kpi-label">${k.label}</div>
-      <div class="kpi-val" style="color:${k.color};">${v.toLocaleString()}${tgt?` <span style="font-size:14px;color:var(--muted);">/ ${(tgt>=1000?(tgt/1000).toFixed(0)+'K':tgt)}</span>`:''}</div>
-      ${pct?`<div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:${k.color};"></div></div><div class="prog-labels"><span>0</span><span style="color:${k.color};font-weight:600;">${pct}% of target</span><span>${tgt>=1000?(tgt/1000).toFixed(0)+'K':tgt}</span></div>`:''}
-      ${sub?`<div class="kpi-sub">${sub}</div>`:''}
-      ${mom!=null?`<div class="kpi-badge ${isUp?'up':'dn'}">${isUp?'▲':'▼'} ${isUp?'+':''}${mom}% vs last month</div>`:''}
-    </div>`;
-  });
-
-  // Pipeline KPIs
-  const samplesRow=kpiMap['samples_sent'];
-  const sampleTarget=num(cfg.samples_target)||3240;
-  const samplesSent=num(samplesRow?.value);
-  const samplePct=(samplesSent/sampleTarget*100).toFixed(1);
-  const flatVideos=num(cfg.flatfee_videos_contracted)||0;
-  const flatSpend=num(cfg.flatfee_spend_committed)||0;
-
-  document.getElementById('pipeline-kpis').innerHTML=`
-    <div class="kpi" style="border-color:var(--amber-mid);">
-      <div class="kpi-accent" style="background:var(--amber);"></div>
-      <div class="kpi-label">Samples sent this month</div>
-      <div class="kpi-val" style="color:var(--amber);">${samplesSent.toLocaleString()} <span style="font-size:14px;color:var(--muted);">/ ${sampleTarget.toLocaleString()} target</span></div>
-      <div class="prog-wrap"><div class="prog-bar" style="width:${samplePct}%;background:var(--amber);"></div></div>
-      <div class="prog-labels"><span>0</span><span style="color:var(--amber);font-weight:600;">${samplePct}% of target</span><span>${(sampleTarget/1000).toFixed(1)}K</span></div>
-      <div style="margin-top:10px;padding:9px 12px;background:var(--amber-dim);border-radius:8px;font-size:11px;line-height:1.6;color:var(--ink2);">
-        <div style="font-weight:600;color:var(--amber);margin-bottom:3px;">Results window: next 4–6 weeks</div>
-        ${cfg.samples_projection||'Projected GMV impact based on historical conversion rates.'}
-      </div>
+/* Weekly cards */
+const wTargets=[Math.round(D.gmv_target*.151),Math.round(D.gmv_target*.176),Math.round(D.gmv_target*.318),Math.round(D.gmv_target*.356)];
+const wActuals=[D.w1_gmv,D.w2_gmv,D.w3_gmv,D.w4_gmv];
+const wDates=[`Apr 1â7`,`Apr 8â14`,`Apr 15â21`,`Apr 22â30`];
+const wStatus=['closed', D.w2_partial?'partial':'closed','upcoming','upcoming'];
+const wNotes=[
+  'W1 historically averages 15% of monthly GMV. Content is still surfacing â normal pattern.',
+  D.w2_partial?`${D.w2_days_done} of 7 days completed.`:'Week complete.',
+  'Historically the ramp week â avg 32% of GMV lands here.',
+  'Strongest week on average â end-of-month spike typical.',
+];
+const wc=document.getElementById('weekly-cards');
+[0,1,2,3].forEach(i=>{
+  const a=wActuals[i];const t=wTargets[i];
+  const pct=a!=null?Math.min(100,Math.round(a/t*100)):0;
+  const isPartial=wStatus[i]==='partial';
+  const isUpcoming=wStatus[i]==='upcoming';
+  const barColor=isPartial?'var(--blue)':'var(--red)';
+  const border=isPartial?'1.5px solid var(--blue-mid)':isUpcoming?'1px dashed var(--border2)':'1px solid var(--border)';
+  const noteBg=isPartial?'var(--blue-dim)':'var(--surface3)';
+  const noteColor=isPartial?'color:var(--blue);':'';
+  wc.innerHTML+=`<div style="border:${border};border-radius:10px;padding:12px;background:var(--surface);${isUpcoming?'opacity:.65;':''}">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
+      <div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);">Week ${i+1} Â· ${wDates[i]}</div>
+      ${isPartial?'<div style="font-size:9px;font-weight:600;padding:1px 7px;border-radius:20px;background:var(--blue-dim);color:var(--blue);">In progress</div>':''}
     </div>
-    <div class="kpi" style="border-color:var(--amber-mid);">
-      <div class="kpi-accent" style="background:var(--amber);"></div>
-      <div class="kpi-label">Flat-fee videos contracted</div>
-      <div class="kpi-val" style="color:var(--amber);">${flatVideos} videos <span style="font-size:14px;color:var(--muted);">· $${flatSpend.toLocaleString()} committed</span></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;">
-        <div style="font-size:11px;color:var(--soft);">Creators contracted</div><div style="font-size:11px;font-weight:600;color:var(--ink);text-align:right;">${cfg.flatfee_creators_count||'—'}</div>
-        <div style="font-size:11px;color:var(--soft);">Videos posted so far</div><div style="font-size:11px;font-weight:600;color:var(--red);text-align:right;">${cfg.flatfee_videos_posted||'0'} / ${flatVideos}</div>
-        <div style="font-size:11px;color:var(--soft);">GMV recorded</div><div style="font-size:11px;font-weight:600;color:var(--soft);text-align:right;">${cfg.flatfee_gmv_recorded?'$'+num(cfg.flatfee_gmv_recorded).toLocaleString():'$0 (pending)'}</div>
-      </div>
-      <div style="margin-top:10px;padding:9px 12px;background:var(--amber-dim);border-radius:8px;font-size:11px;line-height:1.6;color:var(--ink2);">
-        <div style="font-weight:600;color:var(--amber);margin-bottom:3px;">Posts expected this month</div>
-        ${cfg.flatfee_note||'Chase posting timelines with contracted creators.'}
-      </div>
-    </div>`;
-}
+    <div style="font-size:19px;font-weight:600;color:var(--ink);line-height:1;margin-bottom:2px;">${a!=null?'$'+a.toLocaleString():'â'}</div>
+    <div style="font-size:10px;color:var(--soft);margin-bottom:8px;">of $${t.toLocaleString()} target (${[15,18,32,36][i]}% of month)</div>
+    <div style="height:4px;background:var(--surface3);border-radius:4px;overflow:hidden;margin-bottom:8px;">
+      <div style="width:${pct}%;height:100%;background:${barColor};border-radius:4px;"></div>
+    </div>
+    <div style="font-size:10px;line-height:1.55;padding:7px 9px;background:${noteBg};border-radius:7px;${noteColor}color:var(--soft);">${wNotes[i]}</div>
+  </div>`;
+});
 
-function renderCreators(rows){
-  if(!rows||!rows.length){console.warn('TOP_CREATORS tab empty');return;}
-  const ccGrid=document.getElementById('creator-cards');
-  const ctb=document.getElementById('creators-tbody');
-  ccGrid.innerHTML='';ctb.innerHTML='';
-  rows.slice(0,5).forEach((c,i)=>{
-    const av=avatarColors[i%5];
-    const initials=(c.creator_name||'??').split(' ').map(w=>w[0]).slice(0,2).join('');
-    const tag=c.type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
-    const rankBg=i===0?'var(--red)':'var(--surface3)';
-    const rankColor=i===0?'#fff':'var(--soft)';
+/* Pacing chart */
+new Chart(document.getElementById('pacingChart'),{
+  type:'bar',
+  data:{
+    labels:['W1 Â· Apr 1â7','W2 Â· Apr 8â14','W3 Â· Apr 15â21','W4 Â· Apr 22â30'],
+    datasets:[
+      {label:'Actual GMV',
+       data:[D.w1_gmv||0, D.w2_partial&&D.w2_gmv?D.w2_gmv:D.w2_gmv||0, 0, 0],
+       backgroundColor:[D.w1_gmv?'#e8284a':'rgba(232,40,74,0.1)', D.w2_gmv&&D.w2_partial?'rgba(232,40,74,0.55)':D.w2_gmv?'#e8284a':'rgba(232,40,74,0.1)','rgba(232,40,74,0.1)','rgba(232,40,74,0.1)'],
+       borderRadius:4,borderSkipped:false,barPercentage:0.9,categoryPercentage:0.85,order:1},
+      {label:'Weekly target',data:wTargets,backgroundColor:'#378ADD',
+       borderRadius:4,borderSkipped:false,barPercentage:0.9,categoryPercentage:0.85,order:2}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',titleColor:'#9ca3af',bodyColor:'#fff',padding:8,cornerRadius:6,
+      callbacks:{label:c=>c.raw>0?` ${c.dataset.label}: $${c.raw.toLocaleString()}`:null,filter:i=>i.raw>0}}},
+    scales:{
+      x:{grid:{display:false},ticks:{font:{family:'DM Sans',size:10},color:'#6b7280'}},
+      y:{grid:{color:'rgba(0,0,0,.04)'},min:0,max:40000,ticks:{callback:v=>'$'+(v>=1000?Math.round(v/1000)+'K':v),font:{family:'DM Sans',size:10},color:'#6b7280'}}
+    }
+  }
+});
+
+/* Live KPIs */
+const lk=document.getElementById('live-kpis');
+[
+  {label:'Active affiliates',val:D.active_affiliates,last:D.active_affiliates_last,target:D.affiliates_target,color:'var(--purple)'},
+  {label:'Total videos posted',val:D.total_videos,last:D.total_videos_last,color:'var(--teal)',sub:`Avg. ${(D.total_videos/Math.max(D.active_affiliates,1)).toFixed(2)} videos / affiliate Â· $${(gmvTotal/Math.max(D.total_videos,1)).toFixed(2)} GMV/video`},
+  {label:'Enrolled affiliates',val:D.enrolled_affiliates,last:D.enrolled_affiliates_last,color:'var(--blue)',sub:`${Math.round(D.active_affiliates/D.enrolled_affiliates*100)}% activation rate`},
+].forEach(k=>{
+  const mom=k.last?((k.val-k.last)/k.last*100).toFixed(1):null;
+  const isUp=mom&&parseFloat(mom)>=0;
+  const pct=k.target?Math.min(k.val/k.target*100,100).toFixed(1):null;
+  lk.innerHTML+=`<div class="kpi"><div class="kpi-accent" style="background:${k.color};"></div>
+    <div class="kpi-label">${k.label}</div>
+    <div class="kpi-val" style="color:${k.color};">${k.val.toLocaleString()}${k.target?` <span style="font-size:14px;color:var(--muted);">/ ${k.target>=1000?(k.target/1000).toFixed(0)+'K':k.target}</span>`:''}</div>
+    ${pct?`<div class="prog-wrap"><div class="prog-bar" style="width:${pct}%;background:${k.color};"></div></div><div class="prog-labels"><span>0</span><span style="color:${k.color};font-weight:600;">${pct}% of target</span><span>${k.target>=1000?(k.target/1000).toFixed(0)+'K':k.target}</span></div>`:''}
+    ${k.sub?`<div class="kpi-sub">${k.sub}</div>`:''}
+    ${mom!=null?`<div class="kpi-badge ${isUp?'up':'dn'}">${isUp?'â²':'â¼'} ${isUp?'+':''}${mom}% vs last month</div>`:''}
+  </div>`;
+});
+
+/* Pipeline KPIs */
+const samplePct=(D.samples_sent/D.samples_target*100).toFixed(1);
+document.getElementById('pipeline-kpis').innerHTML=`
+  <div class="kpi" style="border-color:var(--amber-mid);">
+    <div class="kpi-accent" style="background:var(--amber);"></div>
+    <div class="kpi-label">Samples sent this month</div>
+    <div class="kpi-val" style="color:var(--amber);">${D.samples_sent.toLocaleString()} <span style="font-size:14px;color:var(--muted);">/ ${D.samples_target.toLocaleString()} target</span></div>
+    <div class="prog-wrap"><div class="prog-bar" style="width:${samplePct}%;background:var(--amber);"></div></div>
+    <div class="prog-labels"><span>0</span><span style="color:var(--amber);font-weight:600;">${samplePct}% of target</span><span>${(D.samples_target/1000).toFixed(1)}K</span></div>
+    <div style="margin-top:10px;padding:9px 12px;background:var(--amber-dim);border-radius:8px;font-size:11px;line-height:1.6;color:var(--ink2);">
+      <div style="font-weight:600;color:var(--amber);margin-bottom:3px;">Results window: next 4â6 weeks</div>${D.samples_projection}
+    </div>
+    <div class="kpi-badge up" style="margin-top:8px;">â² +${((D.samples_sent-D.samples_last_month)/D.samples_last_month*100).toFixed(1)}% vs last month (${D.samples_last_month.toLocaleString()})</div>
+  </div>
+  <div class="kpi" style="border-color:var(--amber-mid);">
+    <div class="kpi-accent" style="background:var(--amber);"></div>
+    <div class="kpi-label">Flat-fee videos contracted</div>
+    <div class="kpi-val" style="color:var(--amber);">${D.flatfee_videos} videos <span style="font-size:14px;color:var(--muted);">Â· $${D.flatfee_spend.toLocaleString()} committed</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;">
+      <div style="font-size:11px;color:var(--soft);">Creators contracted</div><div style="font-size:11px;font-weight:600;text-align:right;">${D.flatfee_creators}</div>
+      <div style="font-size:11px;color:var(--soft);">Videos posted</div><div style="font-size:11px;font-weight:600;color:var(--red);text-align:right;">${D.flatfee_posted} / ${D.flatfee_videos}</div>
+      <div style="font-size:11px;color:var(--soft);">GMV recorded</div><div style="font-size:11px;font-weight:600;color:var(--soft);text-align:right;">${D.flatfee_gmv>0?'$'+D.flatfee_gmv.toLocaleString():'$0 (pending)'}</div>
+    </div>
+    <div style="margin-top:10px;padding:9px 12px;background:var(--amber-dim);border-radius:8px;font-size:11px;line-height:1.6;color:var(--ink2);">
+      <div style="font-weight:600;color:var(--amber);margin-bottom:3px;">Posts expected this month</div>${D.flatfee_note}
+    </div>
+  </div>`;
+
+/* Creators */
+const ccGrid=document.getElementById('creator-cards');
+const ctb=document.getElementById('creators-tbody');
+D.creators.forEach(([rank,name,handle,type,gmv,orders,views,gpm,vids,comm],i)=>{
+  const av=AV[i%5];
+  const initials=name.split(' ').map(w=>w[0]).slice(0,2).join('');
+  const tag=type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
+  if(i<5){
+    const rkBg=i===0?'var(--red)':'var(--surface3)';
+    const rkCol=i===0?'#fff':'var(--soft)';
     ccGrid.innerHTML+=`<div class="ccard">
-      <div class="crank" style="background:${rankBg};color:${rankColor};">${c.rank||i+1}</div>
-      <div class="ccard-top">
-        <div class="cavatar" style="color:${av.c};border-color:${av.b};background:${av.bg};">${initials}</div>
-        <div><div class="cname">${c.creator_name}</div><div class="chandle">${c.handle}</div></div>
-      </div>
+      <div class="crank" style="background:${rkBg};color:${rkCol};">${rank}</div>
+      <div class="ccard-top"><div class="cavatar" style="color:${av.c};border-color:${av.b};background:${av.bg};">${initials}</div>
+      <div><div class="cname">${name}</div><div class="chandle">${handle}</div></div></div>
       ${tag}
       <div class="cstats">
-        <div><div class="cstat-label">GMV</div><div class="cstat-val">${c.gmv}</div></div>
-        <div><div class="cstat-label">Orders</div><div class="cstat-val">${c.orders}</div></div>
-        <div><div class="cstat-label">Views</div><div class="cstat-val">${c.product_views}</div></div>
-        <div><div class="cstat-label">GPM</div><div class="cstat-val">${c.gpm}</div></div>
-        <div><div class="cstat-label">Videos</div><div class="cstat-val">${c.videos}</div></div>
-        <div><div class="cstat-label">Commission</div><div class="cstat-val">${c.commission}</div></div>
+        <div><div class="cstat-label">GMV</div><div class="cstat-val">${gmv}</div></div>
+        <div><div class="cstat-label">Orders</div><div class="cstat-val">${orders}</div></div>
+        <div><div class="cstat-label">Views</div><div class="cstat-val">${views}</div></div>
+        <div><div class="cstat-label">GPM</div><div class="cstat-val">${gpm}</div></div>
+        <div><div class="cstat-label">Videos</div><div class="cstat-val">${vids}</div></div>
+        <div><div class="cstat-label">Commission</div><div class="cstat-val">${comm}</div></div>
       </div></div>`;
-  });
-  rows.slice(5).forEach((c,i)=>{
-    const tag=c.type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
-    const cls=i>=4?'collapsible-row hidden':'';
-    ctb.innerHTML+=`<tr class="${cls}"><td><span class="trank">${c.rank||i+6}</span></td>
-      <td><span class="tcreator">${c.handle}</span><br><span style="font-size:10px;color:var(--soft);">${c.creator_name}</span></td>
-      <td>${tag}</td><td class="gmv">${c.gmv}</td><td class="r">${c.orders}</td>
-      <td class="r">${c.product_views}</td><td class="r">${c.gpm}</td><td class="r">${c.videos}</td><td class="r">${c.commission}</td></tr>`;
-  });
-}
+  } else {
+    const cls=i>=9?'collapsible-row hidden':'';
+    ctb.innerHTML+=`<tr class="${cls}"><td><span class="trank">${rank}</span></td>
+      <td><span class="tcreator">${handle}</span><br><span style="font-size:10px;color:var(--soft);">${name}</span></td>
+      <td>${tag}</td><td class="gmv">${gmv}</td><td class="r">${orders}</td>
+      <td class="r">${views}</td><td class="r">${gpm}</td><td class="r">${vids}</td><td class="r">${comm}</td></tr>`;
+  }
+});
 
-function renderVideos(rows){
-  if(!rows||!rows.length){console.warn('TOP_VIDEOS tab empty');return;}
-  const vcGrid=document.getElementById('video-cards');
-  const vtb=document.getElementById('videos-tbody');
-  vcGrid.innerHTML='';vtb.innerHTML='';
-  rows.slice(0,5).forEach((v,i)=>{
-    const tag=v.type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
-    const rankBg=i===0?'var(--red)':'#9ca3af';
+/* Videos */
+const vcGrid=document.getElementById('video-cards');
+const vtb=document.getElementById('videos-tbody');
+D.videos.forEach(([rank,handle,type,caption,date,gmv,orders,views,gpm,url,thumb],i)=>{
+  const tag=type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
+  if(i<5){
     vcGrid.innerHTML+=`<div class="vcard">
       <div class="vthumb">
-        <img src="${v.thumbnail_url||''}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="">
+        <img src="${thumb}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="">
         <div class="vthumb-fallback" style="display:none;"><div class="play-btn"></div><span>No thumbnail</span></div>
-        <div class="vrank" style="background:${rankBg};">${v.rank||i+1}</div>
+        <div class="vrank" style="background:${i===0?'var(--red)':'#9ca3af'};">${rank}</div>
       </div>
       <div class="vbody">
-        <div class="vcreator-row"><span class="vcreator">${v.handle}</span>${tag}</div>
-        <div class="vtitle">${v.caption}</div>
+        <div class="vcreator-row"><span class="vcreator">${handle}</span>${tag}</div>
+        <div class="vtitle">${caption}</div>
         <div class="vstats">
-          <div><div class="vstat-label">GMV</div><div class="vstat-val" style="color:var(--red);">${v.gmv}</div></div>
-          <div><div class="vstat-label">Orders</div><div class="vstat-val">${v.orders}</div></div>
-          <div><div class="vstat-label">Views</div><div class="vstat-val">${v.views}</div></div>
-          <div><div class="vstat-label">GPM</div><div class="vstat-val">${v.gpm}</div></div>
+          <div><div class="vstat-label">GMV</div><div class="vstat-val" style="color:var(--red);">${gmv}</div></div>
+          <div><div class="vstat-label">Orders</div><div class="vstat-val">${orders}</div></div>
+          <div><div class="vstat-label">Views</div><div class="vstat-val">${views}</div></div>
+          <div><div class="vstat-label">GPM</div><div class="vstat-val">${gpm}</div></div>
         </div>
-        <div class="vdate-row"><div class="vdate">📅 ${v.post_date}</div>${v.tiktok_url?`<a href="${v.tiktok_url}" target="_blank" class="vlink">View</a>`:''}</div>
+        <div class="vdate-row"><div class="vdate">ð ${date}</div>${url?`<a href="${url}" target="_blank" class="vlink">View</a>`:''}</div>
       </div></div>`;
-  });
-  rows.slice(5).forEach((v,i)=>{
-    const tag=v.type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
-    const cls=i>=4?'collapsible-row hidden':'';
-    vtb.innerHTML+=`<tr class="${cls}"><td><span class="trank">${v.rank||i+6}</span></td>
-      <td><span class="tcreator">${v.handle}</span></td><td>${tag}</td>
-      <td><span class="ttitle">${v.caption}</span></td>
-      <td><span class="tdate">📅 ${v.post_date}</span></td>
-      <td class="gmv">${v.gmv}</td><td class="r">${v.orders}</td>
-      <td class="r">${v.views}</td><td class="r">${v.gpm}</td>
-      <td>${v.tiktok_url?`<a href="${v.tiktok_url}" target="_blank" class="tlink">View</a>`:''}</td></tr>`;
-  });
-}
-
-function renderSamples(rows){
-  if(!rows||!rows.length){console.warn('SAMPLES tab empty');return;}
-  const funnel=document.getElementById('sample-funnel');
-  const funnelSteps=rows.filter(r=>r.type==='funnel').sort((a,b)=>num(a.step)-num(b.step));
-  funnel.innerHTML='';
-  funnelSteps.forEach((s,i)=>{
-    funnel.innerHTML+=`<div class="fstep">
-      <div class="fstep-accent" style="background:${s.color||'var(--blue)'};"></div>
-      <div class="fstep-num">Step ${s.step} · ${s.step_label}</div>
-      <div class="fstep-label">${s.metric}</div>
-      <div class="fstep-val" style="color:${s.color||'var(--blue)'};">${s.value}</div>
-      <div class="fstep-sub">${s.sub||''}</div>
-      <div class="fstep-pct" style="background:${s.pct_bg||'var(--blue-dim)'};color:${s.color||'var(--blue)'};">${s.pct_label||''}</div>
-    </div>
-    ${i<funnelSteps.length-1?`<div class="farrow"><div class="farrow-line"></div><div class="farrow-pct">${funnelSteps[i+1]?.rate||''}</div></div>`:''}`;
-  });
-  const prodRows=rows.filter(r=>r.type==='product');
-  const spGrid=document.getElementById('sample-products');
-  spGrid.innerHTML='';
-  prodRows.forEach(p=>{
-    const sent=num(p.sent);const target=num(p.target);
-    const pct=target?Math.min(100,Math.round(sent/target*100)):0;
-    const barColor=pct>=100?'var(--green)':pct>=70?'var(--amber)':p.color||'var(--blue)';
-    const reached=p.goal_reached_date;
-    spGrid.innerHTML+=`<div class="prod-card">
-      <img class="prod-img" src="${p.image_url||''}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="">
-      <div class="prod-img-fallback" style="display:none;background:${p.color||'var(--blue)'};">${p.product_name?.[0]||'?'}</div>
-      <div class="prod-info">
-        <div class="prod-name">${p.product_name}</div>
-        <div class="prod-prog-labels"><span style="font-weight:600;color:var(--ink);">${sent.toLocaleString()} sent</span><span>Target: ${target.toLocaleString()}</span></div>
-        <div class="prod-prog-track"><div class="prod-prog-bar" style="width:${pct}%;background:${barColor};"></div></div>
-        <div class="prod-prog-pct" style="color:${barColor};">${pct}% of target${reached?'':' · '+(target-sent)+' remaining'}</div>
-        ${reached?`<div class="prod-goal-date prod-goal-reached">✓ Target reached ${reached}</div>`:'<div class="prod-goal-date prod-goal-pending">📅 Target not yet reached</div>'}
-      </div></div>`;
-  });
-}
-
-function renderProducts(rows, cfg){
-  if(!rows||!rows.length){console.warn('PRODUCTS tab empty');return;}
-  const totalGMV=rows.reduce((s,r)=>s+num(r.gmv),0);
-  const maxGMV=Math.max(...rows.map(r=>num(r.gmv)));
-  const bundles=rows.filter(r=>r.bundle==='TRUE'||r.bundle==='true');
-  const bundleGMV=bundles.reduce((s,r)=>s+num(r.gmv),0);
-  const bundleLastGMV=bundles.reduce((s,r)=>s+num(r.gmv_last_month),0);
-  const sowThis=(bundleGMV/totalGMV*100).toFixed(1);
-  const sowLast=bundleLastGMV?(bundleGMV/bundleLastGMV).toFixed(1):null;
-
-  document.getElementById('product-scards').innerHTML=`
-    <div class="scard"><div class="scard-accent" style="background:var(--red);"></div><div class="scard-label">Total Product GMV</div><div class="scard-val" style="color:var(--red);">$${Math.round(totalGMV).toLocaleString()}</div><div class="scard-sub">across all products</div></div>
-    <div class="scard"><div class="scard-accent" style="background:var(--teal);"></div><div class="scard-label">Total Orders</div><div class="scard-val" style="color:var(--teal);">${rows.reduce((s,r)=>s+num(r.orders),0).toLocaleString()}</div><div class="scard-sub">all products combined</div></div>
-    <div class="scard"><div class="scard-accent" style="background:var(--blue);"></div><div class="scard-label">Top Product Share</div><div class="scard-val" style="color:var(--blue);">${totalGMV?((num(rows[0]?.gmv)/totalGMV)*100).toFixed(1)+'%':'—'}</div><div class="scard-sub">${rows[0]?.product_name?.slice(0,30)||''}</div></div>
-    <div class="scard"><div class="scard-accent" style="background:var(--amber);"></div><div class="scard-label">Bundle GMV</div><div class="scard-val" style="color:var(--amber);">$${Math.round(bundleGMV).toLocaleString()}</div><div class="scard-sub">${bundles.length} bundle product${bundles.length!==1?'s':''}</div></div>
-    <div class="scard"><div class="scard-accent" style="background:var(--purple);"></div><div class="scard-label">Bundle SOW</div><div class="scard-val" style="color:var(--purple);">${sowThis}%</div><div class="scard-sub">of total shop GMV</div><div class="sow-prog-wrap"><div class="sow-prog-bar" style="width:${sowThis}%;"></div></div></div>`;
-
-  const ptb=document.getElementById('products-tbody');
-  ptb.innerHTML='';
-  rows.forEach((p,i)=>{
-    const gmv=num(p.gmv),last=num(p.gmv_last_month);
-    const pct=(gmv/totalGMV*100).toFixed(1);
-    const barPct=(gmv/maxGMV*100).toFixed(1);
-    const isBundle=p.bundle==='TRUE'||p.bundle==='true';
-    const cls=i>=5?'collapsible-row hidden':'';
-    const barColor=isBundle?'var(--purple)':i<3?'var(--red)':'var(--border2)';
-    const rkStyle=i===0?'background:var(--red);color:#fff;':i===1?'background:#9ca3af;color:#fff;':i===2?'background:#d97706;color:#fff;':'background:var(--surface3);color:var(--soft);';
-    ptb.innerHTML+=`<tr class="${cls}"><td class="c"><span class="prank" style="${rkStyle}">${i+1}</span></td>
-      <td><div class="prod-cell"><div><div class="prod-cell-name">${p.product_name}</div><div class="prod-cell-sku">${p.product_id||''}</div>${isBundle?'<div class="bundle-tag">📦 Bundle</div>':''}</div></div></td>
-      <td class="r" style="font-weight:700;color:${isBundle?'var(--purple)':'var(--ink)'};">$${Math.round(gmv).toLocaleString()}</td>
-      <td><div class="gmv-bar-wrap"><div class="gmv-bar" style="width:${barPct}%;background:${barColor};"></div></div></td>
-      <td class="c"><span style="font-size:11px;font-weight:600;color:${parseFloat(pct)>=20?'var(--red)':parseFloat(pct)>=10?'var(--amber)':'var(--soft)'};">${pct}%</span></td>
-      <td class="r">${num(p.orders).toLocaleString()}</td>
-      <td class="c">${momBadge(gmv,last)}</td></tr>`;
-  });
-}
-
-function renderFlatFee(rows){
-  if(!rows||!rows.length){console.warn('FLAT_FEE tab empty');return;}
-  const tb=document.getElementById('flatfee-tbody');
-  tb.innerHTML='';
-  rows.forEach(r=>{
-    const tag=r.type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'';
-    tb.innerHTML+=`<tr><td><span class="tcreator">${r.handle}</span></td>
-      <td><span class="tdate">${r.month}</span></td>
-      <td class="r">${r.videos}</td>
-      <td class="r">$${num(r.total_payment).toLocaleString()}</td>
-      <td class="r">$${num(r.cost_per_video).toLocaleString()}/vid</td>
-      <td class="r">${num(r.gmv_generated)>0?'$'+num(r.gmv_generated).toLocaleString():'—'}</td>
-      <td style="font-size:11px;color:var(--soft);font-style:italic;">${r.notes||''}</td></tr>`;
-  });
-}
-
-function renderTrends(rows, cfg){
-  if(!rows||!rows.length){console.warn('TRENDS tab empty');return;}
-  const labels=rows.map(r=>r.month_label||'');
-  const gmvData=rows.map(r=>num(r.gmv));
-  const currentIdx=rows.findIndex(r=>r.is_current==='TRUE'||r.is_current==='true');
-  const proj=currentIdx>=0?num(rows[currentIdx]?.gmv_projected):null;
-
-  const bgColors=rows.map((r,i)=>{
-    if(r.is_current==='TRUE'||r.is_current==='true') return 'rgba(10,158,131,0.4)';
-    return '#0a9e83';
-  });
-  const projLabels=[...labels];
-  const projData=[...gmvData];
-  if(proj&&currentIdx>=0){
-    projLabels.splice(currentIdx+1,0,`${rows[currentIdx].month_label} proj.`);
-    projData.splice(currentIdx+1,0,proj);
-    bgColors.splice(currentIdx+1,0,'rgba(26,111,212,0.18)');
+  } else {
+    const cls=i>=9?'collapsible-row hidden':'';
+    vtb.innerHTML+=`<tr class="${cls}"><td><span class="trank">${rank}</span></td>
+      <td><span class="tcreator">${handle}</span></td><td>${tag}</td>
+      <td><span class="ttitle">${caption}</span></td>
+      <td><span class="tdate">ð ${date}</span></td>
+      <td class="gmv">${gmv}</td><td class="r">${orders}</td><td class="r">${views}</td><td class="r">${gpm}</td>
+      <td>${url?`<a href="${url}" target="_blank" class="tlink">View</a>`:''}</td></tr>`;
   }
+});
 
-  document.getElementById('trend-chart-sub').textContent=proj?`Current month projected EOMonth: ~$${Math.round(proj).toLocaleString()}`:'Current month in progress';
+/* Samples funnel */
+const {samples_sent_this_month:sent,samples_posted:posted,samples_converted:conv,samples_gmv:sGmv}=D;
+const postRate=sent?((posted/sent)*100).toFixed(1):0;
+const convRate=posted?((conv/posted)*100).toFixed(1):0;
+const gmvPctOfShop=gmvTotal?((sGmv/gmvTotal)*100).toFixed(1):0;
+const funnelSteps=[
+  {num:'Step 1',label:'Sent',metric:'Samples Sent',val:sent.toLocaleString(),sub:'of enrolled creators',pct:`${((sent/D.samples_target)*100).toFixed(1)}% of target`,rate:`${postRate}% posted`,color:'#1a6fd4',pbg:'var(--blue-dim)'},
+  {num:'Step 2',label:'Posted',metric:'Posted a Video',val:posted.toLocaleString(),sub:`of ${sent.toLocaleString()} sampled`,pct:`${postRate}% post rate`,rate:`${convRate}% converted`,color:'#c97d0a',pbg:'var(--amber-dim)'},
+  {num:'Step 3',label:'Converted',metric:'Generated a Sale',val:conv.toLocaleString(),sub:`of ${posted.toLocaleString()} who posted`,pct:`${((conv/sent)*100).toFixed(1)}% of all sampled`,rate:`$${Math.round(sGmv/Math.max(conv,1))} avg GMV`,color:'#0a9e83',pbg:'var(--teal-dim)'},
+  {num:'Result',label:'GMV',metric:'GMV Attributed',val:`$${sGmv.toLocaleString()}`,sub:'from sampled creators',pct:`${gmvPctOfShop}% of shop GMV`,rate:'',color:'#e8284a',pbg:'var(--red-dim)'},
+];
+const sf=document.getElementById('sample-funnel');
+funnelSteps.forEach((s,i)=>{
+  sf.innerHTML+=`<div class="fstep"><div class="fstep-accent" style="background:${s.color};"></div>
+    <div class="fstep-num">${s.num} Â· ${s.label}</div>
+    <div class="fstep-label">${s.metric}</div>
+    <div class="fstep-val" style="color:${s.color};">${s.val}</div>
+    <div class="fstep-sub">${s.sub}</div>
+    <div class="fstep-pct" style="background:${s.pbg};color:${s.color};">${s.pct}</div>
+  </div>${i<3?`<div class="farrow"><div class="farrow-line"></div><div class="farrow-pct">${funnelSteps[i+1].rate}</div></div>`:''}`;
+});
 
-  const ctx=document.getElementById('trendChart');
-  if(window._trendChart)window._trendChart.destroy();
-  window._trendChart=new Chart(ctx,{
-    type:'bar',
-    data:{labels:projLabels,datasets:[{
-      label:'GMV',data:projData,
-      backgroundColor:bgColors,
-      borderColor:projLabels.map((l,i)=>String(l||'').includes('proj.')?'#1a6fd4':'transparent'),
-      borderWidth:projLabels.map((l,i)=>l.includes('proj.')?2:0),
-      borderRadius:4,borderSkipped:false
-    }]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',titleColor:'#9ca3af',bodyColor:'#fff',padding:8,cornerRadius:6,
-        callbacks:{label:c=>{
-          if(c.label.includes('proj.'))return` Projected EOMonth: ~$${c.raw.toLocaleString()}`;
-          return` GMV: $${c.raw.toLocaleString()}`;
-        }}}},
-      scales:{
-        x:{grid:{display:false},ticks:{font:{family:'DM Sans',size:10},color:'#6b7280',autoSkip:false}},
-        y:{grid:{color:'rgba(0,0,0,.04)'},min:0,ticks:{callback:v=>'$'+(v>=1000?Math.round(v/1000)+'K':v),font:{family:'DM Sans',size:10},color:'#6b7280'}}
-      }
+/* Sample products */
+const spg=document.getElementById('sample-products');
+D.sample_products.forEach(([name,img,s,tgt,reached])=>{
+  const pct=Math.min(100,Math.round(s/tgt*100));
+  const bc=pct>=100?'var(--green)':pct>=70?'var(--amber)':'var(--blue)';
+  spg.innerHTML+=`<div class="prod-card">
+    <img class="prod-img" src="${img}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="">
+    <div class="prod-img-fallback" style="display:none;background:var(--blue);">${name[0]}</div>
+    <div class="prod-info">
+      <div class="prod-name">${name}</div>
+      <div class="prod-prog-labels"><span style="font-weight:600;color:var(--ink);">${s.toLocaleString()} sent</span><span>Target: ${tgt.toLocaleString()}</span></div>
+      <div class="prod-prog-track"><div class="prod-prog-bar" style="width:${pct}%;background:${bc};"></div></div>
+      <div class="prod-prog-pct" style="color:${bc};">${pct}% of target${reached?'':' Â· '+(tgt-s)+' remaining'}</div>
+      ${reached?`<div class="prod-goal-date prod-goal-reached">â Target reached ${reached}</div>`:'<div class="prod-goal-date prod-goal-pending">ð Target not yet reached</div>'}
+    </div></div>`;
+});
+
+/* Products */
+const totalGMV=D.products.reduce((s,[,,,,g])=>s+g,0);
+const maxGMV=D.products[0][4];
+const bundleGMV=D.products.filter(p=>p[2]).reduce((s,p)=>s+p[4],0);
+const bundleLastGMV=D.products.filter(p=>p[2]).reduce((s,p)=>s+p[5],0);
+const sowThis=(bundleGMV/totalGMV*100).toFixed(1);
+document.getElementById('product-scards').innerHTML=`
+  <div class="scard"><div class="scard-accent" style="background:var(--red);"></div><div class="scard-label">Total Product GMV</div><div class="scard-val" style="color:var(--red);">$${Math.round(totalGMV).toLocaleString()}</div><div class="scard-sub">across all products</div></div>
+  <div class="scard"><div class="scard-accent" style="background:var(--teal);"></div><div class="scard-label">Total Orders</div><div class="scard-val" style="color:var(--teal);">${D.products.reduce((s,p)=>s+p[6],0).toLocaleString()}</div><div class="scard-sub">all products combined</div></div>
+  <div class="scard"><div class="scard-accent" style="background:var(--blue);"></div><div class="scard-label">Top Product Share</div><div class="scard-val" style="color:var(--blue);">${((D.products[0][4]/totalGMV)*100).toFixed(1)}%</div><div class="scard-sub">${D.products[0][0].slice(0,30)}...</div></div>
+  <div class="scard"><div class="scard-accent" style="background:var(--amber);"></div><div class="scard-label">Bundle GMV</div><div class="scard-val" style="color:var(--amber);">$${Math.round(bundleGMV).toLocaleString()}</div><div class="scard-sub">${D.products.filter(p=>p[2]).length} bundle products</div></div>
+  <div class="scard"><div class="scard-accent" style="background:var(--purple);"></div><div class="scard-label">Bundle SOW</div><div class="scard-val" style="color:var(--purple);">${sowThis}%</div><div class="scard-sub">of total shop GMV</div><div class="sow-prog-wrap"><div class="sow-prog-bar" style="width:${sowThis}%;"></div></div></div>`;
+
+const ptb=document.getElementById('products-tbody');
+D.products.forEach(([name,pid,bundle,gmv,lastGmv,orders],i)=>{
+  const pct=(gmv/totalGMV*100).toFixed(1);
+  const barPct=(gmv/maxGMV*100).toFixed(1);
+  const cls=i>=5?'collapsible-row hidden':'';
+  const rkStyle=i===0?'background:var(--red);color:#fff;':i===1?'background:#9ca3af;color:#fff;':i===2?'background:#d97706;color:#fff;':'background:var(--surface3);color:var(--soft);';
+  ptb.innerHTML+=`<tr class="${cls}"><td class="c"><span class="prank" style="${rkStyle}">${i+1}</span></td>
+    <td><div class="prod-cell"><div>
+      <div class="prod-cell-name">${name}</div>
+      <div class="prod-cell-sku">${pid}</div>
+      ${bundle?'<div class="bundle-tag">ð¦ Bundle</div>':''}
+    </div></div></td>
+    <td class="r" style="font-weight:700;color:${bundle?'var(--purple)':'var(--ink)'};">$${Math.round(gmv).toLocaleString()}</td>
+    <td><div class="gmv-bar-wrap"><div class="gmv-bar" style="width:${barPct}%;background:${bundle?'var(--purple)':i<3?'var(--red)':'var(--border2)'};"></div></div></td>
+    <td class="c"><span style="font-size:11px;font-weight:600;color:${parseFloat(pct)>=20?'var(--red)':parseFloat(pct)>=10?'var(--amber)':'var(--soft)'};">${pct}%</span></td>
+    <td class="r">${orders}</td>
+    <td class="c">${momBadge(gmv,lastGmv)}</td></tr>`;
+});
+
+/* Flat fee */
+const fftb=document.getElementById('flatfee-tbody');
+D.flat_fee.forEach(([handle,month,vids,pay,cpv,gmv,notes])=>{
+  fftb.innerHTML+=`<tr><td><span class="tcreator">${handle}</span></td>
+    <td><span class="tdate">${month}</span></td>
+    <td class="r">${vids}</td>
+    <td class="r">$${pay.toLocaleString()}</td>
+    <td class="r">$${cpv}/vid</td>
+    <td class="r">${gmv>0?'$'+gmv.toLocaleString():'â'}</td>
+    <td style="font-size:11px;color:var(--soft);font-style:italic;">${notes}</td></tr>`;
+});
+
+/* Trends chart */
+document.getElementById('trend-sub').textContent=`Current month projected EOMonth: ~$${D.trends_projected.toLocaleString()}`;
+const tLabels=[...D.trends.map(t=>t[0]),'Projected'];
+const tColors=[...D.trends.map(t=>t[2]?'rgba(10,158,131,0.4)':'#0a9e83'),'rgba(26,111,212,0.18)'];
+const tBorders=[...D.trends.map(()=>'transparent'),'#1a6fd4'];
+const tData=[...D.trends.map(t=>t[1]),D.trends_projected];
+new Chart(document.getElementById('trendChart'),{
+  type:'bar',
+  data:{labels:tLabels,datasets:[{
+    label:'GMV',data:tData,backgroundColor:tColors,
+    borderColor:tBorders,borderWidth:tBorders.map(b=>b==='transparent'?0:2),
+    borderRadius:4,borderSkipped:false
+  }]},
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',titleColor:'#9ca3af',bodyColor:'#fff',padding:8,cornerRadius:6,
+      callbacks:{label:c=>c.label==='Projected'?` Projected EOMonth: ~$${c.raw.toLocaleString()}`:`GMV: $${c.raw.toLocaleString()}`}}},
+    scales:{
+      x:{grid:{display:false},ticks:{font:{family:'DM Sans',size:10},color:'#6b7280',autoSkip:false}},
+      y:{grid:{color:'rgba(0,0,0,.04)'},min:0,ticks:{callback:v=>'$'+(v>=1000?Math.round(v/1000)+'K':v),font:{family:'DM Sans',size:10},color:'#6b7280'}}
     }
-  });
-}
-
-function renderSummary(rows){
-  if(!rows||!rows.length){console.warn('SUMMARY tab empty');return;}
-  const hero=rows.find(r=>r.type==='hero')||{};
-  const cards=rows.filter(r=>r.type==='card');
-  document.getElementById('summary-eyebrow').textContent=hero.eyebrow||'Hero Insight';
-  document.getElementById('summary-title').innerHTML=hero.title||'—';
-  document.getElementById('summary-body').innerHTML=hero.body||'—';
-  document.getElementById('summary-action').textContent=hero.action||'—';
-  const stats=document.getElementById('summary-stats');
-  stats.innerHTML='';
-  [1,2,3,4].forEach(n=>{
-    if(hero[`stat${n}_label`])stats.innerHTML+=`<div style="display:flex;flex-direction:column;gap:3px;"><div style="font-size:22px;font-weight:600;color:#f0efe8;">${hero[`stat${n}_value`]}</div><div style="font-size:10px;color:#6b6b7a;">${hero[`stat${n}_label`]}</div></div>`;
-  });
-  const cardsEl=document.getElementById('insight-cards');
-  cardsEl.innerHTML='';
-  cards.forEach(c=>{
-    cardsEl.innerHTML+=`<div class="icard">
-      <div class="icard-top"><span style="font-size:20px;">${c.icon||''}</span><span class="icard-badge" style="background:${c.badge_bg||'var(--blue-dim)'};color:${c.badge_color||'var(--blue)'};">${c.badge_label||''}</span></div>
-      <div class="icard-title">${c.title}</div>
-      <div class="icard-body">${c.body}</div>
-      <div class="icard-action"><div class="icard-action-arrow">→</div><div class="icard-action-text">${c.action}</div></div>
-    </div>`;
-  });
-}
-
-/* ============================================================
-   MAIN LOAD
-============================================================ */
-async function loadDashboard(){
-  try{
-    if(!SHEET_ID||SHEET_ID==='YOUR_SHEET_ID_HERE'){
-      document.getElementById('loading').innerHTML=`<div class="error-banner" style="max-width:500px;margin:0 auto;">
-        <strong>Sheet ID not configured.</strong><br>Open this HTML file, find <code>YOUR_SHEET_ID_HERE</code> near the top, and replace it with your Google Sheet ID.
-      </div>`;
-      return;
-    }
-    const sleep=ms=>new Promise(r=>setTimeout(r,ms));
-    const configRows   = await fetchSheet('CONFIG');    await sleep(300);
-    const kpiRows      = await fetchSheet('KPI');       await sleep(300);
-    const creatorRows  = await fetchSheet('TOP_CREATORS'); await sleep(300);
-    const videoRows    = await fetchSheet('TOP_VIDEOS'); await sleep(300);
-    const sampleRows   = await fetchSheet('SAMPLES');   await sleep(300);
-    const productRows  = await fetchSheet('PRODUCTS');  await sleep(300);
-    const flatFeeRows  = await fetchSheet('FLAT_FEE');  await sleep(300);
-    const trendsRows   = await fetchSheet('TRENDS');    await sleep(300);
-    const summaryRows  = await fetchSheet('SUMMARY');
-
-    const cfg=renderConfig(configRows);
-    document.getElementById('pill-enrolled').innerHTML=`<div class="dot" style="background:var(--blue);width:6px;height:6px;border-radius:50%;"></div>${cfg.enrolled_affiliates||'—'} Creators Tracked`;
-    renderKPI(kpiRows,cfg);
-    renderCreators(creatorRows);
-    renderVideos(videoRows);
-    renderSamples(sampleRows);
-    renderProducts(productRows,cfg);
-    renderFlatFee(flatFeeRows);
-    renderTrends(trendsRows,cfg);
-    renderSummary(summaryRows);
-
-    document.getElementById('loading').style.display='none';
-    document.getElementById('dashboard').style.display='block';
-  }catch(err){
-    console.error('Dashboard error:', err);
-    document.getElementById('loading').innerHTML=`<div class="error-banner" style="max-width:500px;margin:0 auto;">
-      <strong>Error loading dashboard data.</strong><br>${err.message}<br><br>
-      Make sure your Google Sheet is published to web (File → Share → Publish to web) and the Sheet ID is correct.
-    </div>`;
   }
-}
+});
 
-loadDashboard();
+/* Summary */
+document.getElementById('sum-eyebrow').textContent=`Hero Insight Â· ${D.report_month}`;
+document.getElementById('sum-title').innerHTML=D.summary_hero_title;
+document.getElementById('sum-body').innerHTML=D.summary_hero_body;
+document.getElementById('sum-action').textContent=D.summary_hero_action;
+const ss=document.getElementById('sum-stats');
+D.summary_stats.forEach(([label,val])=>{
+  ss.innerHTML+=`<div style="display:flex;flex-direction:column;gap:3px;">
+    <div class="hero-stat-val-t">${val}</div>
+    <div class="hero-stat-label-t">${label}</div>
+  </div>`;
+});
+const ic=document.getElementById('insight-cards');
+D.summary_cards.forEach(c=>{
+  ic.innerHTML+=`<div class="icard">
+    <div class="icard-top"><span style="font-size:20px;">${c.icon}</span>
+    <span class="icard-badge" style="background:${c.badge_bg};color:${c.badge_color};">${c.badge}</span></div>
+    <div class="icard-title">${c.title}</div>
+    <div class="icard-body">${c.body}</div>
+    <div class="icard-action"><div class="icard-action-arrow">â</div><div class="icard-action-text">${c.action}</div></div>
+  </div>`;
+});
 </script>
 </body>
 </html>
