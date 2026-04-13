@@ -702,6 +702,7 @@ function renderKPI(rows, cfg){
 }
 
 function renderCreators(rows){
+  if(!rows||!rows.length){console.warn('TOP_CREATORS tab empty');return;}
   const ccGrid=document.getElementById('creator-cards');
   const ctb=document.getElementById('creators-tbody');
   ccGrid.innerHTML='';ctb.innerHTML='';
@@ -738,6 +739,7 @@ function renderCreators(rows){
 }
 
 function renderVideos(rows){
+  if(!rows||!rows.length){console.warn('TOP_VIDEOS tab empty');return;}
   const vcGrid=document.getElementById('video-cards');
   const vtb=document.getElementById('videos-tbody');
   vcGrid.innerHTML='';vtb.innerHTML='';
@@ -776,6 +778,7 @@ function renderVideos(rows){
 }
 
 function renderSamples(rows){
+  if(!rows||!rows.length){console.warn('SAMPLES tab empty');return;}
   const funnel=document.getElementById('sample-funnel');
   const funnelSteps=rows.filter(r=>r.type==='funnel').sort((a,b)=>num(a.step)-num(b.step));
   funnel.innerHTML='';
@@ -812,6 +815,7 @@ function renderSamples(rows){
 }
 
 function renderProducts(rows, cfg){
+  if(!rows||!rows.length){console.warn('PRODUCTS tab empty');return;}
   const totalGMV=rows.reduce((s,r)=>s+num(r.gmv),0);
   const maxGMV=Math.max(...rows.map(r=>num(r.gmv)));
   const bundles=rows.filter(r=>r.bundle==='TRUE'||r.bundle==='true');
@@ -848,6 +852,7 @@ function renderProducts(rows, cfg){
 }
 
 function renderFlatFee(rows){
+  if(!rows||!rows.length){console.warn('FLAT_FEE tab empty');return;}
   const tb=document.getElementById('flatfee-tbody');
   tb.innerHTML='';
   rows.forEach(r=>{
@@ -863,7 +868,8 @@ function renderFlatFee(rows){
 }
 
 function renderTrends(rows, cfg){
-  const labels=rows.map(r=>r.month_label);
+  if(!rows||!rows.length){console.warn('TRENDS tab empty');return;}
+  const labels=rows.map(r=>r.month_label||'');
   const gmvData=rows.map(r=>num(r.gmv));
   const currentIdx=rows.findIndex(r=>r.is_current==='TRUE'||r.is_current==='true');
   const proj=currentIdx>=0?num(rows[currentIdx]?.gmv_projected):null;
@@ -889,7 +895,7 @@ function renderTrends(rows, cfg){
     data:{labels:projLabels,datasets:[{
       label:'GMV',data:projData,
       backgroundColor:bgColors,
-      borderColor:projLabels.map((l,i)=>(l||'').includes('proj.')?'#1a6fd4':'transparent'),
+      borderColor:projLabels.map((l,i)=>String(l||'').includes('proj.')?'#1a6fd4':'transparent'),
       borderWidth:projLabels.map((l,i)=>l.includes('proj.')?2:0),
       borderRadius:4,borderSkipped:false
     }]},
@@ -908,6 +914,7 @@ function renderTrends(rows, cfg){
 }
 
 function renderSummary(rows){
+  if(!rows||!rows.length){console.warn('SUMMARY tab empty');return;}
   const hero=rows.find(r=>r.type==='hero')||{};
   const cards=rows.filter(r=>r.type==='card');
   document.getElementById('summary-eyebrow').textContent=hero.eyebrow||'Hero Insight';
@@ -967,9 +974,10 @@ async function loadDashboard(){
     document.getElementById('loading').style.display='none';
     document.getElementById('dashboard').style.display='block';
   }catch(err){
+    console.error('Dashboard error:', err);
     document.getElementById('loading').innerHTML=`<div class="error-banner" style="max-width:500px;margin:0 auto;">
       <strong>Error loading dashboard data.</strong><br>${err.message}<br><br>
-      Make sure your Google Sheet is set to <em>"Anyone with the link can view"</em> and the Sheet ID is correct.
+      Make sure your Google Sheet is published to web (File → Share → Publish to web) and the Sheet ID is correct.
     </div>`;
   }
 }
