@@ -280,12 +280,12 @@ const D = {
   "samples_posted": 216,
   "samples_converted": 91,
   "samples_gmv": 1612,
-  "flatfee_videos": 380,
-  "flatfee_spend": 34200,
-  "flatfee_creators": 21,
-  "flatfee_posted": 164,
+  "flatfee_videos": 100,
+  "flatfee_spend": 8300,
+  "flatfee_creators": 9,
+  "flatfee_posted": 93,
   "flatfee_gmv": 2203,
-  "flatfee_note": "Some flat-fee creators have posted more videos than they were contracted for, while others have yet to post all videos",
+  "flatfee_note": "Chase posting timelines this week. All 5 creators confirmed but none have posted yet.",
   "creators": [
     [
       1,
@@ -1157,28 +1157,28 @@ const D = {
   },
   "summary_cards": [
     {
-      "icon": "",
+      "icon": "📈",
       "badge": "Validated",
-      "badge_bg": "var(--blue-dim)",
-      "badge_color": "var(--blue)",
+      "badge_bg": "var(--green-dim)",
+      "badge_color": "var(--green)",
       "title": "Promotions drove the late-month breakout — this playbook needs to start in W1 of May",
       "body": "Product discounts running at <strong>19x+ ROI</strong> were a key driver of the 4K–5K daily revenue surge in April's final days. The flash sales and ongoing 5% discounts generated $6,436 in GMV from just $327 in discount spend. The lesson: this lever works — but it was activated mid-month. In May, launching promos in W1 will spread the impact across the full 30 days.",
       "action": "Schedule W1 May promos now: replicate the 5% product discount and a bundle flash sale before May 5th."
     },
     {
-      "icon": "",
+      "icon": "🎬",
       "badge": "Key Driver",
-      "badge_bg": "var(--blue-dim)",
-      "badge_color": "var(--blue)",
+      "badge_bg": "var(--teal-dim)",
+      "badge_color": "var(--teal)",
       "title": "Creator content volume was the other accelerant — 93 flat-fee videos live by close",
       "body": "The increase in creator posting volume in late April directly contributed to the revenue surge. With <strong>93 of 100 flat-fee videos now live</strong> and 2,118 active affiliates posting organically, content density reached a tipping point. For May, onboarding new flat-fee creators and briefing them early gives the algorithm more to amplify from day one.",
       "action": "Brief May flat-fee creators by April 30th. Target posting in W1–W2 to front-load content momentum."
     },
     {
-      "icon": "",
+      "icon": "⚙️",
       "badge": "Carry Forward",
-      "badge_bg": "var(--blue-dim)",
-      "badge_color": "var(--blue)",
+      "badge_bg": "var(--purple-dim)",
+      "badge_color": "var(--purple)",
       "title": "GMV Max optimization is working — maintain the settings and scale into May",
       "body": "GMV Max improvements contributed to more efficient paid spend in April's final stretch. At <strong>$35,234 gross revenue on $29,927 spend</strong> (1.18x ROAS for the month), there's room to improve — but the optimizations made in late April provide a stronger baseline heading into May. Maintaining current campaign structures while increasing budget in W2–W3 can amplify what's already working.",
       "action": "Do not reset campaign structures entering May. Scale budget incrementally in W2 as content volume rises."
@@ -1260,7 +1260,7 @@ const D = {
       6.2
     ]
   ],
-  "current_week": 0
+  "current_week": 4
 };
 /* ============================================================
    END OF DATA SECTION  -  do not edit below this line
@@ -1852,7 +1852,7 @@ const bundleLastGMV=D.products.filter(p=>p[2]).reduce((s,p)=>s+p[5],0);
 const sowThis=(bundleGMV/totalGMV*100).toFixed(1);
 document.getElementById('product-scards').innerHTML=`
   <div class="scard"><div class="scard-accent" style="background:var(--red);"></div><div class="scard-label">Total Product GMV</div><div class="scard-val" style="color:var(--red);">$${Math.round(totalGMV).toLocaleString()}</div><div class="scard-sub">across all products</div></div>
-  <div class="scard"><div class="scard-accent" style="background:var(--teal);"></div><div class="scard-label">Total Orders</div><div class="scard-val" style="color:var(--teal);">${D.products.reduce((s,p)=>s+p[6],0).toLocaleString()}</div><div class="scard-sub">all products combined</div></div>
+  <div class="scard"><div class="scard-accent" style="background:var(--teal);"></div><div class="scard-label">Total Orders</div><div class="scard-val" style="color:var(--teal);">${D.products.reduce((s,p)=>s+p[5],0).toLocaleString()}</div><div class="scard-sub">all products combined</div></div>
   <div class="scard"><div class="scard-accent" style="background:var(--blue);"></div><div class="scard-label">Top Product Share</div><div class="scard-val" style="color:var(--blue);">${((D.products[0][4]/totalGMV)*100).toFixed(1)}%</div><div class="scard-sub">${D.products[0][0].slice(0,30)}...</div></div>
   <div class="scard"><div class="scard-accent" style="background:var(--amber);"></div><div class="scard-label">Bundle GMV</div><div class="scard-val" style="color:var(--amber);">$${Math.round(bundleGMV).toLocaleString()}</div><div class="scard-sub">${D.products.filter(p=>p[2]).length} bundle products</div></div>
   <div class="scard"><div class="scard-accent" style="background:var(--purple);"></div><div class="scard-label">Bundle SOW</div><div class="scard-val" style="color:var(--purple);">${sowThis}%</div><div class="scard-sub">of total shop GMV</div><div class="sow-prog-wrap"><div class="sow-prog-bar" style="width:${sowThis}%;"></div></div></div>`;
