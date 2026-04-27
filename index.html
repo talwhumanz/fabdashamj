@@ -262,7 +262,7 @@ const D = {
   "w2_gmv": 6150,
   "w3_gmv": 10106,
   "w4_gmv": 18502,
-  "w2_partial": true,
+  "w2_partial": false,
   "w2_days_done": 5,
   "trends_projected": 57000,
   "active_affiliates": 2118,
@@ -1583,7 +1583,7 @@ document.getElementById('pill2').textContent=D.pill2_text;
 document.getElementById('pill3').textContent=D.pill3_text;
 document.getElementById('pill4').textContent=D.pill4_text;
 document.getElementById('highlights').textContent=D.highlights;
-document.getElementById('kpi-title').textContent=D.report_month+' - Week '+(D.w2_partial?'2 in progress':'2 closed');
+const _cw=D.current_week||0;document.getElementById('kpi-title').textContent=D.report_month+(_cw>0?' - Week '+_cw+' in progress':' - Month closed');
 document.getElementById('kpi-sub').textContent=D.days_elapsed+' of '+D.days_in_month+' days elapsed - Last updated '+D.last_updated+' - Targets based on Dec-Mar historical pattern';
 document.getElementById('samples-title').textContent=`Samples Tracking  -  ${D.report_month}`;
 document.getElementById('flatfee-title').textContent=`Flat-Fee Tracker  -  ${D.report_month}`;
@@ -1607,10 +1607,10 @@ badge.textContent=`${isUp?'^':'v'} ${isUp?'+':''}${gmvMom}% vs last month ($${D.
 const wTargets=[Math.round(D.gmv_target*.151),Math.round(D.gmv_target*.176),Math.round(D.gmv_target*.318),Math.round(D.gmv_target*.356)];
 const wActuals=[D.w1_gmv,D.w2_gmv,D.w3_gmv,D.w4_gmv];
 const wDates=[`Apr 1-7`,`Apr 8-14`,`Apr 15-21`,`Apr 22-30`];
-const wStatus=['closed', D.w2_partial?'partial':'closed','upcoming','upcoming'];
+const _cwNum=D.current_week||0;const wStatus=[0,1,2,3].map(i=>_cwNum===0?'closed':i+1===_cwNum?'partial':i+1<_cwNum?'closed':'upcoming');
 const wNotes=[
   'W1 historically averages 15% of monthly GMV. Content is still surfacing  -  normal pattern.',
-  D.w2_partial?`${D.w2_days_done} of 7 days completed.`:'Week complete.',
+  _cwNum===2?`${D.w2_days_done} of 7 days completed.`:'Week complete.',
   'Historically the ramp week  -  avg 32% of GMV lands here.',
   'Strongest week on average  -  end-of-month spike typical.',
 ];
@@ -1647,7 +1647,7 @@ new Chart(document.getElementById('pacingChart'),{
       {label:'Actual GMV',
        data:[D.w1_gmv||0, D.w2_gmv||0, D.w3_gmv||0, D.w4_gmv||0],
        backgroundColor:(function(){
-         const cw=D.current_week||(D.w2_partial?2:0);
+         const cw=D.current_week||0;
          const partial='rgba(232,40,74,0.55)',closed='#e8284a',empty='rgba(232,40,74,0.1)';
          return [D.w1_gmv,D.w2_gmv,D.w3_gmv,D.w4_gmv].map((g,idx)=>{
            if(!g)return empty;
