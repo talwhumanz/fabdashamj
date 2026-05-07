@@ -236,6 +236,15 @@ footer{background:#fff;border-top:1px solid var(--border);padding:20px 28px;disp
 .roi-strong{background:var(--green-dim);color:var(--green);}
 .roi-ok{background:var(--amber-dim);color:var(--amber);}
 .roi-weak{background:var(--red-dim);color:var(--red);}
+tr.roi-positive{background:#f0fdf4;}
+tr.roi-positive:hover{background:#dcfce7;}
+tr.roi-positive td{color:var(--green)!important;}
+tr.roi-positive td.r{color:var(--green)!important;}
+th.sortable{cursor:pointer;user-select:none;}
+th.sortable:hover{color:var(--ink);}
+th.sortable::after{content:' ⇅';font-size:8px;color:var(--muted);opacity:.5;}
+th.sortable.asc::after{content:' ↑';color:var(--blue);opacity:1;}
+th.sortable.desc::after{content:' ↓';color:var(--blue);opacity:1;}
 </style>
 </head>
 <body>
@@ -247,285 +256,294 @@ footer{background:#fff;border-top:1px solid var(--border);padding:20px 28px;disp
 const D = {
   "agency": "Humanz",
   "client": "First Aid Beauty",
-  "report_month": "Apr 2026",
-  "last_updated": "May 30, 2026",
-  "days_elapsed": 30,
-  "days_in_month": 30,
-  "highlights": "The month closes on a high note. After a slow start, we've broken through to 4K–5K daily revenue in the final days — proof that the strategy is working. The combination of active promotions (19x+ ROI on product discounts), GMV Max optimization, and a surge in creator content has unlocked the momentum we were building toward all month. Active affiliates reached 2,118 (up 25% vs last month), 3,534 samples are deployed, and 93 of 100 flat-fee videos are now live. Apr '26 is on track to close at ~$52,700 — more than double March's $28,553 and a clear step in the right direction.",
-  "pill1_text": "TikTok Shop Overview",
+  "report_month": "May 2026",
+  "last_updated": "May 7, 2026",
+  "days_elapsed": 6,
+  "days_in_month": 31,
+  "highlights": "May is off to its strongest start of the year. The first days of the month delivered well above average \u2014 driven by a weekend-opening calendar and a viral video that was still converting hard from its April breakout. Mid-week the viral video was temporarily flagged, causing a visible dip in daily revenue. It has since been reinstated, and momentum is already recovering. To stay on course toward our $225K target, the priority for the remainder of the month is clear: concentrate spend on GMV Max, pulling budget from live sessions and samples to give paid amplification the fuel it needs. $225K is a stretch \u2014 but the start of this month has set us up better than any month before it.",
+  "report_month": "May 2026",
+  "last_updated": "May 7, 2026",
+  "days_elapsed": 6,
+  "days_in_month": 31,
+  "highlights": "May is off to its strongest start ever. The first 6 days delivered <strong>$22,791 in revenue</strong> \u2014 6.7x the $3,397 generated in the same window last April. A weekend-opening calendar, @qwuanda's viral video (1.67M views, $10,975 GMV) still converting strong, and 616 active affiliates entering the month all compounded to create real early momentum. The viral video was briefly flagged mid-week causing a temporary dip \u2014 it has since been reinstated and conversion is expected to resume. GMV Max has been the primary spend channel this week at $20,252. To reach our <strong>$225K monthly target</strong>, we will need to concentrate remaining budget on GMV Max, redirecting spend from live, samples, and flat-fee to give paid amplification the fuel it needs. The goal is ambitious \u2014 and with the strongest early-month foundation we've had all year, it is possible.",
+  "report_month": "May 2026",
+  "last_updated": "May 7, 2026",
+  "days_elapsed": 6,
+  "days_in_month": 31,
+    "pill1_text": "TikTok Shop Overview",
   "pill2_text": "Top Videos & Creators",
   "pill3_text": "Samples Performance",
   "pill4_text": "Paid Ads",
-  "gmv_target": 100000,
-  "gmv_last_month": 25171,
-  "w1_gmv": 4531,
-  "w2_gmv": 6150,
-  "w3_gmv": 10106,
-  "w4_gmv": 34549,
+  "gmv_target": 225000,
+  "gmv_last_month": 3930,
+  "w1_gmv": 21100,
+  "w2_gmv": null,
+  "w3_gmv": null,
+  "w4_gmv": null,
   "w2_partial": false,
-  "w2_days_done": 7,
-  "trends_projected": 55336,
-  "active_affiliates": 2118,
-  "active_affiliates_last": 1821,
-  "affiliates_target": 2500,
-  "total_videos": 4288,
-  "total_videos_last": 452,
-  "enrolled_affiliates": 12907,
-  "enrolled_affiliates_last": 12907,
-  "samples_sent": 3534,
-  "samples_last_month": 990,
-  "samples_target": 3648,
+  "w2_days_done": 6,
+  "trends_projected": 147672,
+  "active_affiliates": 616,
+  "active_affiliates_last": 258,
+  "affiliates_target": 3250,
+  "total_videos": 470,
+  "total_videos_last": 276,
+  "enrolled_affiliates": 1542,
+  "enrolled_affiliates_last": 1480,
+  "samples_sent": 255,
+  "samples_last_month": 444,
+  "samples_target": 850,
   "samples_projection": "Projected GMV impact: ~$4,785-$9,570 based on 4.0%-17.4% historical conversion x $76 avg GMV per converter.",
-  "samples_sent_this_month": 3534,
+  "samples_sent_this_month": 255,
   "samples_posted": 216,
-  "samples_converted": 91,
-  "samples_gmv": 1612,
-  "flatfee_videos": 290,
-  "flatfee_spend": 33275,
-  "flatfee_creators": 19,
-  "flatfee_posted": 93,
-  "flatfee_gmv": 2203,
-  "flatfee_note": "7 creators (80 videos) will carry over to May campaign",
+  "samples_converted": 67,
+  "samples_gmv": 16534,
+  "flatfee_videos": 0,
+  "flatfee_spend": 0,
+  "flatfee_creators": 0,
+  "flatfee_posted": 0,
+  "flatfee_gmv": 0,
+  "flatfee_note": "To Be Updated",
   "creators": [
     [
       1,
       "Qwuanda",
       "@qwuanda",
       "Commission",
-      "$18,475.62",
-      490,
-      "1,646,702",
-      "$5.47",
-      1,
-      "$1,215.81"
+      "$10,975.06",
+      255,
+      "",
+      0,
+      0,
+      "$793.35"
     ],
     [
       2,
       "Hailey",
       "@haileyxbush",
       "Flat-Fee",
-      "$2,493.26",
-      70,
-      "9,017",
-      "$38.67",
-      6,
-      "$192.96"
+      "$615.24",
+      14,
+      "",
+      0,
+      0,
+      "$47.25"
     ],
     [
       3,
-      "Erica Taylor",
-      "@ericataylor2347",
-      "Flat-Fee",
-      "$1,987.27",
-      62,
-      "14,061",
-      "$21.73",
+      "Dinafbaby",
+      "@dinafbaby",
+      "Commission",
+      "$306.33",
+      7,
+      "",
       0,
-      "$153.04"
+      0,
+      "$42.49"
     ],
     [
       4,
-      "Rachel",
-      "@influenced.edit",
-      "Flat-Fee",
-      "$1,648.58",
-      46,
-      "20,238",
-      "$14.75",
-      4,
-      "$155.06"
+      "Shopwitherica",
+      "@ericamademebuyit",
+      "Commission",
+      "$300.15",
+      7,
+      "",
+      0,
+      0,
+      "$0.37"
     ],
     [
       5,
       "Amanda Renee",
-      "@mandsbarbie21",
+      "@itsmebethc",
       "Commission",
-      "$1,190.12",
-      30,
-      "2,001",
-      "$110.29",
+      "$276.24",
+      5,
+      "",
+      0,
       4,
-      "$84.60"
+      "$29.24"
     ],
     [
       6,
-      "BestestFinds",
-      "@xbestestfindsx",
+      "findsbyjazz",
+      "@findsbyjazz",
       "Commission",
-      "$1,071.90",
-      29,
-      "4,799",
-      "$28.55",
-      14,
-      "$57.73"
+      "$262.14",
+      7,
+      "",
+      0,
+      0,
+      "$22.86"
     ],
     [
       7,
-      "Happily Ever Becka",
-      "@happilyeverbecka",
-      "Flat-Fee",
-      "$832.58",
-      23,
-      "3,166",
-      "$42.62",
+      "Kim",
+      "@kiimmvl",
+      "Commission",
+      "$250.40",
+      6,
+      "",
       0,
-      "$71.06"
+      0,
+      "$18.00"
     ],
     [
       8,
-      "CANDICE",
-      "@dinafbaby",
+      "Rachel",
+      "@influenced.edit",
       "Commission",
-      "$791.41",
-      21,
-      "2,162",
-      "$46.13",
+      "$214.41",
+      5,
+      "",
       0,
-      "$106.82"
+      0,
+      "$24.60"
     ],
     [
       9,
-      "Shopwitherica",
-      "@ericamademebuyit",
-      "Commission",
-      "$588.40",
-      16,
-      "28,809",
-      "$3.12",
+      "Leslie Soldano",
+      "@lesliesoldano",
+      "Flat-Fee",
+      "$182.70",
+      3,
+      "",
       0,
-      "$0.65"
+      7,
+      "$18.83"
     ],
     [
       10,
-      "TIK TOK SHOP",
-      "@tashaalovetoshop",
+      "Ashley Jernigan",
+      "@ashley.jernigan",
       "Commission",
-      "$488.75",
-      17,
-      "2,267",
-      "$37.94",
+      "$173.72",
+      3,
+      "",
       0,
-      "$39.38"
+      0,
+      "$21.17"
     ],
     [
       11,
-      "CANDICE",
-      "@doublethedeals",
+      "TIK TOK SHOP",
+      "@tashaalovetoshop",
       "Commission",
-      "$444.33",
-      13,
-      "3,020",
-      "$28.48",
-      3,
-      "$52.06"
+      "$162.69",
+      7,
+      "",
+      0,
+      1,
+      "$15.00"
     ],
     [
       12,
-      "Ashley Jernigan",
-      "@ashley.jernigan",
-      "Flat-Fee",
-      "$422.01",
-      7,
-      "1,007",
-      "$74.25",
-      5,
-      "$53.95"
+      "Amanda Renee",
+      "@mandsbarbie21",
+      "Commission",
+      "$152.16",
+      4,
+      "",
+      0,
+      0,
+      "$8.36"
     ],
     [
       13,
-      "Viridiana Escalante",
-      "@abbyrani",
-      "Flat-Fee",
-      "$369.13",
-      17,
-      "285",
-      "$241.09",
+      "Chris | TTS finds",
+      "@chrissysgems",
+      "Commission",
+      "$128.73",
+      3,
+      "",
       0,
-      "$44.12"
+      0,
+      "$14.85"
     ],
     [
       14,
-      "ReddRoxx",
-      "@reddroxx",
+      "DAISY",
+      "@daisy_elizabethh",
       "Commission",
-      "$352.46",
-      13,
-      "31",
-      "$2,208",
-      1,
-      "$44.75"
+      "$124.20",
+      5,
+      "",
+      0,
+      0,
+      "$15.90"
     ],
     [
       15,
       "Healthwithmell",
       "@healthwithmell",
       "Commission",
-      "$311.25",
-      8,
-      "235",
-      "$282.30",
+      "$121.36",
+      3,
+      "",
       0,
-      "$12.16"
+      0,
+      "$15.75"
     ],
     [
       16,
-      "itsmebethc",
-      "@itsmebethc",
+      "𝖙𝖍𝖓𝖝𝖘𝖆𝖙𝖆𝖓",
+      "@thnxsatan",
       "Commission",
-      "$304.41",
-      8,
-      "69",
-      "$960.87",
-      5,
-      "$29.65"
+      "$111.13",
+      3,
+      "",
+      0,
+      0,
+      "$13.20"
     ],
     [
       17,
-      "Sara Weaver",
-      "@schweaver5",
-      "Flat-Fee",
-      "$302.66",
-      10,
-      "2,124",
-      "$31.17",
-      22,
-      "$28.82"
+      "Happily Ever Becka",
+      "@happilyeverbecka",
+      "Commission",
+      "$90.52",
+      2,
+      "",
+      0,
+      0,
+      "$10.35"
     ],
     [
       18,
-      "Viridiana Escalante",
-      "@viryescalantec",
+      "WEEZIE",
+      "@msweeziebaby",
       "Commission",
-      "$289.34",
-      10,
-      "399",
-      "$162.86",
-      1,
-      "$17.16"
+      "$89.89",
+      2,
+      "",
+      0,
+      0,
+      "$9.00"
     ],
     [
       19,
-      "Chris| TTS finds",
-      "@chrissysgems",
+      "Sweet Critiques",
+      "@sweet_critique",
       "Commission",
-      "$259.64",
-      7,
-      "5,583",
-      "$10.87",
+      "$84.52",
+      2,
+      "",
       0,
-      "$26.98"
+      0,
+      "$4.75"
     ],
     [
       20,
-      "Teri [Simply Sprinkled]✨",
-      "@simplysprinkled",
-      "Flat-Fee",
-      "$254.50",
-      7,
-      "1,409",
-      "$42.73",
-      10,
-      "$31.28"
+      "Trending with Chie",
+      "@trendingwithchie",
+      "Commission",
+      "$83.36",
+      3,
+      "",
+      0,
+      0,
+      "$4.11"
     ]
   ],
   "videos": [
@@ -535,10 +553,10 @@ const D = {
       "Commission",
       "Whewwww have the kitty looking so pretty 🥰😍 #fyp #selfcare #foryoupage #fypシ",
       "Apr 21",
-      "$17,233.65",
-      490,
-      "3,334,618",
-      "$5.17",
+      "$10,156.75",
+      256,
+      "1,671,741",
+      "$6.08",
       "https://www.tiktok.com/@qwuanda/video/7631435333774642446",
       "https://i.ibb.co/8nB5XhjX/num1.png"
     ],
@@ -548,245 +566,245 @@ const D = {
       "Flat-Fee",
       "No one wants to deal with red bumps or ingrown hairs #strawberrybumps #bumpyskin #firstaidbeauty #ad #smoothskin @First Aid Beauty",
       "Nov 30",
-      "$1,800.93",
-      53,
-      "103,562",
-      "$17.39",
+      "$444.24",
+      11,
+      "23,946",
+      "$18.55",
       "https://www.tiktok.com/@haileyxbush/video/7578662716341095735",
       "https://i.ibb.co/jPzKnxhG/fab1.png"
     ],
     [
       3,
-      "@ericataylor2347",
-      "Flat-Fee",
-      "Cakey Makeup Hack @First Aid Beauty Brighten + Glow Facial Radiance Pads instantly exfoliate for smoother, brighter ready for makeup skin. Receive up to 30% off during their TTS Grand Opening, ends 2/23. #firstaidbeautygrandopening #firstaidbeautypartner #skincareover40",
-      "Feb 18",
-      "$987.95",
-      33,
-      "27,783",
-      "$35.56",
-      "https://www.tiktok.com/@ericataylor2347/video/7608380676894706975",
-      "https://i.ibb.co/Y40Jkcmb/faberica.png"
-    ],
-    [
-      4,
-      "@ericataylor2347",
-      "Flat-Fee",
-      "Fine lines ate dehydration with dead skin sitting in it - by exfoliatiog and hydrating you can instantly minimize apprarance of fine lines and dehydration #exfoliation #finelines #dehydrated #wrinkles #skincareroutine #makeuproutine #makeupover40 #genx #millennial #matureskin #skintok #tiktokshop #fyp",
-      "Dec 2",
-      "$835.57",
-      27,
-      "50,042",
-      "$16.70",
-      "https://www.tiktok.com/@ericataylor2347/video/7443936233975205151",
-      "https://i.ibb.co/7JGQTgW4/faberica2.png"
-    ],
-    [
-      5,
-      "@happilyeverbecka",
-      "Flat-Fee",
-      "#skincare #skincareroutine #skincaretips #sensitiveskin",
-      "Sep 15",
-      "$640.08",
-      23,
-      "25,394",
-      "$25.21",
-      "https://www.tiktok.com/@happilyeverbecka/video/7550320740252323085",
-      "https://i.ibb.co/wZBtdXhD/fab5.png"
-    ],
-    [
-      6,
       "@dinafbaby",
       "Commission",
       "No one wants to deal with ingrown bumps and hyperpigmentation 😭 #firstaidbeauty #hyperpigmentation #ingrownhairtreatment #bump #tiktokshopcreatorpicks",
       "Dec 30",
-      "$643.21",
-      21,
-      "30,763",
-      "$20.91",
-      "https://www.tiktok.com/@influenced.edit/video/7589778386428415246",
-      "https://i.ibb.co/vC3nsHbS/Screenshot-2026-04-12-at-10-53-18-PM.png"
-    ],
-    [
+      "$171.33",
       7,
-      "@influenced.edit",
+      "14,624",
+      "$11.72",
+      "https://www.tiktok.com/@dinafbaby/video/7589743570093886734",
+      "https://i.ibb.co/S756xNMs/fabmay1.png"
+    ],
+    [
+      4,
+      "@findsbyjazz",
       "Commission",
-      "✨ Don’t miss your chance to glow with Facial Radiance Pads, radiant skin is just a swipe away! Grab this now before it sells out! Trending TikTok shop items beauty Women’s products Women 30+ women 40+ Trending products Must buy Flash Sale Discount #Tiktokshopcreatorpicks #tiktokshopholidayhaul #newyearnewme #newarrivalssurge #tiktokshopjumpstartsale",
-      "Dec 30",
-      "$631.73",
-      18,
-      "47,779",
-      "$13.22",
-      "https://www.tiktok.com/@xbestestfindsx/video/7630898820452322591",
-      "https://i.ibb.co/ksZTjDkF/Screenshot-2026-04-12-at-11-00-54-PM.png"
-    ],
-    [
-      8,
-      "@xbestestfindsx",
-      "Flat-Fee",
-      "#TiktokShopRestock #AprilRestock #TikTokShopMothersDay",
-      "Apr 20",
-      "$577.91",
-      19,
-      "23,179",
-      "$24.93",
-      "https://www.tiktok.com/@mandsbarbie21/video/7597544301765119287",
-      "https://i.ibb.co/FbnWVzjV/ericamademebuyit.png"
-    ],
-    [
+      "And this toasted coconut smell is so delicious 😍",
+      "Feb 16",
+      "$147.94",
       9,
-      "@mandsbarbie21",
-      "Flat-Fee",
-      "The oatmeal and ceramides in this 🥰🥰🥰 @First Aid Beauty #hydratingskincare #skincare #rosaceaskincare #rosacea #winterskincare",
-      "Jan 20",
-      "$596.62",
-      17,
-      "78,248",
-      "$7.62",
-      "https://www.tiktok.com/@doublethedeals/video/7586011404386209079",
-      "https://i.ibb.co/35F9vFG2/viry.png"
+      "8,259",
+      "$17.91",
+      "https://www.tiktok.com/@findsbyjazz/video/7607594280663649549",
+      "https://i.ibb.co/fYmYdkJQ/fabmay2.png"
     ],
     [
-      10,
-      "@tashaalovetoshop",
-      "Commission",
-      "Smoothest skin ever 😋",
-      "Jan 24",
-      "$488.75",
-      17,
-      "44,634",
-      "$10.95",
-      "https://www.tiktok.com/@reddroxx/video/7606218564860644639",
-      "https://i.ibb.co/CpWrP4L0/hailey.png"
-    ],
-    [
-      11,
-      "@mandsbarbie21",
-      "Commission",
-      "Dont miss this hydrating duo sale like i did @First Aid Beauty #rosacea #skincare #winterskincare #dryskintips",
-      "Feb 3",
-      "$396.76",
-      11,
-      "32,768",
-      "$12.11",
-      "https://www.tiktok.com/@mandsbarbie21/video/7602792883233557773",
-      "https://i.ibb.co/MkC5CP42/mrs.png"
-    ],
-    [
-      12,
-      "@doublethedeals",
-      "Flat-Fee",
-      "Facial radiance pads ‼️",
-      "Dec 20",
-      "$416.91",
-      13,
-      "3,779",
-      "$110.32",
-      "https://www.tiktok.com/@schweaver5/video/7588303275238100237",
-      "https://i.ibb.co/zTgm5g2x/psy.png"
-    ],
-    [
-      13,
+      5,
       "@ericamademebuyit",
       "Commission",
       "@First Aid Beauty #ingrownhair #hyperpigmentation #bump #kp #bikini",
       "Dec 19",
-      "$321.00",
-      12,
-      "29,993",
-      "$10.70",
-      "https://www.tiktok.com/@abbyrani/video/7489950034629528878",
-      "https://i.ibb.co/GvQrD3mr/abb.png"
+      "$255.90",
+      6,
+      "19,506",
+      "$13.12",
+      "https://www.tiktok.com/@ericamademebuyit/video/7585761933488360717",
+      "https://i.ibb.co/Kj2D7pWt/fabmay3.png"
     ],
     [
-      14,
-      "@reddroxx",
+      6,
+      "@kiimmvl",
       "Commission",
-      "Transparent moment, let’s talk Keratosis Pilaris 🫣 #firstaidbeauty #smoothskin #kp",
-      "Feb 12",
-      "$248.17",
-      13,
-      "38,791",
-      "$6.40",
-      "https://www.tiktok.com/@viryescalantec/video/7596512366251019551",
-      "https://i.ibb.co/Xktc794T/che.png"
+      "No more strawberry skin or ingrown hairs with this duo 🍓💖@First Aid Beauty #firstaidbeauty #skincare #strawberryskin #ingrownhairtreatment #fyp",
+      "Apr 16",
+      "$250.40",
+      6,
+      "23,701",
+      "$10.56",
+      "https://www.tiktok.com/@kiimmvl/video/7629527581489990925",
+      "https://i.ibb.co/vC3nsHbS/Screenshot-2026-04-12-at-10-53-18-PM.png"
     ],
     [
-      15,
-      "@abbyrani",
+      7,
+      "@itsmebethc",
+      "Commission",
+      "First Aid Beauty repackaged and they’re giving us a Exclusive glowy Skin Bundle of their two most popular products: one for AM and one for PM and your skin will be ready for the summer glow ☀️ #firstaidbeauty #glowyskinroutine #tiktokshopexclusive #tiktokshopcreatorpicks #summervibes @First Aid Beauty",
+      "Apr 29",
+      "$236.58",
+      3,
+      "5,207",
+      "$45.43",
+      "https://www.tiktok.com/@itsmebethc/video/7634258009232887070",
+      "https://i.ibb.co/ksZTjDkF/Screenshot-2026-04-12-at-11-00-54-PM.png"
+    ],
+    [
+      8,
+      "@tashaalovetoshop",
+      "Commission",
+      "Smoothest skin ever 😋",
+      "Jan 24",
+      "$116.16",
+      7,
+      "13,892",
+      "$8.36",
+      "https://www.tiktok.com/@tashaalovetoshop/video/7598957168523480375",
+      "https://i.ibb.co/FbnWVzjV/ericamademebuyit.png"
+    ],
+    [
+      9,
+      "@lesliesoldano",
       "Flat-Fee",
-      "#tiktokshop throw away those tree hut scrubs and switch to a big girl scrub that wont harm your skin @First Aid Beauty #firstaidbeauty #kpscrub #kptreatment #bumperaser #strawberryskin #strawberryskinsolution #keratosispilaris #treehutsugarscrub #scrubforbody #bodyscrub",
-      "Apr 5",
-      "$210.83",
-      16,
-      "6,475",
-      "$32.56",
-      "https://www.tiktok.com/@geetsangraula/video/7629357623183297822",
-      "https://i.ibb.co/B54RFktZ/clas.png"
+      "How I figured out I needed to exfoliate more. The @First Aid Beauty facial radiance pads and hydrating pillow pads are the perfect combo #firstaidbeauty #ad #sensitiveskincare #ttsspringbeauty #exfoliation",
+      "Apr 30",
+      "$60.99",
+      2,
+      "2,775",
+      "$21.98",
+      "https://www.tiktok.com/@lesliesoldano/video/7634728200978910477",
+      "https://i.ibb.co/35F9vFG2/viry.png"
     ],
     [
-      16,
+      10,
+      "@daisy_elizabethh",
+      "Commission",
+      "I found my holygrail product for the stubborn bumps on my arms! @First Aid Beauty #firstaidbeauty #bumperaser #exfoliate #bodyscrub #skincare #foryou #foryoupage #fypp",
+      "May 17",
+      "$124.20",
+      5,
+      "407",
+      "$305.16",
+      "https://www.tiktok.com/@daisy_elizabethh/video/7370019166344023338",
+      "https://i.ibb.co/CpWrP4L0/hailey.png"
+    ],
+    [
+      11,
       "@healthwithmell",
       "Commission",
       "@First Aid Beauty #keratosispilaris #strawberryskin #ingrowns #razorbumps #personalcare",
       "Dec 2",
-      "$347.25",
-      8,
-      "34,384",
-      "$10.10",
+      "$121.36",
+      3,
+      "5,438",
+      "$22.32",
       "https://www.tiktok.com/@healthwithmell/video/7579386066860346655",
+      "https://i.ibb.co/MkC5CP42/mrs.png"
+    ],
+    [
+      12,
+      "@mandsbarbie21",
+      "Commission",
+      "The oatmeal and ceramides in this 🥰🥰🥰 @First Aid Beauty #hydratingskincare #skincare #rosaceaskincare #rosacea #winterskincare",
+      "Jan 20",
+      "$117.32",
+      3,
+      "17,642",
+      "$6.65",
+      "https://www.tiktok.com/@mandsbarbie21/video/7597544301765119287",
+      "https://i.ibb.co/zTgm5g2x/psy.png"
+    ],
+    [
+      13,
+      "@influenced.edit",
+      "Commission",
+      "#Tiktokshopcreatorpicks #tiktokshopstockup #tiktokshopspringglowup #tiktokshopmothersday #ttsbeautybesties",
+      "Apr 9",
+      "$139.41",
+      2,
+      "19,145",
+      "$7.28",
+      "https://www.tiktok.com/@influenced.edit/video/7626945269430570254",
+      "https://i.ibb.co/GvQrD3mr/abb.png"
+    ],
+    [
+      14,
+      "@happilyeverbecka",
+      "Commission",
+      "#skincare #skincareroutine #skincaretips #sensitiveskin",
+      "Sep 15",
+      "$39.00",
+      2,
+      "1,434",
+      "$27.20",
+      "https://www.tiktok.com/@happilyeverbecka/video/7550320740252323085",
+      "https://i.ibb.co/Xktc794T/che.png"
+    ],
+    [
+      15,
+      "@msweeziebaby",
+      "Commission",
+      "I used to deal with shaving bumps all the time. Now? Smooth skin thanks to this AHA + BHA combo.@First Aid Beauty #firstaidbeauty #shavingroutine #ingrownhaircare #smoothskintips #BodyCareRoutine",
+      "Feb 6",
+      "$45.00",
+      2,
+      "2,985",
+      "$15.08",
+      "https://www.tiktok.com/@msweeziebaby/video/7603803464606469407",
+      "https://i.ibb.co/B54RFktZ/clas.png"
+    ],
+    [
+      16,
+      "@sweet_critique",
+      "Commission",
+      "AI-generated product visuals. Not filmed in real location. #tiktokshopspringglowup #tiktokshopjumpstartsale #tiktokshopcreatorpicks #tiktokshopfinds #BigDreamsStartSmall",
+      "Apr 29",
+      "$84.52",
+      2,
+      "1,961",
+      "$43.10",
+      "https://www.tiktok.com/@sweet_critique/video/7633904998639750413",
       "https://i.ibb.co/Fqkdcff2/tas.png"
     ],
     [
       17,
-      "@schweaver5",
-      "Flat-Fee",
-      "@First Aid Beauty’s Facial Radiance Pads with Glycolic + Lactic Acids are a gentle, daily exfoliator for face to help brighten + smooth texture. Prices are current as of 12/26/2025 and are while supplies last only. Prices are subject to change. #firstaidbeauty #skincare #makeupprep #exfoliation #sensitiveskincare",
-      "Dec 26",
-      "$339.71",
-      10,
-      "5,509",
-      "$61.66",
-      "https://www.tiktok.com/@tashaalovetoshop/video/7598957168523480375",
+      "@trendingwithchie",
+      "Commission",
+      "Smooth Skin Starts Here ✨ Say goodbye to rough, bumpy skin! KP Bump Eraser Body Scrub with 10% AHA exfoliates, smooths, and reveals softer, glowing skin—fast. Grab yours from the cart 🛒🔥 #TikTokShopFinds #KPBumpEraser #SmoothSkin #BodyCareRoutine #AHASkincare",
+      "Feb 11",
+      "$83.36",
+      3,
+      "2,197",
+      "$37.94",
+      "https://www.tiktok.com/@trendingwithchie/video/7605691825613032735",
       "https://i.ibb.co/KptJ1ms5/ros.png"
     ],
     [
       18,
-      "@viryescalantec",
+      "@ohheyyitsrose",
       "Commission",
-      "Que tipo de desodorante te gusta más? Mi favorito es el de formato crema 😌🙌 #deodorant @First Aid Beauty",
-      "Jan 17",
-      "$289.34",
-      10,
-      "6,090",
-      "$47.51",
-      "https://www.tiktok.com/@ashley.jernigan/video/7628420705083723021",
+      "The morning and night skin hack #firstaidbeauty",
+      "Apr 2,",
+      "$79.29",
+      2,
+      "2,355",
+      "$33.67",
+      "https://www.tiktok.com/@ohheyyitsrose/video/7634292912309718285",
       "https://i.ibb.co/LhBjbVMb/tru.png"
     ],
     [
       19,
-      "@influenced.edit",
-      "Flat-Fee",
-      "Bump-free confidence every day ✨ Grab your Ingrown Hair Pads & KP Bump Eraser Scrub now! Trending TikTok shop items beauty Women’s products Women 30+ women 40+ Trending products Must buy Flash Sale Discount #Tiktokshopcreatorpicks #newarrivalssurge #newyearnewme #tiktokshopholidayhaul #viralontiktok",
-      "Dec 11",
-      "$261.52",
-      7,
-      "25,101",
-      "$10.42",
-      "https://www.tiktok.com/@xbestestfindsx/video/7630898822033460510",
+      "@thnxsatan",
+      "Commission",
+      "Get this bestselling Bump Eraser Body Scrub on a massive discount right now! #fanfavoritedeals #newarrivalssurge #TikTokShopCreatorPicks #TikTokShopStockUp #TikTokShopJumpstartSale",
+      "Feb 7",
+      "$75.22",
+      3,
+      "8,590",
+      "$8.76",
+      "https://www.tiktok.com/@thnxsatan/video/7604282504845085966",
       "https://i.ibb.co/hJPmKW42/lac.png"
     ],
     [
       20,
-      "@simplysprinkled",
-      "Flat-Fee",
+      "@getdealstoday",
+      "Commission",
       "We are saying good bye to those strawberry 🍓 arms! #firstaidbeauty #SmoothSkinRoutine #KPScrub #strawberryskin #IngrownHairPads @First Aid Beauty",
-      "Feb 2",
-      "$224.40",
-      7,
-      "27,208",
-      "$8.25",
-      "https://www.tiktok.com/@haileyxbush/video/7592769634554613047",
+      "Feb 21",
+      "$53.51",
+      3,
+      "1,297",
+      "$41.26",
+      "https://www.tiktok.com/@getdealstoday/video/7609443705665162509",
       "https://i.ibb.co/4nq17b83/red.png"
     ]
   ],
@@ -795,125 +813,64 @@ const D = {
       "Ingrown Hair Pads 60ct & KP Bump Eraser Body Scrub Strawberry 2oz FREE Exfoliating Duo for Bump-Free Skin",
       "1732016864752931551",
       true,
-      26,
+      15459,
       5,
-      723
+      363
     ],
     [
       "Brighten + Glow Facial Radiance Pads with Glycolic + Lactic Acids",
       "1732016864752931551",
       false,
+      1114,
       7,
-      7,
-      247
-    ],
-    [
-      "KP Bump Eraser Body Scrub 10% AHA",
-      "1729444460628906719",
-      false,
-      2,
-      3,
-      142
+      32
     ],
     [
       "KP Bump Eraser Body Scrub 10% AHA Toasted Coconut",
-      "1732222937286021855",
+      "1729444460628906719",
       false,
-      2,
-      2,
-      116
-    ],
-    [
-      "Hydrating Pillow Pads and 2oz URC with Colloidal Oatmeal Hydration Boost Exclusive Bundle",
-      "1732292801223758559",
-      true,
-      2,
-      1,
-      55
+      1091,
+      3,
+      41
     ],
     [
       "Ingrown Hair Pads with BHA + AHA",
-      "1732070580260279007",
+      "1732222937286021855",
       false,
+      1011,
       2,
-      893,
-      72
+      34
     ],
     [
-      "Ultra Repair Hydrating Pillow Pads with Colloidal Oatmeal + Ceramides",
-      "1730273324509991647",
+      "KP Bump Eraser Body Scrub 10% AHA",
+      "1732292801223758559",
       false,
+      815,
       1,
-      843,
-      48
-    ],
-    [
-      "KP Bump Eraser Body Scrub 10% AHA Fresh Strawberry",
-      "1729440589585945311",
-      false,
-      1,
-      1,
-      85
-    ],
-    [
-      "AM/PM Exclusive Pads Bundle for exfoliation and hydration",
-      "1732070580260279007",
-      true,
-      1,
-      0,
-      20
-    ],
-    [
-      "Ultra Repair Cream Intense Hydration",
-      "1732066215916376799",
-      false,
-      1,
-      1,
-      29
+      40
     ]
   ],
   "sample_products": [
     [
-      "AM/PM Exclusive Pads Bundle",
-      "https://i.ibb.co/vxKH7xmn/mapm.jpg",
-      1015,
-      876,
-      "Apr 8"
-    ],
-    [
-      "Sensitive Skin Full Routine Bundle",
-      "https://i.ibb.co/YBDgXj2X/sens.jpg",
-      684,
-      617,
-      "Apr 6"
-    ],
-    [
-      "Body Bumps Exclusive Bundle",
-      "https://i.ibb.co/hRxPh2ST/bumps.jpg",
-      794,
-      893,
-      null
-    ],
-    [
       "FAB Cleanse + Exfoliate Duo",
       "https://i.ibb.co/cKW0BdZZ/cleanse.jpg",
-      313,
-      250,
-      "Apr 12"
+      90,
+      125,
+      null
     ],
     [
       "Ingrown Hair + KP Bump Eraser Bundle",
       "https://i.ibb.co/9kZkmFy0/ing.jpg",
-      319,
-      250,
-      "Apr 6"
+      142,
+      600,
+      null
     ],
     [
-      "Hydrating Pillow Pads and 2oz URC Bundle",
-      "https://i.ibb.co/RTwDMh1H/pillow.jpg",
-      303,
-      250,
-      "Apr 6"
+      "KP Bump Eraser Body Scrub 10% AHA Toasted Coconut",
+      "https://i.ibb.co/tTY2YxJD/coco.jpg",
+      6,
+      125,
+      null
     ]
   ],
   "flat_fee": [
@@ -961,141 +918,9 @@ const D = {
       90,
       302.6,
       ""
-    ],
-    [
-      "@hannahleigh143",
-      "Apr 2026",
-      20,
-      1800,
-      90,
-      0,
-      ""
-    ],
-    [
-      "@onlystarz1",
-      "Apr 2026",
-      25,
-      2250,
-      90,
-      75,
-      ""
-    ],
-    [
-      "@shopdealswithmarisa",
-      "Apr 2026",
-      20,
-      2000,
-      100,
-      0,
-      ""
-    ],
-    [
-      "@mamakennym",
-      "Apr 2026",
-      20,
-      1400,
-      70,
-      0,
-      ""
-    ],
-    [
-      "@hi.hannah.ashley",
-      "Apr 2026",
-      15,
-      1275,
-      85,
-      50.7,
-      ""
-    ],
-    [
-      "@itsmebethc",
-      "Apr 2026",
-      10,
-      1500,
-      150,
-      304,
-      ""
-    ],
-    [
-      "@imranfinds",
-      "Apr 2026",
-      15,
-      1800,
-      120,
-      0,
-      ""
-    ],
-    [
-      "@huntresshouse",
-      "Apr 2026",
-      10,
-      2250,
-      150,
-      46.91,
-      ""
-    ],
-    [
-      "@the_ss_lifestyle",
-      "Apr 2026",
-      10,
-      1800,
-      180,
-      0,
-      ""
-    ],
-    [
-      "@marvibridges",
-      "Apr 2026",
-      10,
-      2000,
-      200,
-      0,
-      ""
-    ],
-    [
-      "@ohheyitsrose",
-      "Apr 2026",
-      10,
-      2000,
-      200,
-      0,
-      ""
-    ],
-    [
-      "@glowupwithjennn",
-      "Apr 2026",
-      10,
-      1500,
-      150,
-      0,
-      ""
-    ],
-    [
-      "@nowyounoelle",
-      "Apr 2026",
-      10,
-      1500,
-      150,
-      0,
-      ""
-    ],
-    [
-      "@jujuleger85",
-      "Apr 2026",
-      10,
-      1500,
-      150,
-      0,
-      ""
     ]
   ],
   "trends": [
-    [
-      "Nov '25",
-      6285,
-      false,
-      null
-    ],
     [
       "Dec '25",
       54007,
@@ -1123,13 +948,19 @@ const D = {
     [
       "Apr '26",
       55336,
+      false,
+      null
+    ],
+    [
+      "May '26",
+      21100,
       true,
-      55336
+      null
     ]
   ],
-  "summary_hero_title": "The late-month push is real — 4K–5K daily revenue proves the strategy is working, including one viral video from a commission only L2 creator with 1.1M views in 4 days",
-  "summary_hero_body": "April closes with momentum. After a cautious start, three compounding changes unlocked the final stretch: <strong>active promotions running at 19x+ ROI</strong>, GMV Max optimization finding more efficient spend, and a meaningful increase in creator content posting. Daily revenue in the final days hit 4K–5K — a rate that, if sustained, would put May on a trajectory to $120K+. The infrastructure is proven: 2,118 active affiliates, 3,534 samples deployed, 93 flat-fee videos live. The playbook is written. May starts with the same levers, but earlier in the month.",
-  "summary_hero_action": "May priority: replicate April's late-month playbook from Day 1 — promos live in W1, creator content scheduled early, GMV Max running optimized",
+  "summary_hero_title": "May\u2019s early performance sets a new benchmark \u2014 <em>the viral video is back</em>, and $225K is hard but within reach",
+  "summary_hero_body": "This month opened differently from any before it. May 1st landed on a Thursday, meaning the weekend immediately amplified early momentum \u2014 and a viral video already in full flight from April added to that fuel. The result was an early-month revenue pace that dwarfs where we were at the same point in April, setting a foundation that gives this month a genuine chance at the target.<br><br>That momentum hit a speed bump mid-week when the viral video was temporarily flagged by the platform. Daily revenue dipped noticeably as a result. <strong>The video has since been reinstated</strong> \u2014 conversion is expected to resume and the underlying creative remains as strong as ever.<br><br>The honest picture: reaching <strong>$225K</strong> requires a significant acceleration from here. It\u2019s ambitious \u2014 but this is the first month where the early infrastructure genuinely supports it. The lever that can bridge the gap is <strong>GMV Max</strong>. This week\u2019s spend has been heavy, and to maintain that pace through the rest of the month we will need to divert budget from other channels \u2014 live sessions and samples \u2014 and redirect it to paid amplification. The creative is proven, the affiliate base is larger than it\u2019s ever been, and the algorithm has strong signals to work with. The goal is hard. It is possible.",
+  "summary_hero_action": "Double down on GMV Max for the rest of May \u2014 shift budget from live and samples into paid amplification and keep the viral video\u2019s momentum alive",
   "summary_stats": [
     [
       "Active affiliates",
@@ -1148,57 +979,57 @@ const D = {
       "93/100"
     ]
   ],
+  "hidden_sections": [
+    "flatfee"
+  ],
   "hidden_cols": {
-    "creators_cols": [
-      "GPM",
-      "Views"
-    ],
+    "creators_cols": [],
     "videos_cols": [],
     "products_cols": [],
     "samples_cols": [],
     "flatfee_cols": []
   },
   "summary_cards": [
-    {
-      "icon": "",
-      "badge": "Validated",
-      "badge_bg": "var(--blue-dim)",
-      "badge_color": "var(--blue)",
-      "title": "Promotions drove the late-month breakout — this playbook needs to start in W1 of May",
-      "body": "Product discounts running at <strong>19x+ ROI</strong> were a key driver of the 4K–5K daily revenue surge in April's final days. The flash sales and ongoing 5% discounts generated $6,436 in GMV from just $327 in discount spend. The lesson: this lever works — but it was activated mid-month. In May, launching promos in W1 will spread the impact across the full 30 days.",
-      "action": "Schedule W1 May promos now: replicate the 5% product discount and a bundle flash sale before May 5th."
-    },
-    {
-      "icon": "",
-      "badge": "Key Driver",
-      "badge_bg": "var(--blue-dim)",
-      "badge_color": "var(--blue)",
-      "title": "Creator content volume was the other accelerant — 93 flat-fee videos live by close",
-      "body": "The increase in creator posting volume in late April directly contributed to the revenue surge. With <strong>93 of 100 flat-fee videos now live</strong> and 2,118 active affiliates posting organically, content density reached a tipping point. For May, onboarding new flat-fee creators and briefing them early gives the algorithm more to amplify from day one.",
-      "action": "Brief May flat-fee creators by April 30th. Target posting in W1–W2 to front-load content momentum."
-    },
-    {
-      "icon": "",
-      "badge": "Carry Forward",
-      "badge_bg": "var(--blue-dim)",
-      "badge_color": "var(--blue)",
-      "title": "GMV Max optimization is working — maintain the settings and scale into May",
-      "body": "GMV Max improvements contributed to more efficient paid spend in April's final stretch. At <strong>$35,234 gross revenue on $29,927 spend</strong> (1.18x ROAS for the month), there's room to improve — but the optimizations made in late April provide a stronger baseline heading into May. Maintaining current campaign structures while increasing budget in W2–W3 can amplify what's already working.",
-      "action": "Do not reset campaign structures entering May. Scale budget incrementally in W2 as content volume rises."
-    }
-  ],
+  {
+    "icon": "",
+    "badge": "Strong Start",
+    "badge_bg": "var(--teal-dim)",
+    "badge_color": "var(--teal)",
+    "title": "The strongest early-month performance of the year — a weekend start and a viral video created a compounding effect",
+    "body": "May opened with a combination of factors that no previous month had: the calendar handed us a weekend in the first days, and a viral video was already deep in its conversion window. The early-month revenue pace is well ahead of where April stood at the same point — and April ended as our strongest month to date. That comparison matters. It means we’re not starting from scratch; we’re starting from ahead.",
+    "action": "Keep the viral video’s momentum alive — brief creators on the same hook and product angle to generate follow-on content while the creative is still fresh in the algorithm."
+  },
+  {
+    "icon": "",
+    "badge": "GMV Max Priority",
+    "badge_bg": "var(--amber-dim)",
+    "badge_color": "var(--amber)",
+    "title": "GMV Max is the lever that can close the gap to $225K — but it needs budget concentration now",
+    "body": "Significant GMV Max spend has already gone in this week and the channel is still in its optimisation phase. As the algorithm builds on this month’s sessions and creative signals, efficiency will improve. The path to $225K runs through this channel. That means making a deliberate choice: pull budget from live sessions and sample sends for the remainder of the month and redirect it to paid amplification. The creative is there. The spend needs to follow.",
+    "action": "Redirect live and sample budgets to GMV Max immediately. Set a daily minimum spend floor and track ROAS daily — the goal is to be in full optimisation mode by Week 3."
+  },
+  {
+    "icon": "",
+    "badge": "Viral Video",
+    "badge_bg": "var(--red-dim)",
+    "badge_color": "var(--red)",
+    "title": "The viral video was flagged and has been reinstated — recovery is underway and the window is still open",
+    "body": "The mid-week flagging of the top-performing video caused a real and visible dip in daily revenue. This was circumstantial, not structural — the product, the creative, and the audience fit are unchanged. Now that it’s back, the priority is to reactivate its momentum and protect against over-reliance on a single piece of content by encouraging creators to post content with a similar hook and angle.",
+    "action": "Activate sampled creators who haven’t posted yet with a brief tied to the viral video’s angle. Each new piece of content is both a revenue driver and an insurance policy against future single-video dependency."
+  }
+],
   "paid_ads": {
     "this_month": {
-      "cost": 48696,
-      "orders": 1573,
-      "gross_revenue": 56694,
-      "period": "Apr 1-30, 2026"
+      "cost": 20252,
+      "orders": 556,
+      "gross_revenue": 22791,
+      "period": "May 1-6, 2026"
     },
     "last_month": {
-      "cost": 27716,
-      "orders": 949,
-      "gross_revenue": 30810,
-      "period": "Mar 1-30, 2026"
+      "cost": 1903,
+      "orders": 97,
+      "gross_revenue": 3397,
+      "period": "Apr 1-6, 2026"
     }
   },
   "promotions": [
@@ -1207,63 +1038,43 @@ const D = {
       "Free Shipping",
       "Jan 1",
       "Dec 31",
-      45,
-      1,
-      5,
-      8.12
+      19690,
+      455,
+      2260,
+      8.71
     ],
     [
-      "5% All single products",
+      "New Bundle AO Discount",
       "Product Discount",
-      "Apr 7",
-      "Apr 12",
-      4,
-      185,
-      238,
-      20.01
-    ],
-    [
-      "All single products 5% off - 5 days",
-      "Product Discount",
-      "Apr 15",
-      "May 1",
-      3,
-      126,
-      185,
-      19.39
-    ],
-    [
-      "4/15 Flash Sale - Bundles & FRP",
-      "Flash-Sale",
-      "Apr 15",
-      "Apr 18",
-      1136,
-      24,
-      163,
-      6.94
-    ],
-    [
-      "Coupon 04/14/2026 9:00:00 PM",
-      "Follower Coupon",
-      "Apr 14",
-      "Apr 21",
-      550,
-      12,
-      84,
-      6.56
-    ],
-    [
-      "15%/10% bundles Flash Sale",
-      "Flash-Sale",
-      "Apr 7",
-      "Apr 10",
-      600,
+      "Mar 17",
+      "Jun 10",
+      674,
       10,
-      78,
-      6.2
+      46,
+      14.65
+    ],
+    [
+      "[Shopify][26-05-07 17:37:35]Spend $100, Get 10% Off",
+      "Product Discount",
+      "Apr 29",
+      "May 29",
+      352,
+      4,
+      46.4,
+      7.58
+    ],
+    [
+      "Live 05/05/2026 20:40:22, Pid: 1732294646814053087",
+      "Flash-Sale",
+      "May 5",
+      "May 5",
+      61.5,
+      3,
+      20,
+      3.1
     ]
   ],
-  "current_week": 0
+  "current_week": 1
 };
 /* ============================================================
    END OF DATA SECTION  -  do not edit below this line
@@ -1372,8 +1183,8 @@ const D = {
   <div class="creator-grid" id="creator-cards"></div>
   <div class="sub-label">Creators 6-20</div>
   <div class="table-wrap">
-    <table class="vtable">
-      <thead><tr><th>#</th><th>Creator</th><th>Type</th><th class="r">GMV</th><th class="r">Orders</th><th class="r">Product Views</th><th class="r">GPM</th><th class="r">Videos</th><th class="r">Commission</th></tr></thead>
+    <table class="vtable" id="creators-table">
+      <thead><tr><th>#</th><th>Creator</th><th>Type</th><th class="r sortable" data-col="3" data-table="creators-table">GMV</th><th class="r sortable" data-col="4" data-table="creators-table">Orders</th><th class="r sortable" data-col="5" data-table="creators-table">Videos</th><th class="r sortable" data-col="6" data-table="creators-table">Commission</th></tr></thead>
       <tbody id="creators-tbody"></tbody>
     </table>
   </div>
@@ -1388,8 +1199,8 @@ const D = {
   <div class="top5-grid" id="video-cards"></div>
   <div class="sub-label">Videos 6-20</div>
   <div class="table-wrap">
-    <table class="vtable">
-      <thead><tr><th>#</th><th>Creator</th><th>Type</th><th>Caption</th><th>Posted</th><th class="r">GMV</th><th class="r">Orders</th><th class="r">Views</th><th class="r">GPM</th><th></th></tr></thead>
+    <table class="vtable" id="videos-table">
+      <thead><tr><th>#</th><th>Creator</th><th>Type</th><th>Caption</th><th>Posted</th><th class="r sortable" data-col="5" data-table="videos-table">GMV</th><th class="r sortable" data-col="6" data-table="videos-table">Orders</th><th class="r sortable" data-col="7" data-table="videos-table">Views</th><th class="r sortable" data-col="8" data-table="videos-table">GPM</th><th></th></tr></thead>
       <tbody id="videos-tbody"></tbody>
     </table>
   </div>
@@ -1429,8 +1240,8 @@ const D = {
   <div class="sec-title" id="flatfee-title"></div>
   <div class="sec-sub">Manual entries. Cost per video = total payment / videos.</div>
   <div class="table-wrap">
-    <table class="fftable">
-      <thead><tr><th>Creator Handle</th><th>Month</th><th class="r">Videos</th><th class="r">Total Payment</th><th class="r">Cost / Video</th><th class="r">GMV Generated</th><th>Notes</th></tr></thead>
+    <table class="fftable" id="flatfee-table">
+      <thead><tr><th>Creator Handle</th><th>Month</th><th class="r sortable" data-col="2" data-table="flatfee-table">Videos</th><th class="r sortable" data-col="3" data-table="flatfee-table">Total Payment</th><th class="r sortable" data-col="4" data-table="flatfee-table">Cost / Video</th><th class="r sortable" data-col="5" data-table="flatfee-table">GMV Generated</th><th>Notes</th></tr></thead>
       <tbody id="flatfee-tbody"></tbody>
     </table>
   </div>
@@ -1496,10 +1307,10 @@ const D = {
       <div class="chart-badge">6-month view</div>
     </div>
     <div class="chart-body">
-      <div style="display:flex;gap:18px;margin-bottom:12px;flex-wrap:wrap;">
-        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:#0a9e83;"></div>Closed month</div>
-        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(10,158,131,0.4);"></div>Current month (partial)</div>
-        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(26,111,212,0.2);border:1.5px dashed #1a6fd4;"></div>Projected EOMonth</div>
+      <div id="trend-legend" style="display:flex;gap:18px;margin-bottom:12px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:#0a9e83;"></div><span id="trend-legend-closed-label">Closed month</span></div>
+        <div id="trend-legend-partial" style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(10,158,131,0.4);"></div>Current month (partial)</div>
+        <div id="trend-legend-projected" style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--soft);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(26,111,212,0.2);border:1.5px dashed #1a6fd4;"></div>Projected EOMonth</div>
       </div>
       <div class="chart-canvas-wrap"><canvas id="trendChart" role="img" aria-label="6-month GMV trend">6-month GMV</canvas></div>
     </div>
@@ -1540,9 +1351,24 @@ const obs=new IntersectionObserver(entries=>{
     document.querySelector(`.nav-link[onclick="navTo('${en.target.id}',event)"]`)?.classList.add('active');
   }});
 },{threshold:0.15,rootMargin:'-85px 0px -55% 0px'});
+/* Hide sections based on hidden_sections data field */
+(function(){
+  const hs=D.hidden_sections||[];
+  const sectionMap={kpi:'kpi',creators:'creators',videos:'videos',samples:'samples',products:'products',flatfee:'flatfee',paidpromo:'paidpromo',trends:'trends',summary:'summary'};
+  hs.forEach(sec=>{
+    const el=document.getElementById(sectionMap[sec]||sec);
+    if(el)el.style.display='none';
+    // Also hide corresponding nav link
+    const navLink=document.querySelector(`.nav-link[onclick*="'${sectionMap[sec]||sec}'"]`);
+    if(navLink)navLink.style.display='none';
+  });
+})();
+
 ['overview','kpi','creators','videos','samples','products','flatfee','paidpromo','trends','summary'].forEach(id=>{
   const el=document.getElementById(id);if(el)obs.observe(el);
 });
+function atHandle(h){h=String(h||'').trim();return h&&!h.startsWith('@')?'@'+h:h;}
+function parseNum(v){if(v===null||v===undefined||v==='')return 0;return parseFloat(String(v).replace(/[$,]/g,''))||0;}
 function toggleTable(name,label){
   const rows=document.querySelectorAll(`#${name}-tbody .collapsible-row`);
   const btn=document.getElementById(`${name}-btn`);
@@ -1585,7 +1411,31 @@ document.getElementById('pill1').textContent=D.pill1_text;
 document.getElementById('pill2').textContent=D.pill2_text;
 document.getElementById('pill3').textContent=D.pill3_text;
 document.getElementById('pill4').textContent=D.pill4_text;
-document.getElementById('highlights').textContent=D.highlights;
+/* Highlights — fully dynamic, never reads from D.highlights */
+(function(){
+  const gmvTotal_h=(D.w1_gmv||0)+(D.w2_gmv||0)+(D.w3_gmv||0)+(D.w4_gmv||0);
+  const isClosed=(D.current_week||0)===0;
+  const affMom=D.active_affiliates_last?((D.active_affiliates-D.active_affiliates_last)/D.active_affiliates_last*100).toFixed(0):null;
+  const prevMonth=D.trends&&D.trends.length>=2?D.trends[D.trends.length-2][0]:'last month';
+  const ffPending=D.flatfee_videos-D.flatfee_posted;
+  const sampleMom=D.samples_last_month?((D.samples_sent-D.samples_last_month)/D.samples_last_month*100).toFixed(0):null;
+  let text=`${D.report_month} — $${gmvTotal_h.toLocaleString()} GMV${isClosed?' (month closed)':`, with ${D.days_in_month-D.days_elapsed>0?D.days_in_month-D.days_elapsed+' days remaining':'all days elapsed'}`}. `;
+  text+=`Active affiliates: ${D.active_affiliates.toLocaleString()}${affMom?` (${parseFloat(affMom)>=0?'+':''}${affMom}% vs ${prevMonth})`:''}. `;
+  text+=`${D.samples_sent.toLocaleString()} samples deployed this month${sampleMom?` (up ${sampleMom}% vs ${D.samples_last_month.toLocaleString()} last month)`:''}`;
+  if(D.samples_posted>0){text+=`, with ${D.samples_posted} videos posted and ${D.samples_converted} converting to $${D.samples_gmv.toLocaleString()} GMV`;}
+  text+=`. `;
+  if(D.flatfee_videos>0){
+    text+=`${D.flatfee_videos} flat-fee video${D.flatfee_videos===1?'':'s'} contracted ($${D.flatfee_spend.toLocaleString()} committed)`;
+    if(ffPending>0) text+=`, ${ffPending} still pending`;
+    else text+=`, all posted`;
+    text+=`. `;
+  }
+  if(D.gmv_last_month){
+    const mom=((gmvTotal_h-D.gmv_last_month)/D.gmv_last_month*100).toFixed(1);
+    text+=`GMV is ${parseFloat(mom)>=0?'up +'+mom+'%':'down '+Math.abs(mom)+'%'} vs ${prevMonth} ($${D.gmv_last_month.toLocaleString()}).`;
+  }
+  document.getElementById('highlights').textContent=text;
+})();
 const _cw=D.current_week||0;document.getElementById('kpi-title').textContent=D.report_month+(_cw>0?' - Week '+_cw+' in progress':' - Month closed');
 document.getElementById('kpi-sub').textContent=D.days_elapsed+' of '+D.days_in_month+' days elapsed - Last updated '+D.last_updated+' - Targets based on Dec-Mar historical pattern';
 document.getElementById('samples-title').textContent=`Samples Tracking  -  ${D.report_month}`;
@@ -1609,7 +1459,8 @@ badge.textContent=`${isUp?'^':'v'} ${isUp?'+':''}${gmvMom}% vs last month ($${D.
 /* Weekly cards */
 const wTargets=[Math.round(D.gmv_target*.151),Math.round(D.gmv_target*.176),Math.round(D.gmv_target*.318),Math.round(D.gmv_target*.356)];
 const wActuals=[D.w1_gmv,D.w2_gmv,D.w3_gmv,D.w4_gmv];
-const wDates=[`Apr 1-7`,`Apr 8-14`,`Apr 15-21`,`Apr 22-30`];
+const _mo=D.report_month.split(' ')[0];
+const wDates=[`${_mo} 1-7`,`${_mo} 8-14`,`${_mo} 15-21`,`${_mo} 22-30`];
 const _cwNum=D.current_week||0;const wStatus=[0,1,2,3].map(i=>_cwNum===0?'closed':i+1===_cwNum?'partial':i+1<_cwNum?'closed':'upcoming');
 const wNotes=[
   'W1 historically averages 15% of monthly GMV. Content is still surfacing  -  normal pattern.',
@@ -1645,7 +1496,7 @@ const wc=document.getElementById('weekly-cards');
 new Chart(document.getElementById('pacingChart'),{
   type:'bar',
   data:{
-    labels:['W1 - Apr 1-7','W2 - Apr 8-14','W3 - Apr 15-21','W4 - Apr 22-30'],
+    labels:[`W1 - ${D.report_month.split(' ')[0]} 1-7`,`W2 - ${D.report_month.split(' ')[0]} 8-14`,`W3 - ${D.report_month.split(' ')[0]} 15-21`,`W4 - ${D.report_month.split(' ')[0]} 22-30`],
     datasets:[
       {label:'Actual GMV',
        data:[D.w1_gmv||0, D.w2_gmv||0, D.w3_gmv||0, D.w4_gmv||0],
@@ -1740,6 +1591,7 @@ if(hc_c.length){
   }
 }
 D.creators.forEach(([rank,name,handle,type,gmv,orders,views,gpm,vids,comm],i)=>{
+  const h=atHandle(handle);
   const av=AV[i%5];
   const initials=name.split(' ').map(w=>w[0]).slice(0,2).join('');
   const tag=type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
@@ -1749,25 +1601,23 @@ D.creators.forEach(([rank,name,handle,type,gmv,orders,views,gpm,vids,comm],i)=>{
     ccGrid.innerHTML+=`<div class="ccard">
       <div class="crank" style="background:${rkBg};color:${rkCol};">${rank}</div>
       <div class="ccard-top"><div class="cavatar" style="color:${av.c};border-color:${av.b};background:${av.bg};">${initials}</div>
-      <div><div class="cname">${name}</div><div class="chandle">${handle}</div></div></div>
+      <div><div class="cname">${name}</div><div class="chandle">${h}</div></div></div>
       ${tag}
       <div class="cstats">
         ${!hc_c.includes('GMV')?`<div><div class="cstat-label">GMV</div><div class="cstat-val">${gmv}</div></div>`:''}
         ${!hc_c.includes('Orders')?`<div><div class="cstat-label">Orders</div><div class="cstat-val">${orders}</div></div>`:''}
-        ${!hc_c.includes('Views')?`<div><div class="cstat-label">Views</div><div class="cstat-val">${views}</div></div>`:''}
-        ${!hc_c.includes('GPM')?`<div><div class="cstat-label">GPM</div><div class="cstat-val">${gpm}</div></div>`:''}
+
         ${!hc_c.includes('Videos')?`<div><div class="cstat-label">Videos</div><div class="cstat-val">${vids}</div></div>`:''}
         ${!hc_c.includes('Commission')?`<div><div class="cstat-label">Commission</div><div class="cstat-val">${comm}</div></div>`:''}
       </div></div>`;
   } else {
     const cls=i>=9?'collapsible-row hidden':'';
     ctb.innerHTML+=`<tr class="${cls}"><td><span class="trank">${rank}</span></td>
-      <td><span class="tcreator">${handle}</span><br><span style="font-size:10px;color:var(--soft);">${name}</span></td>
+      <td><span class="tcreator">${h}</span><br><span style="font-size:10px;color:var(--soft);">${name}</span></td>
       <td>${tag}</td>
       ${!hc_c.includes('GMV')?`<td class="gmv">${gmv}</td>`:''}
       ${!hc_c.includes('Orders')?`<td class="r">${orders}</td>`:''}
-      ${!hc_c.includes('Views')?`<td class="r">${views}</td>`:''}
-      ${!hc_c.includes('GPM')?`<td class="r">${gpm}</td>`:''}
+
       ${!hc_c.includes('Videos')?`<td class="r">${vids}</td>`:''}
       ${!hc_c.includes('Commission')?`<td class="r">${comm}</td>`:''}
       </tr>`;
@@ -1778,6 +1628,7 @@ D.creators.forEach(([rank,name,handle,type,gmv,orders,views,gpm,vids,comm],i)=>{
 const vcGrid=document.getElementById('video-cards');
 const vtb=document.getElementById('videos-tbody');
 D.videos.forEach(([rank,handle,type,caption,date,gmv,orders,views,gpm,url,thumb],i)=>{
+  const vh=atHandle(handle);
   const tag=type==='Flat-Fee'?'<span class="tag-flat">Flat-Fee</span>':'<span class="tag-comm">Commission</span>';
   if(i<5){
     vcGrid.innerHTML+=`<div class="vcard">
@@ -1787,7 +1638,7 @@ D.videos.forEach(([rank,handle,type,caption,date,gmv,orders,views,gpm,url,thumb]
         <div class="vrank" style="background:${i===0?'var(--red)':'#9ca3af'};">${rank}</div>
       </div>
       <div class="vbody">
-        <div class="vcreator-row"><span class="vcreator">${handle}</span>${tag}</div>
+        <div class="vcreator-row"><span class="vcreator">${vh}</span>${tag}</div>
         <div class="vtitle">${caption}</div>
         <div class="vstats">
           ${!hc_v.includes('GMV')?`<div><div class="vstat-label">GMV</div><div class="vstat-val" style="color:var(--red);">${gmv}</div></div>`:''}
@@ -1800,7 +1651,7 @@ D.videos.forEach(([rank,handle,type,caption,date,gmv,orders,views,gpm,url,thumb]
   } else {
     const cls=i>=9?'collapsible-row hidden':'';
     vtb.innerHTML+=`<tr class="${cls}"><td><span class="trank">${rank}</span></td>
-      <td><span class="tcreator">${handle}</span></td><td>${tag}</td>
+      <td><span class="tcreator">${vh}</span></td><td>${tag}</td>
       <td><span class="ttitle">${caption}</span></td>
       <td><span class="tdate"> ${date}</span></td>
       <td class="gmv">${gmv}</td><td class="r">${orders}</td><td class="r">${views}</td><td class="r">${gpm}</td>
@@ -1883,16 +1734,45 @@ D.products.forEach(([name,pid,bundle,gmv,lastGmv,orders],i)=>{
 /* Flat fee */
 const fftb=document.getElementById('flatfee-tbody');
 D.flat_fee.forEach(([handle,month,vids,pay,cpv,gmv,notes])=>{
-  fftb.innerHTML+=`<tr><td><span class="tcreator">${handle}</span></td>
+  const fh=atHandle(handle);
+  pay=parseNum(pay);gmv=parseNum(gmv);cpv=parseNum(cpv);vids=parseNum(vids);
+  const isPositiveRoi=gmv>0&&gmv>pay;
+  const rowClass=isPositiveRoi?'roi-positive':'';
+  fftb.innerHTML+=`<tr class="${rowClass}"><td><span class="tcreator">${fh}</span></td>
     <td><span class="tdate">${month}</span></td>
     ${!hc_f.includes('Videos')?`<td class="r">${vids}</td>`:''}
     ${!hc_f.includes('Payment')?`<td class="r">$${pay.toLocaleString()}</td>`:''}
     ${!hc_f.includes('Cost/Vid')?`<td class="r">$${cpv}/vid</td>`:''}
-    ${!hc_f.includes('GMV')?`<td class="r">${gmv>0?'$'+gmv.toLocaleString():' - '}</td>`:''}
+    ${!hc_f.includes('GMV')?`<td class="r">${gmv>0?'$'+gmv.toLocaleString()+(isPositiveRoi?' ✓':''):' - '}</td>`:''}
     ${!hc_f.includes('Notes')?`<td style="font-size:11px;color:var(--soft);font-style:italic;">${notes}</td>`:''}
     </tr>`;
 });
 
+
+/* Sortable tables */
+(function(){
+  document.querySelectorAll('th.sortable').forEach(function(th){
+    th.addEventListener('click',function(){
+      var tableId=th.dataset.table;
+      var col=parseInt(th.dataset.col);
+      var tbody=document.querySelector('#'+tableId+' tbody');
+      if(!tbody)return;
+      var isAsc=th.classList.contains('asc');
+      document.querySelectorAll('#'+tableId+' th.sortable').forEach(function(h){h.classList.remove('asc','desc');});
+      th.classList.add(isAsc?'desc':'asc');
+      var dir=isAsc?-1:1;
+      var rows=Array.from(tbody.querySelectorAll('tr'));
+      rows.sort(function(a,b){
+        var av=(a.cells[col]?a.cells[col].textContent:'').replace(/[$,% ]/g,'').trim();
+        var bv=(b.cells[col]?b.cells[col].textContent:'').replace(/[$,% ]/g,'').trim();
+        var an=parseFloat(av),bn=parseFloat(bv);
+        if(!isNaN(an)&&!isNaN(bn))return(an-bn)*dir;
+        return av.localeCompare(bv)*dir;
+      });
+      rows.forEach(function(r){tbody.appendChild(r);});
+    });
+  });
+})();
 
 /* Paid Ads */
 (function(){
@@ -1935,7 +1815,10 @@ D.flat_fee.forEach(([handle,month,vids,pay,cpv,gmv,notes])=>{
   });
   const spendDelta=tm.cost-lm.cost;
   const revDelta=tm.gross_revenue-lm.gross_revenue;
-  document.getElementById('paid-foot').innerHTML=`<strong>Takeaway:</strong> Spend up $${spendDelta.toLocaleString()}, revenue up $${revDelta.toLocaleString()}. Every $1 spent returns $${romas.toFixed(2)} (vs $${romasLM.toFixed(2)} last month).`;
+  const spendDir=spendDelta>=0?`up $${Math.abs(spendDelta).toLocaleString()}`:`down $${Math.abs(spendDelta).toLocaleString()}`;
+  const revDir=revDelta>=0?`up $${Math.abs(revDelta).toLocaleString()}`:`down $${Math.abs(revDelta).toLocaleString()}`;
+  const roasDir=romas>=romasLM?`improved to ${romas.toFixed(2)}x (from ${romasLM.toFixed(2)}x last month)`:`at ${romas.toFixed(2)}x vs ${romasLM.toFixed(2)}x last month`;
+  document.getElementById('paid-foot').innerHTML=`<strong>Takeaway:</strong> Spend ${spendDir} and revenue ${revDir} vs last month. Every $1 spent returns $${romas.toFixed(2)} — ROAS ${roasDir}.`;
 })();
 
 /* Promotions */
@@ -1965,51 +1848,90 @@ D.flat_fee.forEach(([handle,month,vids,pay,cpv,gmv,notes])=>{
 
 })();
 
-/* Trends chart */
-document.getElementById('trend-sub').textContent='Current month projected EOMonth: ~$'+D.trends_projected.toLocaleString();
-const tLabels=[...D.trends.map(t=>t[0]),'Projected'];
-const tColors=[...D.trends.map(t=>t[2]===true||t[2]==='true'?'rgba(10,158,131,0.4)':'#0a9e83'),'rgba(26,111,212,0.18)'];
-const tBorders=[...D.trends.map(()=>'transparent'),'#1a6fd4'];
-const tData=[...D.trends.map(t=>t[1]),D.trends_projected];
-new Chart(document.getElementById('trendChart'),{
-  type:'bar',
-  data:{labels:tLabels,datasets:[{
-    label:'GMV',data:tData,backgroundColor:tColors,
-    borderColor:tBorders,borderWidth:tBorders.map(b=>b==='transparent'?0:2),
-    borderRadius:4,borderSkipped:false
-  }]},
-  options:{responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',titleColor:'#9ca3af',bodyColor:'#fff',padding:8,cornerRadius:6,
-      callbacks:{label:c=>c.label==='Projected'?` Projected EOMonth: ~$${c.raw.toLocaleString()}`:`GMV: $${c.raw.toLocaleString()}`}}},
-    scales:{
-      x:{grid:{display:false},ticks:{font:{family:'DM Sans',size:10},color:'#6b7280',autoSkip:false}},
-      y:{grid:{color:'rgba(0,0,0,.04)'},min:0,suggestedMax:Math.ceil(Math.max(...tData)*1.15/100)*100,ticks:{callback:v=>'$'+(v>=1000?Math.round(v/1000)+'K':v),font:{family:'DM Sans',size:10},color:'#6b7280'}}
-    }
+/* Trends chart — dynamic, closed-month aware */
+(function(){
+  const isClosed=(D.current_week||0)===0;
+  let tLabels, tData, tColors, tBorders, tBorderWidths;
+  if(isClosed){
+    const n=D.trends.length;
+    tLabels=D.trends.map(t=>t[0]);
+    tData=D.trends.map(t=>t[1]);
+    tColors=D.trends.map((_,i)=>i===n-1?'#0a9e83':'rgba(10,158,131,0.35)');
+    tBorders=D.trends.map(()=>'transparent');
+    tBorderWidths=D.trends.map(()=>0);
+    document.getElementById('trend-sub').textContent=`Month closed — total GMV: $${D.trends[n-1][1].toLocaleString()}`;
+    // Hide partial + projected legend items for closed month
+    const lp=document.getElementById('trend-legend-partial');
+    const lproj=document.getElementById('trend-legend-projected');
+    const lcl=document.getElementById('trend-legend-closed-label');
+    if(lp)lp.style.display='none';
+    if(lproj)lproj.style.display='none';
+    if(lcl)lcl.textContent='All months (closed)';
+  } else {
+    tLabels=[...D.trends.map(t=>t[0]),'Projected'];
+    tData=[...D.trends.map(t=>t[1]),D.trends_projected];
+    const n=D.trends.length;
+    tColors=[...D.trends.map((t,i)=>t[2]===true||t[2]==='true'?'rgba(10,158,131,0.4)':i===n-1?'#0a9e83':'rgba(10,158,131,0.35)'),'rgba(26,111,212,0.18)'];
+    tBorders=[...D.trends.map(()=>'transparent'),'#1a6fd4'];
+    tBorderWidths=[...D.trends.map(()=>0),2];
+    document.getElementById('trend-sub').textContent=`Current month projected EOMonth: ~$${D.trends_projected.toLocaleString()}`;
   }
-});
+  new Chart(document.getElementById('trendChart'),{
+    type:'bar',
+    data:{labels:tLabels,datasets:[{
+      label:'GMV',data:tData,backgroundColor:tColors,
+      borderColor:tBorders,borderWidth:tBorderWidths,
+      borderRadius:4,borderSkipped:false
+    }]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',titleColor:'#9ca3af',bodyColor:'#fff',padding:8,cornerRadius:6,
+        callbacks:{label:c=>c.label==='Projected'?` Projected EOMonth: ~$${c.raw.toLocaleString()}`:`GMV: $${c.raw.toLocaleString()}`}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{family:'DM Sans',size:10},color:'#6b7280',autoSkip:false}},
+        y:{grid:{color:'rgba(0,0,0,.04)'},min:0,suggestedMax:Math.ceil(Math.max(...tData)*1.15/100)*100,ticks:{callback:v=>'$'+(v>=1000?Math.round(v/1000)+'K':v),font:{family:'DM Sans',size:10},color:'#6b7280'}}
+      }
+    }
+  });
+})();
 
-/* Summary */
-document.getElementById('sum-eyebrow').textContent=`Hero Insight - ${D.report_month}`;
-document.getElementById('sum-title').innerHTML=D.summary_hero_title;
-document.getElementById('sum-body').innerHTML=D.summary_hero_body;
-document.getElementById('sum-action').textContent=D.summary_hero_action;
-const ss=document.getElementById('sum-stats');
-D.summary_stats.forEach(([label,val])=>{
-  ss.innerHTML+=`<div style="display:flex;flex-direction:column;gap:3px;">
-    <div class="hero-stat-val-t">${val}</div>
-    <div class="hero-stat-label-t">${label}</div>
-  </div>`;
-});
-const ic=document.getElementById('insight-cards');
-D.summary_cards.forEach(c=>{
-  ic.innerHTML+=`<div class="icard">
-    <div class="icard-top"><span style="font-size:20px;">${c.icon}</span>
-    <span class="icard-badge" style="background:${c.badge_bg};color:${c.badge_color};">${c.badge}</span></div>
-    <div class="icard-title">${c.title}</div>
-    <div class="icard-body">${c.body}</div>
-    <div class="icard-action"><div class="icard-action-arrow">-></div><div class="icard-action-text">${c.action}</div></div>
-  </div>`;
-});
+/* Summary — reads from summary_hero_* and summary_cards fields */
+(function(){
+  document.getElementById('sum-eyebrow').textContent=`Hero Insight — ${D.report_month}`;
+  document.getElementById('sum-title').innerHTML=D.summary_hero_title||'';
+  document.getElementById('sum-body').innerHTML=D.summary_hero_body||'';
+  document.getElementById('sum-action').textContent=D.summary_hero_action||'';
+
+  // Stats — keep the data-driven numbers block
+  const ss=document.getElementById('sum-stats');
+  const gmvTotal_s=(D.w1_gmv||0)+(D.w2_gmv||0)+(D.w3_gmv||0)+(D.w4_gmv||0);
+  const affMom=D.active_affiliates_last?((D.active_affiliates-D.active_affiliates_last)/D.active_affiliates_last*100).toFixed(0):null;
+  const prevMonth=D.trends&&D.trends.length>=2?D.trends[D.trends.length-2][0]:'last month';
+  const dynamicStats=[
+    ['GMV so far', '$'+gmvTotal_s.toLocaleString()],
+    ['Target', '$'+(D.gmv_target||0).toLocaleString()],
+    ['Active affiliates', D.active_affiliates.toLocaleString()],
+    ['Samples deployed', D.samples_sent.toLocaleString()],
+  ];
+  dynamicStats.forEach(([label,val])=>{
+    ss.innerHTML+=`<div style="display:flex;flex-direction:column;gap:3px;">
+      <div class="hero-stat-val-t">${val}</div>
+      <div class="hero-stat-label-t">${label}</div>
+    </div>`;
+  });
+
+  // Insight cards — read from summary_cards data field
+  const ic=document.getElementById('insight-cards');
+  const cards=D.summary_cards||[];
+  cards.forEach(c=>{
+    ic.innerHTML+=`<div class="icard">
+      <div class="icard-top"><span style="font-size:20px;">${c.icon||''}</span>
+      <span class="icard-badge" style="background:${c.badge_bg};color:${c.badge_color};">${c.badge}</span></div>
+      <div class="icard-title">${c.title}</div>
+      <div class="icard-body">${c.body}</div>
+      <div class="icard-action"><div class="icard-action-arrow">-></div><div class="icard-action-text">${c.action}</div></div>
+    </div>`;
+  });
+})();
 </script>
 </body>
 </html>
